@@ -2,12 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Prompt:wght@400;700&display=swap');
 
-/* globals.css */
 body {
-  font-family: 'Prompt', sans-serif; /* Ensure this matches the font family you are importing */
+  font-family: 'Prompt', sans-serif;
 }
 
 html {

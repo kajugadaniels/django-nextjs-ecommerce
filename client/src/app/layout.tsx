@@ -4,7 +4,7 @@ import "./globals.css";
 
 const prompt = Prompt({ 
   subsets: ["latin"], 
-  weight: ["400", "700"] // Specify the weights you want to use
+  weight: ["400", "700"]
 });
 
 export const metadata: Metadata = {
