@@ -6,7 +6,7 @@ const Hero = () => {
         <div className="relative pt-12 bg-gray-50 sm:pt-16 lg:py-36 xl:py-48">
             <div className="absolute inset-0 hidden lg:block">
                 <img className="object-cover object-right w-full h-full" src="/hero/1.jpg" alt="" />
-                <div className="absolute inset-0 bg-emerald-800 opacity-30"></div>
+                <div className="absolute inset-0 bg-emerald-800 opacity-40"></div>
             </div>
 
             <div className="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
