@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import { Prompt } from 'next/font/google';
-import Navbar from "@/components/shared/Navbar";
 
 const prompt = Prompt({
     subsets: ['latin'],
