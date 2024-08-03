@@ -1,30 +1,14 @@
-import type { Metadata } from "next";
-import "../globals.css";
-import { Prompt } from 'next/font/google';
-import Navbar from "@/components/shared/Navbar";
-
-const prompt = Prompt({
-    subsets: ['latin'],
-    weight: ['400', '700'],
-    variable: '--font-prompt'
-});
-
-export const metadata: Metadata = {
-    title: "E-Green",
-    description: "Online green product store",
-};
+import Navbar from "@/components/shared/Navbar"
 
 export default function RootLayout({
-    children,
-}: Readonly<{
-    children: React.ReactNode;
-}>) {
-    return (
-        <html lang="en">
-            <body className={prompt.variable}>
-                <Navbar />
-                {children}
-            </body>
-        </html>
-    );
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <div className="flex h-screen flex-col">
+      <Navbar />
+      <main className="flex-1">{children}</main>
+    </div>
+  )
 }
