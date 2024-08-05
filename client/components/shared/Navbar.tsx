@@ -1,5 +1,5 @@
-import React from 'react'
 import Link from 'next/link'
+import React from 'react'
 
 const Navbar = () => {
     return (
@@ -56,7 +56,7 @@ const Navbar = () => {
                             <Link href="/" title="" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> Home </Link>
                             <Link href="/about" title="" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> About Us </Link>
                             <Link href="/shop" title="" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> Shop </Link>
-                            <Link href="contact" title="" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> Contact Us </Link>
+                            <Link href="/contact" title="" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> Contact Us </Link>
                         </nav>
                     </div>
                 </div>
