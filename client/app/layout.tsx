@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
+import type { Metadata } from "next";
 import "./globals.css";
 import { Prompt } from 'next/font/google';
 
 const prompt = Prompt({
     subsets: ['latin'],
-    weight: ['400', '700'],
+    weight: ['300', '400', '500', '600', '700', '900'],
     variable: '--font-prompt'
 });
 
