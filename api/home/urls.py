@@ -1,5 +1,7 @@
 from django.urls import path
-from home.views import ProductList, ProductDetail, CategoryList, CategoryDetail, ProfileList, ProfileDetail, OrderList, OrderDetail
+from home.views import *
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('products/', ProductList.as_view(), name='product-list'),
@@ -12,3 +14,5 @@ urlpatterns = [
     path('orders/<int:pk>/', OrderDetail.as_view(), name='order-detail'),
 ]
 
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
