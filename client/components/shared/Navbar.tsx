@@ -1,4 +1,4 @@
-import { SignedOut } from '@clerk/nextjs'
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import Link from 'next/link'
 import React from 'react'
 
@@ -45,6 +45,11 @@ const Navbar = () => {
                                     </svg>
                                     <span className="inline-flex items-center justify-center w-5 h-5 ml-1 text-xs font-bold text-white bg-gray-600 rounded-full"> 2 </span>
                                 </button>
+                                <div className="hidden lg:flex lg:items-center lg:space-x-8">
+                                    <SignedIn>
+                                        <UserButton afterSignOutUrl='/' />
+                                    </SignedIn>
+                                </div>
                             </div>
                         </div>
                     </div>
