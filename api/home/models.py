@@ -10,9 +10,9 @@ class Category(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=200)
     image = models.ImageField(upload_to='products/')
-    description = models.TextField()
-    price = models.DecimalField(max_digits=10, decimal_places=2)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    description = models.TextField()
     date = models.DateField(auto_now_add=True)
     updated = models.DateField(auto_now=True)
     
@@ -21,11 +21,11 @@ class Product(models.Model):
     
 class Profile(models.Model):
     name = models.CharField(max_length=200)
-    description = models.TextField()
     email = models.EmailField(max_length=200)
     address = models.CharField(max_length=200)
     telephone = models.CharField(max_length=200)
-
+    description = models.TextField()
+    
     def __str__(self):
         return self.name
     
