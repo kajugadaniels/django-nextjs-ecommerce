@@ -89,55 +89,55 @@ const Home = () => {
                                     <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                                     <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
                                         <img
-                                        alt=""
-                                        src="https://i5.walmartimages.com/asr/a83e3e11-9128-4d98-8f6f-8c144e0d8e5e.a5fafdef89b7430bd13cae9037294d87.jpeg"
-                                        className="h-full w-full object-cover object-center"
+                                            alt=""
+                                            src="https://i5.walmartimages.com/asr/a83e3e11-9128-4d98-8f6f-8c144e0d8e5e.a5fafdef89b7430bd13cae9037294d87.jpeg"
+                                            className="h-full w-full object-cover object-center"
                                         />
                                     </div>
                                     <div className="h-64 w-44 overflow-hidden rounded-lg">
                                         <img
-                                        alt=""
-                                        src="https://i5.walmartimages.com/asr/a83e3e11-9128-4d98-8f6f-8c144e0d8e5e.a5fafdef89b7430bd13cae9037294d87.jpeg"
-                                        className="h-full w-full object-cover object-center"
-                                        />
-                                    </div>
-                                    </div>
-                                    <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                                    <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                        <img
-                                        alt=""
-                                        src="https://i5.walmartimages.com/asr/a83e3e11-9128-4d98-8f6f-8c144e0d8e5e.a5fafdef89b7430bd13cae9037294d87.jpeg"
-                                        className="h-full w-full object-cover object-center"
-                                        />
-                                    </div>
-                                    <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                        <img
-                                        alt=""
-                                        src="https://i5.walmartimages.com/asr/a83e3e11-9128-4d98-8f6f-8c144e0d8e5e.a5fafdef89b7430bd13cae9037294d87.jpeg"
-                                        className="h-full w-full object-cover object-center"
-                                        />
-                                    </div>
-                                    <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                        <img
-                                        alt=""
-                                        src="https://i5.walmartimages.com/asr/a83e3e11-9128-4d98-8f6f-8c144e0d8e5e.a5fafdef89b7430bd13cae9037294d87.jpeg"
-                                        className="h-full w-full object-cover object-center"
+                                            alt=""
+                                            src="https://i5.walmartimages.com/asr/a83e3e11-9128-4d98-8f6f-8c144e0d8e5e.a5fafdef89b7430bd13cae9037294d87.jpeg"
+                                            className="h-full w-full object-cover object-center"
                                         />
                                     </div>
                                     </div>
                                     <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                                     <div className="h-64 w-44 overflow-hidden rounded-lg">
                                         <img
-                                        alt=""
-                                        src="https://i5.walmartimages.com/asr/a83e3e11-9128-4d98-8f6f-8c144e0d8e5e.a5fafdef89b7430bd13cae9037294d87.jpeg"
-                                        className="h-full w-full object-cover object-center"
+                                            alt=""
+                                            src="https://i5.walmartimages.com/asr/a83e3e11-9128-4d98-8f6f-8c144e0d8e5e.a5fafdef89b7430bd13cae9037294d87.jpeg"
+                                            className="h-full w-full object-cover object-center"
                                         />
                                     </div>
                                     <div className="h-64 w-44 overflow-hidden rounded-lg">
                                         <img
-                                        alt=""
-                                        src="https://i5.walmartimages.com/asr/a83e3e11-9128-4d98-8f6f-8c144e0d8e5e.a5fafdef89b7430bd13cae9037294d87.jpeg"
-                                        className="h-full w-full object-cover object-center"
+                                            alt=""
+                                            src="https://i5.walmartimages.com/asr/a83e3e11-9128-4d98-8f6f-8c144e0d8e5e.a5fafdef89b7430bd13cae9037294d87.jpeg"
+                                            className="h-full w-full object-cover object-center"
+                                        />
+                                    </div>
+                                    <div className="h-64 w-44 overflow-hidden rounded-lg">
+                                        <img
+                                            alt=""
+                                            src="https://i5.walmartimages.com/asr/a83e3e11-9128-4d98-8f6f-8c144e0d8e5e.a5fafdef89b7430bd13cae9037294d87.jpeg"
+                                            className="h-full w-full object-cover object-center"
+                                        />
+                                    </div>
+                                    </div>
+                                    <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                                    <div className="h-64 w-44 overflow-hidden rounded-lg">
+                                        <img
+                                            alt=""
+                                            src="https://i5.walmartimages.com/asr/a83e3e11-9128-4d98-8f6f-8c144e0d8e5e.a5fafdef89b7430bd13cae9037294d87.jpeg"
+                                            className="h-full w-full object-cover object-center"
+                                        />
+                                    </div>
+                                    <div className="h-64 w-44 overflow-hidden rounded-lg">
+                                        <img
+                                            alt=""
+                                            src="https://i5.walmartimages.com/asr/a83e3e11-9128-4d98-8f6f-8c144e0d8e5e.a5fafdef89b7430bd13cae9037294d87.jpeg"
+                                            className="h-full w-full object-cover object-center"
                                         />
                                     </div>
                                     </div>

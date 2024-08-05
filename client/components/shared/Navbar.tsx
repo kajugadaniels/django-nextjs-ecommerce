@@ -1,5 +1,6 @@
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+import Link from 'next/link'
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
@@ -14,16 +15,17 @@ const Navbar = () => {
                         </button>
 
                         <div className="flex items-center flex-shrink-0 ml-4 lg:ml-0">
-                            <a href="#" title="" className="inline-flex rounded focus:outline-none">
+                            <Link href="/" title="" className="inline-flex rounded focus:outline-none">
                                 E-Greene
-                            </a>
+                            </Link>
                         </div>
 
                         <div className="flex items-center justify-end ml-auto">
                             <div className="hidden lg:flex lg:items-center lg:space-x-8">
-                                <a href="#" title="" className="text-base font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> Create Free Account </a>
-
-                                <a href="#" title="" className="text-base font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> Login </a>
+                                <SignedOut>
+                                    <Link href="/sign-in" title="" className="text-base font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> Login </Link>
+                                    <Link href="/sign-up" title="" className="text-base font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> Create Free Account </Link>
+                                </SignedOut>
                             </div>
 
                             <div className="flex items-center justify-end space-x-5">
@@ -43,6 +45,11 @@ const Navbar = () => {
                                     </svg>
                                     <span className="inline-flex items-center justify-center w-5 h-5 ml-1 text-xs font-bold text-white bg-gray-600 rounded-full"> 2 </span>
                                 </button>
+                                <div className="hidden lg:flex lg:items-center lg:space-x-8">
+                                    <SignedIn>
+                                        <UserButton afterSignOutUrl='/' />
+                                    </SignedIn>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -53,10 +60,10 @@ const Navbar = () => {
                 <div className="py-5">
                     <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                         <nav className="flex items-center space-x-8">
-                            <a href="#" title="" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> Home </a>
-                            <a href="#" title="" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> About Us </a>
+                            <Link href="/" title="" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> Home </Link>
+                            <Link href="/about" title="" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> About Us </Link>
                             <Link href="/shop" title="" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> Shop </Link>
-                            <a href="#" title="" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> Contact Us </a>
+                            <Link href="/contact" title="" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> Contact Us </Link>
                         </nav>
                     </div>
                 </div>
