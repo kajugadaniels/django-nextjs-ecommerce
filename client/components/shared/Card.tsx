@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Card = () => {
@@ -9,10 +10,10 @@ const Card = () => {
             <div className="flex items-start justify-between mt-4 space-x-4">
                 <div>
                     <h3 className="text-xs font-bold text-gray-900 sm:text-sm md:text-base">
-                        <a href="#" title="">
+                        <Link href="/shop/watermelon" title="">
                             Watermelon
                             <span className="absolute inset-0" aria-hidden="true"></span>
-                        </a>
+                        </Link>
                     </h3>
                 </div>
 
