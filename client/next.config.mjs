@@ -3,8 +3,10 @@ const nextConfig = {
     images: {
         remotePatterns: [
             {
-                protocol: "https",
-                hostname: "5.walmartimages.com"
+                protocol: "http",
+                hostname: "127.0.0.1",
+                port: "8000",
+                pathname: "/media/**"
             }
         ]
     }
