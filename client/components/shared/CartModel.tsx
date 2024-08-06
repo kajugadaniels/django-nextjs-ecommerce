@@ -87,11 +87,7 @@ const CartModel: React.FC<CartModelProps> = ({ onClose }) => {
 };
 
 const ParentComponent: React.FC = () => {
-  const [isCartOpen, setIsCartOpen] = useState(false);
-
-  const handleCartOpen = () => {
-    setIsCartOpen(true);
-  };
+  const [isCartOpen, setIsCartOpen] = useState(true);
 
   const handleCartClose = () => {
     setIsCartOpen(false);
@@ -99,7 +95,6 @@ const ParentComponent: React.FC = () => {
 
   return (
     <div>
-      <button onClick={handleCartOpen}>Open Cart</button>
       {isCartOpen && <CartModel onClose={handleCartClose} />}
     </div>
   );
