@@ -1,4 +1,71 @@
+"use client";
+
 import React from 'react';
+
+interface CheckboxOption {
+  label: string;
+  checked: boolean;
+}
+
+const categories: CheckboxOption[] = [
+  { label: 'TV, Audio-Video', checked: true },
+  { label: 'Desktop PC', checked: true },
+  { label: 'Gaming', checked: false },
+  { label: 'Monitors', checked: false },
+  { label: 'Laptops', checked: false },
+  { label: 'Console', checked: false },
+  { label: 'Tablets', checked: true },
+  { label: 'Foto', checked: false },
+  { label: 'Fashion', checked: false },
+  { label: 'Books', checked: false }
+];
+
+// Define the ShopFilters component
+const ShopFilters: React.FC = () => {
+  const [checkboxStates, setCheckboxStates] = React.useState<CheckboxOption[]>(categories);
+
+  const handleCheckboxChange = (index: number) => {
+    setCheckboxStates(prevStates =>
+      prevStates.map((item, idx) =>
+        idx === index ? { ...item, checked: !item.checked } : item
+      )
+    );
+  };
+
+  return (
+    <div className="flex flex-col w-64 h-full bg-card text-foreground p-4 rounded-lg shadow-lg">
+      <h2 className="text-lg font-semibold mb-4">Categories</h2>
+      <input
+        type="text"
+        placeholder="Search for categories"
+        className="mb-4 p-2 border border-border rounded focus:outline-none focus:ring focus:ring-ring"
+      />
+      <div className="flex flex-col mb-4">
+        {checkboxStates.map((option, index) => (
+          <label key={index} className="flex items-center">
+            <input
+              type="checkbox"
+              className="mr-2"
+              checked={option.checked}
+              onChange={() => handleCheckboxChange(index)}
+            />
+            {option.label}
+          </label>
+        ))}
+      </div>
+      <a href="#" className="text-accent hover:underline">
+        See more →
+      </a>
+      <h2 className="text-lg font-semibold mt-6 mb-4">Rating</h2>
+      <h2 className="text-lg font-semibold mb-4">Price</h2>
+      <h2 className="text-lg font-semibold mb-4">Shipping to</h2>
+      <h2 className="text-lg font-semibold mb-4">Color</h2>
+      <h2 className="text-lg font-semibold mb-4">Delivery Method</h2>
+      <h2 className="text-lg font-semibold mb-4">Condition</h2>
+      <h2 className="text-lg font-semibold mb-4">Weight</h2>
+    </div>
+  );
+};
 
 interface ProductCardProps {
   imageAlt: string;
@@ -10,14 +77,14 @@ interface ProductCardProps {
   numRatings: string;
 }
 
-const cardClasses = 'bg-card rounded-lg shadow-md overflow-hidden';
-const primaryButtonClasses = 'bg-primary text-primary-foreground hover:bg-primary/80 mt-4 w-full py-2 rounded';
+const cardClasses = 'bg-card rounded-lg shadow-md overflow-hidden h-2/3';
+const primaryButtonClasses = 'bg-primary text-primary-foreground hover:bg-primary/80 w-full py-2 rounded';
 
 const ProductCard: React.FC<ProductCardProps> = ({ imageAlt, imageUrl, title, discount, price, rating, numRatings }) => {
   return (
     <div className={cardClasses}>
-      <img aria-hidden="true" alt={imageAlt} src={imageUrl} />
-      <div className="p-4">
+      <img aria-hidden="true" alt={imageAlt} src={imageUrl} className="w-full h-auto" />
+      <div className="p-10">
         <h3 className="text-lg font-semibold">{title}</h3>
         <p className="text-muted-foreground">{discount}</p>
         <p className="text-xl font-bold">{price}</p>
@@ -32,51 +99,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ imageAlt, imageUrl, title, di
 };
 
 const products = [
-  {
-    imageAlt: 'Apple iMac 27”',
-    imageUrl: 'https://openui.fly.dev/openui/300x200.svg?text=Apple+iMac+27%E2%80%9D',
-    title: 'Apple iMac 27”, 1TB HDD, Retina 5K Display, M3 Max',
-    discount: 'Up to 35% off',
-    price: '$1,699',
-    rating: '★★★★★',
-    numRatings: '(455)'
-  },
-  {
-    imageAlt: 'Apple iPhone 15 Pro Max',
-    imageUrl: 'https://openui.fly.dev/openui/300x200.svg?text=Apple+iPhone+15+Pro+Max',
-    title: 'Apple iPhone 15 Pro Max, 256GB, Blue Titanium',
-    discount: 'Up to 15% off',
-    price: '$1,199',
-    rating: '★★★★★',
-    numRatings: '(1,233)'
-  },
-  {
-    imageAlt: 'iPad Pro 13-Inch',
-    imageUrl: 'https://openui.fly.dev/openui/300x200.svg?text=iPad+Pro+13-Inch',
-    title: 'iPad Pro 13-Inch (M4): XDR Display, 512GB',
-    discount: 'Up to 35% off',
-    price: '$799',
-    rating: '★★★★★',
-    numRatings: '(879)'
-  },
-  {
-    imageAlt: 'PlayStation 5 Console',
-    imageUrl: 'https://openui.fly.dev/openui/300x200.svg?text=PlayStation+5+Console',
-    title: 'PlayStation®5 Console – 1TB, PRO Controller',
-    discount: 'Up to 10% off',
-    price: '$499',
-    rating: '★★★★★',
-    numRatings: '(624)'
-  },
-  {
-    imageAlt: 'Microsoft Xbox Series X',
-    imageUrl: 'https://openui.fly.dev/openui/300x200.svg?text=Microsoft+Xbox+Series+X',
-    title: 'Microsoft Xbox Series X 1TB Gaming Console',
-    discount: 'Up to 10% off',
-    price: '$499',
-    rating: '★★★★★',
-    numRatings: '(4,263)'
-  },
   {
     imageAlt: 'Apple MacBook PRO Laptop',
     imageUrl: 'https://openui.fly.dev/openui/300x200.svg?text=Apple+MacBook+PRO+Laptop',
@@ -111,8 +133,11 @@ const showMoreButtonClasses = 'bg-secondary text-secondary-foreground hover:bg-s
 
 const ProductGrid: React.FC = () => {
   return (
-    <>
-      <div className={gridClasses}>
+    <div className="flex ml-28">
+      <div className="w-64 ml-10">
+        <ShopFilters />
+      </div>
+      <div className={`flex-1 ml-10 ${gridClasses}`}>
         {products.map((product, index) => (
           <ProductCard
             key={index}
@@ -126,18 +151,19 @@ const ProductGrid: React.FC = () => {
           />
         ))}
       </div>
-      <div className="flex justify-center mt-6">
-        <button className={showMoreButtonClasses}>Show more</button>
-      </div>
-    </>
+    </div>
   );
 };
 
 const Shop: React.FC = () => {
   return (
-    <div>
-      <h1 className="text-2xl font-bold mb-4">Shop</h1>
-      <ProductGrid />
+    <div className="flex ml-10 mt-10">
+      <div className="flex-1">
+        <ProductGrid />
+        <div className="text-center mt-6">
+          <button className={showMoreButtonClasses}>Show More</button>
+        </div>
+      </div>
     </div>
   );
 };
