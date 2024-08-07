@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
 import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
@@ -17,15 +16,21 @@ interface ProductData {
     description: string;
     price: string;
     category: number;
+    image: string;
     images: string[];
 }
 
-const Product = () => {
+interface ProductProps {
+    params: {
+        slug: string;
+    }
+}
+
+const Product = ({ params }: ProductProps) => {
     const [quantity, setQuantity] = useState(1);
     const [product, setProduct] = useState<ProductData | null>(null);
     const [isLoading, setIsLoading] = useState(true);
-    const router = useRouter();
-    const { slug } = router.query;
+    const { slug } = params;
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -81,7 +86,7 @@ const Product = () => {
                             navigation
                             pagination={{ clickable: true }}
                         >
-                            {product.images.map((image, index) => (
+                            {[product.image, ...product.images].map((image, index) => (
                                 <SwiperSlide key={index} className="swiper-slide">
                                     <div className="block">
                                         <img src={image} alt={`${product.name} image ${index + 1}`} className="max-lg:mx-auto rounded-2xl" />
@@ -98,7 +103,7 @@ const Product = () => {
                                     <p className="font-normal text-base text-gray-500">{product.category}</p>
                                 </div>
                                 <button className="group transition-all duration-500 p-0.5">
-                                    {/* ... (Wishlist button SVG remains the same) */}
+                                    {/* Wishlist button SVG */}
                                 </button>
                             </div>
                             <div className="flex flex-col min-[400px]:flex-row min-[400px]:items-center mb-8 gap-y-3">
