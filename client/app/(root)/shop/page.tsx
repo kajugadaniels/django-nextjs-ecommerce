@@ -33,7 +33,7 @@ const ShopFilters: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col w-64 h-full bg-card text-foreground p-4 rounded-lg shadow-lg">
+    <div className="flex flex-col w-64 h-full bg-gray-200 text-foreground p-4 rounded-lg shadow-lg mb-10">
       <h2 className="text-lg font-semibold mb-4">Categories</h2>
       <input
         type="text"
@@ -78,10 +78,11 @@ interface ProductCardProps {
 }
 
 const cardClasses = 'bg-card rounded-lg shadow-md overflow-hidden h-2/3';
-const primaryButtonClasses = 'bg-primary text-primary-foreground hover:bg-primary/80 w-full py-2 rounded';
+const primaryButtonClasses = 'bg-emerald-800 text-primary-foreground hover:bg-emerald-800/80 w-full py-2  rounded';
 
 const ProductCard: React.FC<ProductCardProps> = ({ imageAlt, imageUrl, title, discount, price, rating, numRatings }) => {
   return (
+    <div>
     <div className={cardClasses}>
       <img aria-hidden="true" alt={imageAlt} src={imageUrl} className="w-full h-auto" />
       <div className="p-10">
@@ -94,6 +95,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ imageAlt, imageUrl, title, di
         </div>
         <button className={primaryButtonClasses}>Add to cart</button>
       </div>
+    </div>
+    <div className="text-center mt-6">
+          <button className={showMoreButtonClasses}>Show More</button>
+    </div>
     </div>
   );
 };
@@ -160,9 +165,6 @@ const Shop: React.FC = () => {
     <div className="flex ml-10 mt-10">
       <div className="flex-1">
         <ProductGrid />
-        <div className="text-center mt-6">
-          <button className={showMoreButtonClasses}>Show More</button>
-        </div>
       </div>
     </div>
   );
