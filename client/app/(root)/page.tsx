@@ -56,10 +56,7 @@ const Home = () => {
                         <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">Our featured items</h2>
                         <p className="mt-4 text-base font-normal leading-7 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus faucibus massa dignissim tempus.</p>
                     </div>
-
-                    <div className="grid grid-cols-2 gap-6 mt-10 lg:mt-16 lg:gap-4 lg:grid-cols-4">
-                        <Card />
-                    </div>
+                    <Card />
                 </div>
             </section>
 

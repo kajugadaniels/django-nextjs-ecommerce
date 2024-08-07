@@ -1,19 +1,20 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 interface Product {
-  id: number;
-  name: string;
-  slug: string;
-  image: string;
-  price: string;
-  description: string;
-  date: string;
-  updated: string;
-  category: number;
+    id: number;
+    name: string;
+    slug: string;
+    image: string;
+    price: string;
+    description: string;
+    date: string;
+    updated: string;
+    category: number;
 }
 
 const Card = () => {
@@ -38,10 +39,19 @@ const Card = () => {
                 <div key={product.id} className='flex gap-x-4 gap-y-16 justify-between flex-wrap'>
                     <Link href={`/product/${product.slug}`} className='w-full flex flex-col gap-5'>
                         <div className='relative w-full h-80'>
-                            <img
+                            <Image
                                 src={product.image}
                                 alt={product.name}
-                                className='w-full h-full object-cover rounded-md'
+                                layout="fill"
+                                objectFit="cover"
+                                className='rounded-md z-10 hover:opacity-0 transition-opacity easy duration-500'
+                            />
+                            <Image
+                                src={product.image}
+                                alt={product.name}
+                                layout="fill"
+                                objectFit="cover"
+                                className='rounded-md z-10 hover:opacity-0 transition-opacity easy duration-500'
                             />
                         </div>
                         <div className='flex justify-between'>
@@ -59,4 +69,4 @@ const Card = () => {
     )
 }
 
-export default Card
+export default Card;
