@@ -1,5 +1,4 @@
 import os
-from .juzzimin import JAZZMIN_SETTINGS
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -123,5 +122,3 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
     ],
 }
-
-JAZZMIN_SETTINGS = JAZZMIN_SETTINGS
