@@ -7,8 +7,8 @@ class ProductImageInline(admin.TabularInline):
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name',)
-    search_fields = ('name',)
+    list_display = ('name', 'slug', 'created_at', 'updated_at')
+    search_fields = ('name', 'slug')
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
@@ -18,10 +18,15 @@ class ProductAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
     inlines = [ProductImageInline]
 
-@admin.register(ProductImage)
-class ProductImageAdmin(admin.ModelAdmin):
-    list_display = ('product', 'created_at')
-    search_fields = ('product__name',)
+# @admin.register(ProductImage)
+# class ProductImageAdmin(admin.ModelAdmin):
+#     list_display = ('product', 'created_at')
+#     search_fields = ('product__name',)
+
+# @admin.register(ProductCategory)
+# class ProductCategoryAdmin(admin.ModelAdmin):
+#     list_display = ('product', 'category', 'created_at')
+#     search_fields = ('product__name', 'category__name')
 
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):

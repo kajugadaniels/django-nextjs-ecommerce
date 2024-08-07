@@ -9,15 +9,21 @@ from django.core.exceptions import ValidationError
 
 class Category(models.Model):
     name = models.CharField(max_length=200, null=True, blank=True)
+    slug = models.SlugField(unique=True, blank=True)
     created_at = models.DateField(default=timezone.now)
     updated_at = models.DateField(auto_now=True)
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name)
+        super(Category, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.name
 
 def product_image_path(instance, filename):
     base_filename, file_extension = os.path.splitext(filename)
-    return f'products/product_{slugify(instance.name)}_{instance.price}{file_extension}'
+    return f'products/product_{slugify(instance.name)}_{instance.unit_price}{file_extension}'
 
 class Product(models.Model):
     MEASURE_CHOICES = [
@@ -35,7 +41,7 @@ class Product(models.Model):
         null=True,
         blank=True
     )
-    category = models.ForeignKey('Category', on_delete=models.CASCADE, null=True, blank=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, blank=True)
     unit_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     quantity = models.PositiveIntegerField(default=0, null=True, blank=True)
     measure = models.CharField(max_length=10, choices=MEASURE_CHOICES, default='KG')
@@ -46,11 +52,31 @@ class Product(models.Model):
     def save(self, *args, **kwargs):
         if self.quantity < 0:
             raise ValidationError("Quantity must not be negative.")
-        self.slug = slugify(self.name)
+        if not self.slug:
+            self.slug = slugify(self.name)
         super(Product, self).save(*args, **kwargs)
+
+        # Create ProductCategory relationship if a category is set
+        if self.category:
+            ProductCategory.objects.get_or_create(
+                product=self,
+                category=self.category
+            )
 
     def __str__(self):
         return self.name
+
+class ProductCategory(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    created_at = models.DateField(default=timezone.now)
+    updated_at = models.DateField(auto_now=True)
+
+    class Meta:
+        unique_together = ('product', 'category')
+
+    class Meta:
+        unique_together = ('product', 'category')
 
 def Product_add_on_image_path(instance, filename):
     base_filename, file_extension = os.path.splitext(filename)
@@ -75,7 +101,7 @@ class ProductImage(models.Model):
 
 def profile_image_path(instance, filename):
     base_filename, file_extension = os.path.splitext(filename)
-    return f'profiles/profile_{slugify(instance.name)}_{instance.price}{file_extension}'
+    return f'profiles/profile_{slugify(instance.name)}_{instance.unit_price}{file_extension}'
 
 class Profile(models.Model):
     name = models.CharField(max_length=200, null=True, blank=True)

@@ -3,15 +3,14 @@ from home.serializers import *
 from rest_framework import generics
 from rest_framework.exceptions import NotFound
 
-# Create your views here.
 class ProductList(generics.ListCreateAPIView):
     serializer_class = ProductSerializer
 
     def get_queryset(self):
         queryset = Product.objects.all()
-        category_id = self.request.query_params.get('category_id', None)
-        if category_id is not None:
-            queryset = queryset.filter(category_id=category_id)
+        category_slug = self.request.query_params.get('category_slug', None)
+        if category_slug:
+            queryset = queryset.filter(category__slug=category_slug)
         return queryset
 
 class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -32,6 +31,25 @@ class CategoryList(generics.ListCreateAPIView):
 class CategoryDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+
+class ProductByCategory(generics.ListAPIView):
+    serializer_class = ProductSerializer
+
+    def get_queryset(self):
+        category_slug = self.kwargs.get('category_slug')
+        try:
+            category = Category.objects.get(slug=category_slug)
+        except Category.DoesNotExist:
+            raise NotFound('Category not found')
+        return Product.objects.filter(category=category)
+
+class ProductCategoryList(generics.ListCreateAPIView):
+    queryset = ProductCategory.objects.all()
+    serializer_class = ProductCategorySerializer
+
+class ProductCategoryDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = ProductCategory.objects.all()
+    serializer_class = ProductCategorySerializer
 
 class ProfileList(generics.ListCreateAPIView):
     queryset = Profile.objects.all()
