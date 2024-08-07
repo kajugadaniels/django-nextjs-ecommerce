@@ -104,7 +104,7 @@ const Shop = () => {
     };
 
     return (
-        <section className="bg-gray-50 py-8 antialiased dark:bg-gray-900 md:py-12">
+        <section className="bg-gray-100 py-8 antialiased dark:bg-gray-900 md:py-12">
             <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
