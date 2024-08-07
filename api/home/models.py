@@ -1,4 +1,5 @@
 import os
+import random
 from django.db import models
 from django.utils.text import slugify
 from imagekit.processors import ResizeToFill
@@ -13,12 +14,13 @@ class Category(models.Model):
 def product_image_path(instance, filename):
     base_filename, file_extension = os.path.splitext(filename)
     return f'products/product_{slugify(instance.name)}_{instance.price}{file_extension}'
+
 class Product(models.Model):
     name = models.CharField(max_length=200, null=True, blank=True)
     slug = models.SlugField(unique=True, blank=True)
     image = ProcessedImageField(
         upload_to=product_image_path,
-        processors=[ResizeToFill(1296, 1556)],
+        processors=[ResizeToFill(1296, 1296)],
         format='JPEG',
         options={'quality': 90},
         null=True, blank=True
@@ -35,6 +37,26 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name 
+
+def Product_add_on_image_path(instance, filename):
+    base_filename, file_extension = os.path.splitext(filename)
+    random_number = random.randint(1000, 9999)
+    return f'products/add_on/{random_number}_{instance.created_at}{file_extension}'
+
+class ProductImage(models.Model):
+    product = models.ForeignKey(Product, related_name='images', on_delete=models.CASCADE)
+    image = ProcessedImageField(
+        upload_to=Product_add_on_image_path,
+        processors=[ResizeToFill(1296, 1296)],
+        format='JPEG',
+        options={'quality': 90},
+        null=True,
+        blank=True,
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def _str_(self):
+        return f"Image for {self.product.name} - {self.created_at}"
 
 def profile_image_path(instance, filename):
     base_filename, file_extension = os.path.splitext(filename)
@@ -71,5 +93,25 @@ class Order(models.Model):
 
     def __str__(self):
         return f'{self.profile} - {self.product}'
+    
+def Product_add_on_image_path(instance, filename):
+    base_filename, file_extension = os.path.splitext(filename)
+    random_number = random.randint(1000, 9999)
+    return f'spaces/add_on/{random_number}_{instance.created_at}{file_extension}'
+
+class ProductImage(models.Model):
+    space = models.ForeignKey(Product, related_name='images', on_delete=models.CASCADE)
+    image = ProcessedImageField(
+        upload_to=Product_add_on_image_path,
+        processors=[ResizeToFill(1296, 1296)],
+        format='JPEG',
+        options={'quality': 90},
+        null=True,
+        blank=True,
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def _str_(self):
+        return f"Image for {self.space.name} - {self.created_at}"
 
 
