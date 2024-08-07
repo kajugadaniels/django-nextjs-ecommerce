@@ -11,7 +11,7 @@ interface Product {
     name: string;
     slug: string;
     image: string;
-    price: string;
+    unit_price: string;
     description: string;
     date: string;
     updated: string;
@@ -87,7 +87,7 @@ const Card = () => {
                         </div>
                         <div className='flex justify-between mt-2'>
                             <span className='font-medium'>{product.name}</span>
-                            <span className='font-semibold'>${product.price}</span>
+                            <span className='font-semibold'>${product.unit_price}</span>
                         </div>
                     </Link>
                 </motion.div>

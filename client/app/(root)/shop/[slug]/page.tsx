@@ -14,7 +14,7 @@ interface ProductData {
     name: string;
     slug: string;
     description: string;
-    price: string;
+    unit_price: string;
     category: {
         name: string; // Change this line
     };
@@ -120,7 +120,7 @@ const Product = ({ params }: ProductProps) => {
                             </div>
                             <div className="flex flex-col min-[400px]:flex-row min-[400px]:items-center mb-8 gap-y-3">
                                 <div className="flex items-center">
-                                    <h5 className="font-manrope font-semibold text-2xl leading-9 text-gray-900">${product.price}</h5>
+                                    <h5 className="font-manrope font-semibold text-2xl leading-9 text-gray-900">${product.unit_price}</h5>
                                 </div>
                             </div>
                             <p className="font-manrope font-normal text-sm text-gray-500 mb-6">
