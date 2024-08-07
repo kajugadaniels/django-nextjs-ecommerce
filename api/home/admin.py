@@ -12,9 +12,9 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'slug', 'category', 'price', 'date', 'updated')
+    list_display = ('name', 'slug', 'category', 'quantity', 'measure', 'unit_price', 'created_at', 'updated_at')
     search_fields = ('name', 'description')
-    list_filter = ('category', 'date', 'updated')
+    list_filter = ('category', 'created_at', 'updated_at')
     prepopulated_fields = {'slug': ('name',)}
     inlines = [ProductImageInline]
 
@@ -30,6 +30,6 @@ class ProfileAdmin(admin.ModelAdmin):
 
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ('profile', 'product', 'quantity', 'total_price', 'date')
+    list_display = ('profile', 'product', 'quantity', 'total_price', 'created_at')
     search_fields = ('profile__name', 'product__name')
-    list_filter = ('date',)
+    list_filter = ('created_at',)

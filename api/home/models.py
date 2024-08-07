@@ -1,13 +1,17 @@
 import os
 import random
 from django.db import models
+from django.utils import timezone
 from django.utils.text import slugify
 from imagekit.processors import ResizeToFill
 from imagekit.models import ProcessedImageField
+from django.core.exceptions import ValidationError
 
 class Category(models.Model):
-    name = models.CharField(max_length=200)
-    
+    name = models.CharField(max_length=200, null=True, blank=True)
+    created_at = models.DateField(default=timezone.now)
+    updated_at = models.DateField(auto_now=True)
+
     def __str__(self):
         return self.name
 
@@ -16,6 +20,11 @@ def product_image_path(instance, filename):
     return f'products/product_{slugify(instance.name)}_{instance.price}{file_extension}'
 
 class Product(models.Model):
+    MEASURE_CHOICES = [
+        ('KG', 'KG'),
+        ('Unit', 'Unit'),
+    ]
+
     name = models.CharField(max_length=200, null=True, blank=True)
     slug = models.SlugField(unique=True, blank=True)
     image = ProcessedImageField(
@@ -23,20 +32,25 @@ class Product(models.Model):
         processors=[ResizeToFill(1296, 1296)],
         format='JPEG',
         options={'quality': 90},
-        null=True, blank=True
+        null=True,
+        blank=True
     )
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, blank=True)
-    price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    category = models.ForeignKey('Category', on_delete=models.CASCADE, null=True, blank=True)
+    unit_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    quantity = models.PositiveIntegerField(default=0, null=True, blank=True)
+    measure = models.CharField(max_length=10, choices=MEASURE_CHOICES, default='KG')
     description = models.TextField(null=True, blank=True)
-    date = models.DateField(auto_now_add=True)
-    updated = models.DateField(auto_now=True)
+    created_at = models.DateField(default=timezone.now)
+    updated_at = models.DateField(auto_now=True)
 
     def save(self, *args, **kwargs):
+        if self.quantity < 0:
+            raise ValidationError("Quantity must not be negative.")
         self.slug = slugify(self.name)
         super(Product, self).save(*args, **kwargs)
 
     def __str__(self):
-        return self.name 
+        return self.name
 
 def Product_add_on_image_path(instance, filename):
     base_filename, file_extension = os.path.splitext(filename)
@@ -53,7 +67,8 @@ class ProductImage(models.Model):
         null=True,
         blank=True,
     )
-    created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateField(default=timezone.now)
+    updated_at = models.DateField(auto_now=True)
 
     def _str_(self):
         return f"Image for {self.product.name} - {self.created_at}"
@@ -76,6 +91,8 @@ class Profile(models.Model):
     address = models.CharField(max_length=200, null=True, blank=True)
     phone_number = models.CharField(max_length=200, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
+    created_at = models.DateField(default=timezone.now)
+    updated_at = models.DateField(auto_now=True)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
@@ -89,7 +106,8 @@ class Order(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True, blank=True)
     quantity = models.PositiveIntegerField(null=True, blank=True)
     total_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
-    date = models.DateField(auto_now_add=True)
+    created_at = models.DateField(default=timezone.now)
+    updated_at = models.DateField(auto_now=True)
 
     def __str__(self):
         return f'{self.profile} - {self.product}'
