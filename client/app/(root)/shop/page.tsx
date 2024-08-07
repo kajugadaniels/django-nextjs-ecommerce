@@ -143,7 +143,7 @@ const Shop = () => {
                             variants={itemVariants}
                             className='relative flex gap-x-4 gap-y-16 justify-between flex-wrap mb-10 group'
                         >
-                            <Link href={`/product/${product.slug}`} className='w-full flex flex-col gap-5 relative'>
+                            <Link href={`/shop/${product.slug}`} className='w-full flex flex-col gap-5 relative'>
                                 <div className='relative w-full h-80 overflow-hidden group'>
                                     <Image
                                         src={product.image}

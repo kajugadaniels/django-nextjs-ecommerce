@@ -50,7 +50,7 @@ const Card = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <Link href={`/product/${product.slug}`} className='relative w-full flex flex-col'>
+                    <Link href={`/shop/${product.slug}`} className='relative w-full flex flex-col'>
                         <div className='relative w-full h-80 overflow-hidden'>
                             <Image
                                 src={product.image}

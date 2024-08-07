@@ -5,7 +5,7 @@ export default authMiddleware({
         '/',
         '/about',
         '/shop',
-        '/product/:id',
+        '/shop/:id',
         '/contact',
         '/api/webhook/clerk'
     ]
