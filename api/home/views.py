@@ -1,6 +1,7 @@
-from rest_framework import generics
 from home.models import *
 from home.serializers import *
+from rest_framework import generics
+from rest_framework.exceptions import NotFound
 
 # Create your views here.
 class ProductList(generics.ListCreateAPIView):
@@ -17,6 +18,12 @@ class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
+    def get_object(self):
+        slug = self.kwargs.get('slug')
+        try:
+            return Product.objects.get(slug=slug)
+        except Product.DoesNotExist:
+            raise NotFound('Product not found')
 
 class CategoryList(generics.ListCreateAPIView):
     queryset = Category.objects.all()
