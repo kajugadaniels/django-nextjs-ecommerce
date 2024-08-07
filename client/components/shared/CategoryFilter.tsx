@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 interface Category {
     id: number;
@@ -7,28 +8,37 @@ interface Category {
 
 const CategoryFilter: React.FC = () => {
     const [categories, setCategories] = useState<Category[]>([]);
-    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         const fetchCategories = async () => {
+            setIsLoading(true);
             try {
                 const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories/`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
-                const data = await response.json();
+                const data: Category[] = await response.json();
                 setCategories(data);
             } catch (error) {
+                setError('Failed to fetch categories');
                 console.error('Failed to fetch categories:', error);
+            } finally {
+                setIsLoading(false);
             }
         };
 
         fetchCategories();
     }, []);
 
-    const toggleDropdown = () => {
-        setDropdownOpen(!dropdownOpen);
+    const handleFilter = (categoryId: number | null) => {
+        console.log('Selected category:', categoryId);
+        // Implement your filtering logic here
     };
+
+    if (isLoading) return <div>Loading...</div>;
+    if (error) return <div>Error: {error}</div>;
 
     return (
         <div className="w-full md:max-w-sm">
@@ -38,21 +48,16 @@ const CategoryFilter: React.FC = () => {
                 <ul className="space-y-2 mb-5">
                     {categories.map((category) => (
                         <li key={category.id} className="flex items-center">
-                            <input
-                                id={`category-${category.id}`}
-                                type="checkbox"
-                                className="w-5 h-5 appearance-none border border-gray-300 rounded-md mr-2 hover:border-indigo-500 hover:bg-indigo-100 checked:bg-no-repeat checked:bg-center checked:border-indigo-500 checked:bg-indigo-100 checked:bg-[url('https://pagedone.io/asset/uploads/1689406942.svg')]"
-                            />
-                            <label htmlFor={`category-${category.id}`} className="text-xs font-normal text-gray-600 leading-4 cursor-pointer">
+                            <Link href={`#`} onClick={() => handleFilter(category.id)} className="text-xs font-normal text-gray-600 leading-4 cursor-pointer">
                                 {category.name}
-                            </label>
+                            </Link>
                         </li>
                     ))}
                 </ul>
                 
                 <button
                     className="w-full py-2.5 flex items-center justify-center gap-2 rounded-full bg-indigo-600 text-white font-semibold text-xs shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-200"
-                    onClick={toggleDropdown}
+                    onClick={() => handleFilter(null)}
                 >
                     <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
