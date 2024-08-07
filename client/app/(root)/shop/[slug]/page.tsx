@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -15,20 +15,22 @@ interface ProductData {
     slug: string;
     description: string;
     price: string;
-    category: number;
+    category: {
+        name: string; // Change this line
+    };
     image: string;
-    images: string[];
+    images: { image: string }[];
 }
 
 interface ProductProps {
     params: {
         slug: string;
-    }
+    };
 }
 
 const Product = ({ params }: ProductProps) => {
     const [quantity, setQuantity] = useState(1);
-    const [product, setProduct] = useState<ProductData | null>(null);
+    const [product, setProduct] = useState < ProductData | null > (null);
     const [isLoading, setIsLoading] = useState(true);
     const { slug } = params;
 
@@ -86,7 +88,7 @@ const Product = ({ params }: ProductProps) => {
                             navigation
                             pagination={{ clickable: true }}
                         >
-                            {[product.image, ...product.images].map((image, index) => (
+                            {[product.image, ...product.images.map(img => img.image)].map((image, index) => (
                                 <SwiperSlide key={index} className="swiper-slide">
                                     <div className="block">
                                         <img src={image} alt={`${product.name} image ${index + 1}`} className="max-lg:mx-auto rounded-2xl" />
@@ -100,10 +102,20 @@ const Product = ({ params }: ProductProps) => {
                             <div className="flex items-center justify-between gap-6 mb-6">
                                 <div className="text">
                                     <h2 className="font-manrope font-bold text-3xl leading-10 text-gray-900 mb-2">{product.name}</h2>
-                                    <p className="font-normal text-base text-gray-500">{product.category}</p>
+                                    <p className="font-normal text-base text-gray-500">{product.category.name}</p> {/* Display category name */}
                                 </div>
                                 <button className="group transition-all duration-500 p-0.5">
-                                    {/* Wishlist button SVG */}
+                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle
+                                            className="fill-emerald-50 transition-all duration-500 group-hover:fill-emerald-100"
+                                            cx="30" cy="30" r="30" fill="" />
+                                        <path
+                                            className="stroke-emerald-600 transition-all duration-500 group-hover:stroke-emerald-700"
+                                            d="M21.4709 31.3196L30.0282 39.7501L38.96 30.9506M30.0035 22.0789C32.4787 19.6404 36.5008 19.6404 38.976 22.0789C41.4512 24.5254 41.4512 28.4799 38.9842 30.9265M29.9956 22.0789C27.5205 19.6404 23.4983 19.6404 21.0231 22.0789C18.548 24.5174 18.548 28.4799 21.0231 30.9184M21.0231 30.9184L21.0441 30.939M21.0231 30.9184L21.4628 31.3115"
+                                            stroke="" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
                                 </button>
                             </div>
                             <div className="flex flex-col min-[400px]:flex-row min-[400px]:items-center mb-8 gap-y-3">
