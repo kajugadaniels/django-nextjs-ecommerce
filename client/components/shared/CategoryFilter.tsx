@@ -1,19 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const categories = [
-    'Electronics',
-    'Fashion',
-    'Home & Garden',
-    'Sports',
-    'Toys',
-    'Automotive',
-    'Books',
-    'Health',
-    'Beauty',
-];
+interface Category {
+    id: number;
+    name: string;
+}
 
 const CategoryFilter: React.FC = () => {
+    const [categories, setCategories] = useState<Category[]>([]);
     const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    useEffect(() => {
+        const fetchCategories = async () => {
+            try {
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories/`);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                setCategories(data);
+            } catch (error) {
+                console.error('Failed to fetch categories:', error);
+            }
+        };
+
+        fetchCategories();
+    }, []);
 
     const toggleDropdown = () => {
         setDropdownOpen(!dropdownOpen);
@@ -25,15 +36,15 @@ const CategoryFilter: React.FC = () => {
                 <h6 className="font-medium text-base leading-7 text-black mb-5">Filter by Category</h6>
                 
                 <ul className="space-y-2 mb-5">
-                    {categories.map((category, index) => (
-                        <li key={index} className="flex items-center">
+                    {categories.map((category) => (
+                        <li key={category.id} className="flex items-center">
                             <input
-                                id={`category-${index}`}
+                                id={`category-${category.id}`}
                                 type="checkbox"
                                 className="w-5 h-5 appearance-none border border-gray-300 rounded-md mr-2 hover:border-indigo-500 hover:bg-indigo-100 checked:bg-no-repeat checked:bg-center checked:border-indigo-500 checked:bg-indigo-100 checked:bg-[url('https://pagedone.io/asset/uploads/1689406942.svg')]"
                             />
-                            <label htmlFor={`category-${index}`} className="text-xs font-normal text-gray-600 leading-4 cursor-pointer">
-                                {category}
+                            <label htmlFor={`category-${category.id}`} className="text-xs font-normal text-gray-600 leading-4 cursor-pointer">
+                                {category.name}
                             </label>
                         </li>
                     ))}
