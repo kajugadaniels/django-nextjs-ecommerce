@@ -136,7 +136,7 @@ JAZZMIN_SETTINGS = {
         "auth.user": "fas fa-user",
         "auth.Group": "fas fa-users",
     },
-    "custom_css": "custom.css",
+    "custom_css": "jazzmin/css/custom.css",
     "custom_js": None,
     "navbar_fixed": True,
     "layout_boxed": False,

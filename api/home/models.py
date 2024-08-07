@@ -93,25 +93,3 @@ class Order(models.Model):
 
     def __str__(self):
         return f'{self.profile} - {self.product}'
-    
-def Product_add_on_image_path(instance, filename):
-    base_filename, file_extension = os.path.splitext(filename)
-    random_number = random.randint(1000, 9999)
-    return f'spaces/add_on/{random_number}_{instance.created_at}{file_extension}'
-
-class ProductImage(models.Model):
-    space = models.ForeignKey(Product, related_name='images', on_delete=models.CASCADE)
-    image = ProcessedImageField(
-        upload_to=Product_add_on_image_path,
-        processors=[ResizeToFill(1296, 1296)],
-        format='JPEG',
-        options={'quality': 90},
-        null=True,
-        blank=True,
-    )
-    created_at = models.DateTimeField(auto_now_add=True)
-
-    def _str_(self):
-        return f"Image for {self.space.name} - {self.created_at}"
-
-
