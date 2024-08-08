@@ -6,6 +6,8 @@ import axios from 'axios';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import CategoryFilter from '@/components/shared/CategoryFilter';
+import { useRouter } from 'next/navigation';
+import { useUser } from '@clerk/nextjs';
 
 interface Product {
     id: number;
@@ -22,20 +24,31 @@ interface Product {
 }
 
 const Shop = () => {
-    const [allProducts, setAllProducts] = useState < Product[] > ([]);
-    const [displayedProducts, setDisplayedProducts] = useState < Product[] > ([]);
+    const [allProducts, setAllProducts] = useState<Product[]>([]);
+    const [displayedProducts, setDisplayedProducts] = useState<Product[]>([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [isLoading, setIsLoading] = useState(false);
     const [sortBy, setSortBy] = useState('latest');
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
     const itemsPerPage = 12;
 
-    const placeholderImage = `${process.env.NEXT_PUBLIC_API_IMAGE_URL}`;
+    const placeholderImage = `${process.env.NEXT_PUBLIC_API_IMAGE_URL}/placeholder.png`;
+
+    const router = useRouter();
+    const { isSignedIn } = useUser();
 
     const fetchProducts = async () => {
         setIsLoading(true);
         try {
-            const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/products/`);
+            let url = `${process.env.NEXT_PUBLIC_API_URL}/products?order_by=-created_at`;
+            const params = [];
+    
+            if (selectedCategory) {
+                params.push(`category_slug=${selectedCategory}`);
+            }
+    
+            const response = await axios.get(url);
             setAllProducts(response.data);
         } catch (error) {
             console.error('Error fetching products:', error);
@@ -46,7 +59,7 @@ const Shop = () => {
 
     useEffect(() => {
         fetchProducts();
-    }, []);
+    }, [selectedCategory]);
 
     useEffect(() => {
         const sortedProducts = [...allProducts].sort((a, b) => {
@@ -67,7 +80,8 @@ const Shop = () => {
 
     const handleShowMore = () => {
         if (currentPage * itemsPerPage < allProducts.length) {
-            setCurrentPage(prevPage => prevPage + 1);
+            setCurrentPage((prevPage) => prevPage + 1);
+            fetchProducts();
         }
     };
 
@@ -79,6 +93,18 @@ const Shop = () => {
 
     const toggleDropdown = () => {
         setDropdownOpen(!dropdownOpen);
+    };
+
+    const handleFilter = (categorySlug: string | null) => {
+        setSelectedCategory(categorySlug);
+    };
+
+    const handleButtonClick = () => {
+        if (isSignedIn) {
+            router.push('/cart');
+        } else {
+            router.push('/sign-in');
+        }
     };
 
     const hasMore = currentPage * itemsPerPage < allProducts.length;
@@ -151,7 +177,7 @@ const Shop = () => {
                 </motion.div>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <div className="md:col-span-1">
-                        <CategoryFilter />
+                        <CategoryFilter handleFilter={handleFilter} selectedCategory={selectedCategory} />
                     </div>
                     <motion.div
                         variants={containerVariants}
@@ -165,17 +191,24 @@ const Shop = () => {
                                 variants={itemVariants}
                                 className="relative bg-cover group rounded-3xl bg-center overflow-hidden mx-auto sm:mr-0 xl:mx-auto cursor-pointer"
                             >
-                                <img className="rounded-2xl" src={product.image || placeholderImage} alt={product.name} />
+                                <Link href={`/shop/${product.slug}`}>
+                                    <img className="rounded-2xl" src={product.image || placeholderImage} alt={product.name} />
+                                </Link>
                                 <div className="absolute z-10 bottom-3 left-0 mx-3 p-3 bg-white w-[calc(100%-24px)] rounded-xl shadow-sm shadow-transparent transition-all duration-500 group-hover:shadow-indigo-200 group-hover:bg-indigo-50">
-                                    <div className="flex items-center justify-between mb-2">
-                                        <h6 className="font-semibold text-base leading-7 text-black">{product.name}</h6>
-                                        <h6 className="font-semibold text-base leading-7 text-emerald-600 text-right">
-                                            {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(Number(product.unit_price))}
-                                        </h6>
-                                    </div>
+                                    <Link href={`/shop/${product.slug}`}>
+                                        <div className="flex items-center justify-between mb-2">
+                                            <h6 className="font-semibold text-base leading-7 text-black">{product.name}</h6>
+                                            <h6 className="font-semibold text-base leading-7 text-emerald-600 text-right">
+                                                {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(Number(product.unit_price))}
+                                            </h6>
+                                        </div>
+                                    </Link>
                                     <div className="flex items-center justify-between mb-2">
                                         <p className="text-xs leading-5 text-gray-500">{product.category.name}</p>
-                                        <button className="p-2 bg-white hover:bg-emerald-900 text-white rounded-full shadow-lg transform transition-transform duration-700 ease-in-out hover:scale-110">
+                                        <button 
+                                            className="p-2 bg-white hover:bg-emerald-900 text-white rounded-full shadow-lg transform transition-transform duration-700 ease-in-out hover:scale-110"
+                                            onClick={handleButtonClick}
+                                        >
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-emerald-900 hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path d="m19.5 9.5l-.71-2.605c-.274-1.005-.411-1.507-.692-1.886A2.5 2.5 0 0 0 17 4.172C16.56 4 16.04 4 15 4M4.5 9.5l.71-2.605c.274-1.005.411-1.507.692-1.886A2.5 2.5 0 0 1 7 4.172C7.44 4 7.96 4 9 4" />
                                                 <path d="M9 4a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1Z" />
