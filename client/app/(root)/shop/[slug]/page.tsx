@@ -16,7 +16,7 @@ interface ProductData {
     description: string;
     unit_price: string;
     category: {
-        name: string; // Change this line
+        name: string;
     };
     image: string;
     images: { image: string }[];
@@ -102,7 +102,7 @@ const Product = ({ params }: ProductProps) => {
                             <div className="flex items-center justify-between gap-6 mb-6">
                                 <div className="text">
                                     <h2 className="font-manrope font-bold text-3xl leading-10 text-gray-900 mb-2">{product.name}</h2>
-                                    <p className="font-normal text-base text-gray-500">{product.category.name}</p> {/* Display category name */}
+                                    <p className="font-normal text-base text-gray-500">{product.category.name}</p>
                                 </div>
                                 <button className="group transition-all duration-500 p-0.5">
                                     <svg width="60" height="60" viewBox="0 0 60 60" fill="none"

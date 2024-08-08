@@ -33,7 +33,7 @@ const Navbar = () => {
                             <div className="hidden lg:flex lg:items-center lg:space-x-8">
                                 <SignedOut>
                                     <Link href="/sign-in" title="" className="text-base font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> Login </Link>
-                                    <Link href="/sign-up" title="" className="text-base font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> Create Free Account </Link>
+                                    <Link href="/sign-up" title="" className="text-base font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> Register </Link>
                                 </SignedOut>
                             </div>
 
