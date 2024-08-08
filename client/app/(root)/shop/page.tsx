@@ -22,20 +22,25 @@ interface Product {
 }
 
 const Shop = () => {
-    const [allProducts, setAllProducts] = useState < Product[] > ([]);
-    const [displayedProducts, setDisplayedProducts] = useState < Product[] > ([]);
+    const [allProducts, setAllProducts] = useState<Product[]>([]);
+    const [displayedProducts, setDisplayedProducts] = useState<Product[]>([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [isLoading, setIsLoading] = useState(false);
     const [sortBy, setSortBy] = useState('latest');
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
     const itemsPerPage = 12;
 
-    const placeholderImage = `${process.env.NEXT_PUBLIC_API_IMAGE_URL}`;
+    const placeholderImage = `${process.env.NEXT_PUBLIC_API_IMAGE_URL}/placeholder.png`;
 
     const fetchProducts = async () => {
         setIsLoading(true);
         try {
-            const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/products/`);
+            let url = `${process.env.NEXT_PUBLIC_API_URL}/products/`;
+            if (selectedCategory) {
+                url += `?category_slug=${selectedCategory}`;
+            }
+            const response = await axios.get(url);
             setAllProducts(response.data);
         } catch (error) {
             console.error('Error fetching products:', error);
@@ -46,7 +51,7 @@ const Shop = () => {
 
     useEffect(() => {
         fetchProducts();
-    }, []);
+    }, [selectedCategory]);
 
     useEffect(() => {
         const sortedProducts = [...allProducts].sort((a, b) => {
@@ -67,7 +72,8 @@ const Shop = () => {
 
     const handleShowMore = () => {
         if (currentPage * itemsPerPage < allProducts.length) {
-            setCurrentPage(prevPage => prevPage + 1);
+            setCurrentPage((prevPage) => prevPage + 1);
+            fetchProducts();
         }
     };
 
@@ -79,6 +85,10 @@ const Shop = () => {
 
     const toggleDropdown = () => {
         setDropdownOpen(!dropdownOpen);
+    };
+
+    const handleFilter = (categorySlug: string | null) => {
+        setSelectedCategory(categorySlug);
     };
 
     const hasMore = currentPage * itemsPerPage < allProducts.length;
@@ -151,7 +161,7 @@ const Shop = () => {
                 </motion.div>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <div className="md:col-span-1">
-                        <CategoryFilter />
+                        <CategoryFilter handleFilter={handleFilter} selectedCategory={selectedCategory} />
                     </div>
                     <motion.div
                         variants={containerVariants}
