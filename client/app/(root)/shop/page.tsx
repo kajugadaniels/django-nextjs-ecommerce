@@ -36,10 +36,13 @@ const Shop = () => {
     const fetchProducts = async () => {
         setIsLoading(true);
         try {
-            let url = `${process.env.NEXT_PUBLIC_API_URL}/products/`;
+            let url = `${process.env.NEXT_PUBLIC_API_URL}/products?order_by=-created_at`;
+            const params = [];
+    
             if (selectedCategory) {
-                url += `?category_slug=${selectedCategory}`;
+                params.push(`category_slug=${selectedCategory}`);
             }
+    
             const response = await axios.get(url);
             setAllProducts(response.data);
         } catch (error) {
