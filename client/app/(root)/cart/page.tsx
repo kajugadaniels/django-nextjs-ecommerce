@@ -39,7 +39,6 @@ function ViewCart() {
                     <button className="px-6 py-2 bg-gray-200 text-gray-600 rounded">Clear Cart</button>
                     <div className="text-right">
                         <p className="text-lg font-medium">Subtotal: $400</p>
-                        <p className="text-gray-500">Taxes and shipping calculated at checkout.</p>
                         <button className="mt-4 px-6 py-3 bg-green-900 text-white rounded">Check out</button>
                     </div>
                 </div>

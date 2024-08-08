@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+
 
 interface CartModelProps {
   onClose: () => void;
@@ -76,7 +78,11 @@ const CartModel: React.FC<CartModelProps> = ({ onClose }) => {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
             <div className='flex justify-between text-sm'>
-              <button className='rounded-md px-3 py-4 ring-1 ring-gray-300'>View Carts</button>
+            <Link href="/cart">
+  <button className='rounded-md px-3 py-4 ring-1 ring-gray-300'>
+    View Carts
+  </button>
+  </Link>
               <button className='rounded-md px-3 py-4 bg-black text-white'>Checkout</button>
             </div>
           </div>
