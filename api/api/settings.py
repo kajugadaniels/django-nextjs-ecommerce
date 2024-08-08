@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     'corsheaders',
     
     # Custom apps
-    'accounts',
+    'account',
     'home',
 ]
 
@@ -107,12 +107,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+AUTH_USER_MODEL = 'account.User'
+
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Add your frontend URL
+    "http://localhost:3000",
 ]
 
-# Django REST Framework settings
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
