@@ -13,9 +13,9 @@ const ShoppingCart: React.FC = () => {
   const products: Product[] = [
     {
       id: 1,
-      name: 'iPhone 12 Pro',
-      image: 'https://appletoolbox.com/wp-content/uploads/2020/10/Apple-iPhone-12-Pro-image.jpeg',
-      display: '6.1-inch display',
+      name: 'beans',
+      image: 'gemin.jpeg',
+      display: 'Organic Black Beans - 500g',
       price: 999,
       quantity: 3,
     },
@@ -41,7 +41,7 @@ const ShoppingCart: React.FC = () => {
               <div className="ml-4">
                 <h5 className="font-semibold">{product.name}</h5>
                 <p className="text-gray-500">{product.display}</p>
-                <button className="text-indigo-600 mt-2">Remove</button>
+                <button className="text-green-900 mt-2">Remove</button>
               </div>
             </div>
             <div className="text-center text-lg">${product.price.toFixed(2)}</div>
@@ -64,12 +64,12 @@ const ShoppingCart: React.FC = () => {
           <div className="text-right">
             <p className="text-lg font-medium">Subtotal: ${subTotal.toFixed(2)}</p>
             <p className="text-gray-500">Taxes and shipping calculated at checkout.</p>
-            <button className="mt-4 px-6 py-3 bg-blue-600 text-white rounded">Check out</button>
+            <button className="mt-4 px-6 py-3 bg-green-900 text-white rounded">Check out</button>
           </div>
         </div>
 
         <div className="mt-4">
-          <button className="text-indigo-600 flex items-center">
+          <button className="text-green-900 flex items-center">
             <span>&larr;</span> Continue Shopping
           </button>
         </div>
