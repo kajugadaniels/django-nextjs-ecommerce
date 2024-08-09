@@ -75,23 +75,42 @@ const CheckOutForm: React.FC = () => {
                     </div>
                 </form>
             </div>
-            <div className="w-full lg:w-1/2 p-4">
+            <div className="w-full lg:w-1/2 p-6">
                 <h2 className="text-lg font-semibold mb-4">Your Order</h2>
-                <div className="mb-4 border border-border rounded-md p-2 w-1/2 max-w-xs md:max-w-sm">
-                    <div className="flex flex-col md:flex-row md:items-center">
-                        <div>
-                            <img src="gemin.jpeg" className="w-full md:w-[150px] lg:w-[200px] mx-auto" alt="Product" />
+                <div className="flex flex-cols-1 md:flex-cols-2 gap-6 ">
+                    <div className="mb-4 border border-border rounded-md  p-1 max-w-xs">
+                        <div className="flex flex-col md:flex-row md:items-center">
+                            <div>
+                                <img src="gemin.jpeg" className="w-[75px] md:w-[75px] lg:w-[100px] mx-auto" alt="Product" />
+                            </div>
+                            <div className="mt-5 md:mt-0 md:ml-2">
+                                <h3 className="font-medium">Black Beans</h3>
+                                <p className="text-sm">$120</p>
+                                <div className="flex items-center mt-2">
+                                    <label className="mr-2">Quantity:</label>
+                                    <span>200</span>
+                                </div>
+                            </div>
                         </div>
-                        <div className="mt-5 md:mt-0 md:ml-4">
-                            <h3 className="font-medium">Black Beans</h3>
-                            <p className="text-sm">$120</p>
-                            <div className="flex items-center mt-2">
-                                <label className="mr-2">Quantity:</label>
-                                <span>200</span>
+                    </div>
+
+                    <div className="mb-4 border border-border rounded-md  p-1 max-w-xs">
+                        <div className="flex flex-col md:flex-row md:items-center">
+                            <div>
+                                <img src="gemin.jpeg" className="w-[75px] md:w-[75px] lg:w-[100px] mx-auto" alt="Product" />
+                            </div>
+                            <div className="mt-5 md:mt-0 md:ml-2">
+                                <h3 className="font-medium">Black Beans</h3>
+                                <p className="text-sm">$120</p>
+                                <div className="flex items-center mt-2">
+                                    <label className="mr-2">Quantity:</label>
+                                    <span>200</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div className="bg-gray-200 text-black p-4 rounded-lg w-full md:w-4/5">
                     <div className="flex justify-between mt-4">
                         <span>Subtotal:</span>
