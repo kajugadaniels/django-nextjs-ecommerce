@@ -83,7 +83,9 @@ const CartModel: React.FC<CartModelProps> = ({ onClose }) => {
     View Carts
   </button>
   </Link>
+  <Link href="/checkout">
               <button className='rounded-md px-3 py-4 bg-black text-white'>Checkout</button>
+              </Link>
             </div>
           </div>
         </>
