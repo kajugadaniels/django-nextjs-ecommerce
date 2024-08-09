@@ -2,8 +2,8 @@ import React from 'react';
 
 const CheckOutForm: React.FC = () => {
     return (
-        <div className="flex flex-col md:flex-row p-6 bg-background rounded-lg shadow-lg">
-            <div className="w-full md:w-1/2 p-4 ml-40">
+        <div className="flex flex-col lg:flex-row p-6 bg-background rounded-lg shadow-lg">
+            <div className="w-full lg:w-1/2 p-4 lg:ml-32">
                 <h2 className="text-lg font-semibold mb-4">Billing Address</h2>
                 <form>
                     <div className="mb-4">
@@ -11,7 +11,7 @@ const CheckOutForm: React.FC = () => {
                         <input
                             type="text"
                             className="mt-1 block w-full border border-border rounded-md p-2"
-                            placeholder="you names"
+                            placeholder="Your Name"
                             required
                         />
                     </div>
@@ -29,7 +29,7 @@ const CheckOutForm: React.FC = () => {
                         <input
                             type="text"
                             className="mt-1 block w-full border border-border rounded-md p-2"
-                            placeholder="your address"
+                            placeholder="Your Address"
                         />
                     </div>
                     <div className="mb-4">
@@ -40,8 +40,8 @@ const CheckOutForm: React.FC = () => {
                             placeholder="Rwanda"
                         />
                     </div>
-                    <div className="flex space-x-4 mb-4">
-                        <div className="w-1/2">
+                    <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mb-4">
+                        <div className="w-full md:w-1/2">
                             <label className="block text-sm font-medium text-foreground">State</label>
                             <input
                                 type="text"
@@ -49,7 +49,7 @@ const CheckOutForm: React.FC = () => {
                                 placeholder="Rwanda"
                             />
                         </div>
-                        <div className="w-1/2">
+                        <div className="w-full md:w-1/2">
                             <label className="block text-sm font-medium text-foreground">City</label>
                             <input
                                 type="text"
@@ -75,49 +75,62 @@ const CheckOutForm: React.FC = () => {
                     </div>
                 </form>
             </div>
-            <div className="w-full md:w-1/2 p-4">
+            <div className="w-full lg:w-1/2 p-6">
                 <h2 className="text-lg font-semibold mb-4">Your Order</h2>
-                <div className="mb-4 border border-border rounded-md p-6 w-[250px] ">
-                    <div className=" items-center">
-
-                        <div>
-                            <img src='gemin.jpeg' className='w-[200px]' />
-                        </div>
-                        <div className='mt-5'>
-                            <h3 className="font-medium">Black Beans</h3>
-                            <p className="text-sm">$120</p>
-                            <div className="flex items-center">
-                                <label className="mx-2">Quantity:</label>
-                                <span className="mx-2">200</span>
+                <div className="flex flex-cols-1 md:flex-cols-2 gap-6 ">
+                    <div className="mb-4 border border-border rounded-md  p-1 max-w-xs">
+                        <div className="flex flex-col md:flex-row md:items-center">
+                            <div>
+                                <img src="gemin.jpeg" className="w-[75px] md:w-[75px] lg:w-[100px] mx-auto" alt="Product" />
                             </div>
-
+                            <div className="mt-5 md:mt-0 md:ml-2">
+                                <h3 className="font-medium">Black Beans</h3>
+                                <p className="text-sm">$120</p>
+                                <div className="flex items-center mt-2">
+                                    <label className="mr-2">Quantity:</label>
+                                    <span>200</span>
+                                </div>
+                            </div>
                         </div>
+                    </div>
 
+                    <div className="mb-4 border border-border rounded-md  p-1 max-w-xs">
+                        <div className="flex flex-col md:flex-row md:items-center">
+                            <div>
+                                <img src="gemin.jpeg" className="w-[75px] md:w-[75px] lg:w-[100px] mx-auto" alt="Product" />
+                            </div>
+                            <div className="mt-5 md:mt-0 md:ml-2">
+                                <h3 className="font-medium">Black Beans</h3>
+                                <p className="text-sm">$120</p>
+                                <div className="flex items-center mt-2">
+                                    <label className="mr-2">Quantity:</label>
+                                    <span>200</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className='bg-gray-100 p-4 border-rounded'>
+
+                <div className="bg-gray-200 text-black p-4 rounded-lg w-full md:w-4/5">
                     <div className="flex justify-between mt-4">
                         <span>Subtotal:</span>
                         <span>$220.00</span>
                     </div>
-                    <hr className='mt-6' />
+                    <hr className="mt-6" />
                     <div className="flex justify-between mt-2">
                         <span>Delivery:</span>
                         <span>$2.00</span>
                     </div>
-                    <hr className='mt-6' />
-                    <div className="flex justify-between  mt-6 font-semibold">
+                    <hr className="mt-6" />
+                    <div className="flex justify-between mt-6 font-semibold">
                         <span>Total:</span>
                         <span>$222.00</span>
                     </div>
                 </div>
-
-                <div className="flex gap-24 mt-6 ml-28">
-                    <button className="bg-gray-200 text-black p-4 rounded-lg w-1/3">Cancel Order</button>
-                    <button className="bg-green-900 text-primary-foreground p-4 rounded-lg w-1/3">Place Order</button>
+                <div className="flex flex-col md:flex-row gap-6 mt-6 ">
+                    <button className="bg-gray-200 text-black p-4 rounded-lg w-full md:w-1/3">Cancel Order</button>
+                    <button className="bg-green-900 text-primary-foreground p-4 rounded-lg w-full md:w-1/3">Place Order</button>
                 </div>
-
-
             </div>
         </div>
     );
