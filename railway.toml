@@ -1,0 +1,7 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "./client/Dockerfile"
+
+[deploy]
+startCommand = "npm run dev"
+restartPolicyType = "ON_FAILURE"
