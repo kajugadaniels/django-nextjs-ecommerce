@@ -75,9 +75,6 @@ class ProductCategory(models.Model):
     class Meta:
         unique_together = ('product', 'category')
 
-    class Meta:
-        unique_together = ('product', 'category')
-
 def Product_add_on_image_path(instance, filename):
     base_filename, file_extension = os.path.splitext(filename)
     random_number = random.randint(1000, 9999)

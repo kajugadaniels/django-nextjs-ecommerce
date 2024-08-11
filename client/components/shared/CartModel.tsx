@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+
 
 interface CartModelProps {
-  onClose: () => void;
+    onClose: () => void;
 }
 
 const CartModel: React.FC<CartModelProps> = ({ onClose }) => {
-  const cartItems = true;
+    const cartItems = true;
 
   return (
     <div className='w-max absolute right-0 mt-2 p-4 rounded-md shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-white top-full flex flex-col gap-6 z-20'>
@@ -76,8 +78,14 @@ const CartModel: React.FC<CartModelProps> = ({ onClose }) => {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
             <div className='flex justify-between text-sm'>
-              <button className='rounded-md px-3 py-4 ring-1 ring-gray-300'>View Carts</button>
+            <Link href="/cart">
+  <button className='rounded-md px-3 py-4 ring-1 ring-gray-300'>
+    View Carts
+  </button>
+  </Link>
+  <Link href="/checkout">
               <button className='rounded-md px-3 py-4 bg-black text-white'>Checkout</button>
+              </Link>
             </div>
           </div>
         </>
@@ -87,17 +95,17 @@ const CartModel: React.FC<CartModelProps> = ({ onClose }) => {
 };
 
 const ParentComponent: React.FC = () => {
-  const [isCartOpen, setIsCartOpen] = useState(true);
+    const [isCartOpen, setIsCartOpen] = useState(true);
 
-  const handleCartClose = () => {
-    setIsCartOpen(false);
-  };
+    const handleCartClose = () => {
+        setIsCartOpen(false);
+    };
 
-  return (
-    <div>
-      {isCartOpen && <CartModel onClose={handleCartClose} />}
-    </div>
-  );
+    return (
+        <div>
+            {isCartOpen && <CartModel onClose={handleCartClose} />}
+        </div>
+    );
 };
 
 export default ParentComponent;
