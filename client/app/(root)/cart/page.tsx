@@ -6,14 +6,16 @@ function ViewCart() {
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 ">
                 <h2 className="text-2xl font-bold text-center mb-8">Shopping Cart</h2>
                 <div className='bg-gray-100 p-10 rounded-lg'>
-                    <div className="grid grid-cols-5 text-sm font-medium text-gray-700 border-b py-2">
+                    <div className="grid grid-cols-5 text-sm font-medium text-gray-700 border-b py-2" data-aos="fade-up"
+                        data-aos-duration="3000">
                         <div className="col-span-2 font-bold">PRODUCT</div>
                         <div className="text-center font-bold">PRICE</div>
                         <div className="text-center font-bold">QUANTITY</div>
                         <div className="text-right font-bold">TOTAL</div>
                     </div>
 
-                    <div className="grid grid-cols-5 gap-4 items-center py-4 border-b">
+                    <div className="grid grid-cols-5 gap-4 items-center py-4 border-b" data-aos="fade-up"
+                        data-aos-duration="3000">
                         <div className="flex col-span-2 items-center">
                             <img src='' alt='' className="w-20 h-20 object-cover rounded-lg" />
                             <div className="ml-4">
@@ -37,10 +39,13 @@ function ViewCart() {
                     </div>
 
                     <div className="flex justify-between items-center mt-8">
-                        <button className="px-6 py-2 bg-gray-200 text-gray-600 rounded">Clear Cart</button>
+                        <button className="px-6 py-2 bg-gray-200 text-gray-600 rounded" data-aos="fade-up"
+                            data-aos-duration="3000">Clear Cart</button>
                         <div className="text-right">
-                            <p className="text-lg font-medium">Subtotal: $400</p>
-                            <button className="mt-4 px-6 py-3 bg-green-900 text-white rounded">Check out</button>
+                            <p className="text-lg font-medium" data-aos="fade-up"
+                                data-aos-duration="3000">Subtotal: $400</p>
+                            <button className="mt-4 px-6 py-3 bg-green-900 text-white rounded" data-aos="fade-up"
+                                data-aos-duration="3000">Check out</button>
                         </div>
                     </div>
 

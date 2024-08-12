@@ -75,10 +75,10 @@ const Navbar = () => {
                 <div className="py-5">
                     <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                         <nav className="flex items-center space-x-8">
-                            <Link href="/" title="" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> Home </Link>
-                            <Link href="/about" title="" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> About Us </Link>
-                            <Link href="/shop" title="" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> Shop </Link>
-                            <Link href="/contact" title="" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-gray-700 focus:outline-none"> Contact Us </Link>
+                            <Link href="/" title="" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded  focus:outline-none hover:text-green-800 hover:underline"> Home </Link>
+                            <Link href="/about" title="" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-green-800 hover:underline focus:outline-none"> About Us </Link>
+                            <Link href="/shop" title="" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-green-800 hover:underline focus:outline-none"> Shop </Link>
+                            <Link href="/contact" title="" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-green-900 hover:underline focus:outline-none"> Contact Us </Link>
                         </nav>
                     </div>
                 </div>
