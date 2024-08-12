@@ -66,9 +66,11 @@ const Card = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
+
                 >
                     <Link href={`/shop/${product.slug}`}>
-                        <img className="rounded-2xl" src={product.image || placeholderImage} alt={product.name} />
+                        <img className="rounded-2xl" src={product.image || placeholderImage} alt={product.name} data-aos="fade-up"
+                            data-aos-duration="3000" />
                     </Link>
                     <div className="absolute z-10 bottom-3 left-0 mx-3 p-3 bg-white w-[calc(100%-24px)] rounded-xl shadow-sm shadow-transparent transition-all duration-500 group-hover:shadow-indigo-200 group-hover:bg-indigo-50">
                         <Link href={`/shop/${product.slug}`}>
@@ -81,7 +83,7 @@ const Card = () => {
                         </Link>
                         <div className="flex items-center justify-between mb-2">
                             <p className="text-xs leading-5 text-gray-500">{product.category.name}</p>
-                            <button 
+                            <button
                                 className="p-2 bg-white hover:bg-emerald-900 text-white rounded-full shadow-lg transform transition-transform duration-700 ease-in-out hover:scale-110"
                                 onClick={handleButtonClick}
                             >
