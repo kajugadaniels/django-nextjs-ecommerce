@@ -2,7 +2,7 @@ import React from 'react';
 
 const CheckOutForm: React.FC = () => {
     return (
-        <div className="flex flex-col lg:flex-row p-6 bg-background rounded-lg shadow-lg">
+        <div className="flex flex-col lg:flex-row p-6 bg-background rounded-lg shadow-lg mt-40">
             <div className="w-full lg:w-1/2 p-4 lg:ml-32 bg-gray-100 shadow-md rounded-md">
                 <h2 className="text-lg font-semibold mb-4">Billing Address</h2>
                 <form >
