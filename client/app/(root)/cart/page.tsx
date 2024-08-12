@@ -2,7 +2,7 @@ import React from 'react'
 
 function ViewCart() {
     return (
-        <section className="py-12 ">
+        <section className="py-12  mt-40">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 ">
                 <h2 className="text-2xl font-bold text-center mb-8">Shopping Cart</h2>
                 <div className='bg-gray-100 p-10 rounded-lg'>

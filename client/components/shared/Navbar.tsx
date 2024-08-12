@@ -13,9 +13,9 @@ const Navbar = () => {
     }
 
     return (
-        <header>
-            <div className="bg-white border-b border-gray-100">
-                <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <header className='fixed top-0 left-0 w-full z-50'>
+            <div className="bg-gray-200 border-b border-green-700">
+                <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl ">
                     <div className="flex items-center justify-between h-24 lg:h-[72px]">
                         <button type="button" className="p-2 -m-2 text-gray-900 transition-all duration-200 lg:hidden hover:text-gray-700">
                             <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
