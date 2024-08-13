@@ -8,6 +8,8 @@ import { motion } from 'framer-motion';
 import CategoryFilter from '@/components/shared/CategoryFilter';
 import { useRouter } from 'next/navigation';
 import { useUser } from '@clerk/nextjs';
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 interface Product {
     id: number;
@@ -99,9 +101,43 @@ const Shop = () => {
         setSelectedCategory(categorySlug);
     };
 
-    const handleButtonClick = () => {
+    const showNotification = (message: string, icon: 'success' | 'error') => {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-start',
+            showConfirmButton: false,
+            timer: 4000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        });
+
+        Toast.fire({
+            icon: icon,
+            title: message
+        });
+    };
+
+    const addToCart = (product: Product) => {
+        const cart = JSON.parse(localStorage.getItem('userCart') || '[]');
+        const existingItemIndex = cart.findIndex((item: Product) => item.id === product.id);
+
+        if (existingItemIndex > -1) {
+            cart[existingItemIndex].quantity += 1;
+            cart[existingItemIndex].timestamp = Date.now();
+        } else {
+            cart.push({ ...product, quantity: 1, timestamp: Date.now() });
+        }
+
+        localStorage.setItem('userCart', JSON.stringify(cart));
+        showNotification('Product added to cart!', 'success');
+    };
+
+    const handleButtonClick = (product: Product) => {
         if (isSignedIn) {
-            router.push('/cart');
+            addToCart(product);
         } else {
             router.push('/sign-in');
         }
@@ -207,7 +243,7 @@ const Shop = () => {
                                         <p className="text-xs leading-5 text-gray-500">{product.category.name}</p>
                                         <button 
                                             className="p-2 bg-white hover:bg-emerald-900 text-white rounded-full shadow-lg transform transition-transform duration-700 ease-in-out hover:scale-110"
-                                            onClick={handleButtonClick}
+                                            onClick={() => handleButtonClick(product)}
                                         >
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-emerald-900 hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path d="m19.5 9.5l-.71-2.605c-.274-1.005-.411-1.507-.692-1.886A2.5 2.5 0 0 0 17 4.172C16.56 4 16.04 4 15 4M4.5 9.5l.71-2.605c.274-1.005.411-1.507.692-1.886A2.5 2.5 0 0 1 7 4.172C7.44 4 7.96 4 9 4" />
@@ -221,26 +257,26 @@ const Shop = () => {
                             </motion.div>
                         ))}
                     </motion.div>
-
-                    {hasMore && (
-                        <div className='flex justify-center mt-8'>
-                            <button
-                                onClick={handleShowMore}
-                                className='px-4 py-2 bg-blue-500 text-white rounded-md shadow-lg hover:bg-blue-600'
-                            >
-                                Show More
-                            </button>
-                        </div>
-                    )}
-                    {isLoading && (
-                        <div className="flex justify-center py-4">
-                            <svg className="animate-spin h-8 w-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                                <path className="opacity-75" fill="currentColor" d="M4 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8-8-3.582-8-8zm8-6c-1.218 0-2.323.502-3.116 1.293L12 12l3.116 3.116C17.323 16.502 16.218 18 15 18c-1.218 0-2.323-.502-3.116-1.293L12 12 8.884 8.884C7.691 7.502 8.795 6 10 6z"></path>
-                            </svg>
-                        </div>
-                    )}
                 </div>
+
+                {hasMore && (
+                    <div className='flex justify-center mt-8'>
+                        <button
+                            onClick={handleShowMore}
+                            className='px-4 py-2 bg-blue-500 text-white rounded-md shadow-lg hover:bg-blue-600'
+                        >
+                            Show More
+                        </button>
+                    </div>
+                )}
+                {isLoading && (
+                    <div className="flex justify-center py-4">
+                        <svg className="animate-spin h-8 w-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8-8-3.582-8-8zm8-6c-1.218 0-2.323.502-3.116 1.293L12 12l3.116 3.116C17.323 16.502 16.218 18 15 18c-1.218 0-2.323-.502-3.116-1.293L12 12 8.884 8.884C7.691 7.502 8.795 6 10 6z"></path>
+                        </svg>
+                    </div>
+                )}
             </div>
         </section>
     );
