@@ -28,9 +28,17 @@ interface ProductProps {
     };
 }
 
+interface CartItem extends ProductData {
+    quantity: number;
+    timestamp: number;
+}
+
+const CART_STORAGE_KEY = 'userCart';
+const CART_EXPIRY_TIME = 60 * 60 * 1000; // 1 hour in milliseconds
+
 const Product = ({ params }: ProductProps) => {
     const [quantity, setQuantity] = useState(1);
-    const [product, setProduct] = useState < ProductData | null > (null);
+    const [product, setProduct] = useState<ProductData | null>(null);
     const [isLoading, setIsLoading] = useState(true);
     const { slug } = params;
 
@@ -51,6 +59,20 @@ const Product = ({ params }: ProductProps) => {
         fetchProduct();
     }, [slug]);
 
+    useEffect(() => {
+        const cleanupExpiredItems = () => {
+            const cartItems = JSON.parse(localStorage.getItem(CART_STORAGE_KEY) || '[]');
+            const currentTime = Date.now();
+            const updatedCart = cartItems.filter((item: CartItem) => currentTime - item.timestamp < CART_EXPIRY_TIME);
+            localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(updatedCart));
+        };
+
+        cleanupExpiredItems();
+        const intervalId = setInterval(cleanupExpiredItems, 60000); // Run cleanup every minute
+
+        return () => clearInterval(intervalId);
+    }, []);
+
     const handleQuantityChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setQuantity(parseInt(event.target.value));
     };
@@ -63,6 +85,23 @@ const Product = ({ params }: ProductProps) => {
         setQuantity(prev => prev + 1);
     };
 
+    const addToCart = () => {
+        if (product) {
+            const cartItems: CartItem[] = JSON.parse(localStorage.getItem(CART_STORAGE_KEY) || '[]');
+            const existingItemIndex = cartItems.findIndex(item => item.id === product.id);
+
+            if (existingItemIndex > -1) {
+                cartItems[existingItemIndex].quantity += quantity;
+                cartItems[existingItemIndex].timestamp = Date.now();
+            } else {
+                cartItems.push({ ...product, quantity, timestamp: Date.now() });
+            }
+
+            localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cartItems));
+            alert('Product added to cart!');
+        }
+    };
+
     if (isLoading) {
         return <div>Loading...</div>;
     }
@@ -72,7 +111,7 @@ const Product = ({ params }: ProductProps) => {
     }
 
     return (
-        <section className="py-24">
+        <section className="py-36">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2">
                     <div className="slider-box w-full h-full max-lg:mx-auto mx-0">
@@ -154,7 +193,12 @@ const Product = ({ params }: ProductProps) => {
                                         </button>
                                     </div>
                                 </div>
-                                <button className="bg-emerald-800 hover:bg-emerald-900 text-white font-manrope text-base font-bold leading-5 py-3.5 px-8 rounded-full transition-all duration-500">Add to Cart</button>
+                                <button 
+                                    className="bg-emerald-800 hover:bg-emerald-900 text-white font-manrope text-base font-bold leading-5 py-3.5 px-8 rounded-full transition-all duration-500"
+                                    onClick={addToCart}
+                                >
+                                    Add to Cart
+                                </button>
                             </div>
                         </div>
                     </div>
