@@ -7,6 +7,8 @@ import axios from 'axios';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { useUser } from '@clerk/nextjs';
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 interface Product {
     id: number;
@@ -30,9 +32,43 @@ const Card = () => {
 
     const placeholderImage = `${process.env.NEXT_PUBLIC_API_IMAGE_URL}`;
 
-    const handleButtonClick = () => {
+    const showNotification = (message: string, icon: 'success' | 'error') => {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-start',
+            showConfirmButton: false,
+            timer: 4000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        });
+
+        Toast.fire({
+            icon: icon,
+            title: message
+        });
+    };
+
+    const addToCart = (product: Product) => {
+        const cart = JSON.parse(localStorage.getItem('userCart') || '[]');
+        const existingItemIndex = cart.findIndex((item: Product) => item.id === product.id);
+
+        if (existingItemIndex > -1) {
+            cart[existingItemIndex].quantity += 1;
+            cart[existingItemIndex].timestamp = Date.now();
+        } else {
+            cart.push({ ...product, quantity: 1, timestamp: Date.now() });
+        }
+
+        localStorage.setItem('userCart', JSON.stringify(cart));
+        showNotification('Product added to cart!', 'success');
+    };
+
+    const handleButtonClick = (product: Product) => {
         if (isSignedIn) {
-            router.push('/cart');
+            addToCart(product);
         } else {
             router.push('/sign-in');
         }
@@ -66,7 +102,6 @@ const Card = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-
                 >
                     <Link href={`/shop/${product.slug}`}>
                         <img className="rounded-2xl" src={product.image || placeholderImage} alt={product.name} data-aos="fade-up"
@@ -85,7 +120,7 @@ const Card = () => {
                             <p className="text-xs leading-5 text-gray-500">{product.category.name}</p>
                             <button
                                 className="p-2 bg-white hover:bg-emerald-900 text-white rounded-full shadow-lg transform transition-transform duration-700 ease-in-out hover:scale-110"
-                                onClick={handleButtonClick}
+                                onClick={() => handleButtonClick(product)}
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-emerald-900 hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path d="m19.5 9.5l-.71-2.605c-.274-1.005-.411-1.507-.692-1.886A2.5 2.5 0 0 0 17 4.172C16.56 4 16.04 4 15 4M4.5 9.5l.71-2.605c.274-1.005.411-1.507.692-1.886A2.5 2.5 0 0 1 7 4.172C7.44 4 7.96 4 9 4" />
