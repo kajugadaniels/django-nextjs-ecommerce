@@ -1,9 +1,9 @@
 "use client"
 
-import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import CategoryFilter from '@/components/shared/CategoryFilter';
 import { useRouter } from 'next/navigation';
@@ -19,13 +19,14 @@ interface Product {
     unit_price: string;
     category: {
         name: string;
+        slug: string;
     };
     description: string;
     date: string;
     updated: string;
 }
 
-const Shop = () => {
+const Shop: React.FC = () => {
     const [allProducts, setAllProducts] = useState<Product[]>([]);
     const [displayedProducts, setDisplayedProducts] = useState<Product[]>([]);
     const [currentPage, setCurrentPage] = useState(1);
@@ -43,13 +44,10 @@ const Shop = () => {
     const fetchProducts = async () => {
         setIsLoading(true);
         try {
-            let url = `${process.env.NEXT_PUBLIC_API_URL}/products?order_by=-created_at`;
-            const params = [];
-    
+            let url = `${process.env.NEXT_PUBLIC_API_URL}/products/`;
             if (selectedCategory) {
-                params.push(`category_slug=${selectedCategory}`);
+                url += `category/${selectedCategory}/`;
             }
-    
             const response = await axios.get(url);
             setAllProducts(response.data);
         } catch (error) {
@@ -83,7 +81,6 @@ const Shop = () => {
     const handleShowMore = () => {
         if (currentPage * itemsPerPage < allProducts.length) {
             setCurrentPage((prevPage) => prevPage + 1);
-            fetchProducts();
         }
     };
 
@@ -99,6 +96,7 @@ const Shop = () => {
 
     const handleFilter = (categorySlug: string | null) => {
         setSelectedCategory(categorySlug);
+        setCurrentPage(1);
     };
 
     const showNotification = (message: string, icon: 'success' | 'error') => {
@@ -263,7 +261,7 @@ const Shop = () => {
                     <div className='flex justify-center mt-8'>
                         <button
                             onClick={handleShowMore}
-                            className='px-4 py-2 bg-blue-500 text-white rounded-md shadow-lg hover:bg-blue-600'
+                            className='px-4 py-2 bg-blue-500 text-white rounded-md shadow-lg hover:bg-blue-600 transition duration-300 ease-in-out'
                         >
                             Show More
                         </button>
@@ -273,7 +271,7 @@ const Shop = () => {
                     <div className="flex justify-center py-4">
                         <svg className="animate-spin h-8 w-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                            <path className="opacity-75" fill="currentColor" d="M4 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8-8-3.582-8-8zm8-6c-1.218 0-2.323.502-3.116 1.293L12 12l3.116 3.116C17.323 16.502 16.218 18 15 18c-1.218 0-2.323-.502-3.116-1.293L12 12 8.884 8.884C7.691 7.502 8.795 6 10 6z"></path>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
                     </div>
                 )}
