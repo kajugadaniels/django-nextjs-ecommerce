@@ -27,21 +27,19 @@ const Navbar: React.FC = () => {
             }
         };
 
-        // Add event listeners
         document.addEventListener('mousedown', handleOutsideClick);
 
-        // Clean up event listeners
         return () => {
             document.removeEventListener('mousedown', handleOutsideClick);
         };
     }, []);
 
-    // Close cart when pathname changes
     useEffect(() => {
         closeCart();
     }, [pathname]);
 
-    const itemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+    // Count unique products in cart
+    const uniqueProductCount = new Set(cartItems.map(item => item.id)).size;
 
     return (
         <header className='fixed top-0 left-0 w-full z-50'>
@@ -92,9 +90,9 @@ const Navbar: React.FC = () => {
                                         <svg className="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                                         </svg>
-                                        {itemCount > 0 && (
+                                        {uniqueProductCount > 0 && (
                                             <span className="absolute top-0 right-0 inline-flex items-center justify-center w-4 h-4 text-xs font-bold text-white bg-red-500 rounded-full">
-                                                {itemCount}
+                                                {uniqueProductCount}
                                             </span>
                                         )}
                                     </button>

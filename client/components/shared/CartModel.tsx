@@ -38,22 +38,36 @@ export const useCartItems = () => {
 };
 
 const CartModel: React.FC<CartModelProps> = ({ onClose }) => {
-    const cartItems = useCartItems();
+    const [cartItems, setCartItems] = useState<CartItem[]>([]);
+
+    useEffect(() => {
+        const loadCart = () => {
+            const storedCart = JSON.parse(localStorage.getItem(CART_STORAGE_KEY) || '[]');
+            setCartItems(storedCart);
+        };
+
+        loadCart();
+        const intervalId = setInterval(loadCart, 1000); // Refresh cart every second
+
+        return () => clearInterval(intervalId);
+    }, []);
 
     const updateQuantity = (id: number, newQuantity: number) => {
         if (newQuantity < 1) return;
         const updatedCart = cartItems.map(item => 
             item.id === id ? { ...item, quantity: newQuantity } : item
         );
+        setCartItems(updatedCart);
         localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(updatedCart));
     };
 
     const removeItem = (id: number) => {
         const updatedCart = cartItems.filter(item => item.id !== id);
+        setCartItems(updatedCart);
         localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(updatedCart));
     };
 
-    const formatPrice = (price: number | string): string => {
+    const formatPrice = (price: number | string | undefined): string => {
         if (typeof price === 'number') {
             return price.toFixed(2);
         }
@@ -64,10 +78,12 @@ const CartModel: React.FC<CartModelProps> = ({ onClose }) => {
         return '0.00';
     };
 
-    const totalPrice = cartItems.reduce((total, item) => {
+    const calculateItemTotal = (item: CartItem): number => {
         const itemPrice = typeof item.price === 'number' ? item.price : parseFloat(item.price) || 0;
-        return total + itemPrice * item.quantity;
-    }, 0);
+        return itemPrice * item.quantity;
+    };
+
+    const totalPrice = cartItems.reduce((total, item) => total + calculateItemTotal(item), 0);
 
     return (
         <motion.div
@@ -97,6 +113,7 @@ const CartModel: React.FC<CartModelProps> = ({ onClose }) => {
                                     <div className="flex-grow">
                                         <h3 className="text-sm font-medium text-gray-900">{item.name}</h3>
                                         <p className="text-sm text-gray-500">${formatPrice(item.price)}</p>
+                                        <p className="text-sm font-bold text-gray-700">Total: ${formatPrice(calculateItemTotal(item))}</p>
                                     </div>
                                     <div className="flex items-center space-x-2">
                                         <button 
@@ -129,12 +146,12 @@ const CartModel: React.FC<CartModelProps> = ({ onClose }) => {
                                 <span className="text-lg font-medium text-gray-900">Total</span>
                                 <span className="text-lg font-bold text-gray-900">${formatPrice(totalPrice)}</span>
                             </div>
-                            <Link href="/checkout" passHref>
+                            <Link href="/cart">
                                 <button 
                                     onClick={onClose} 
                                     className="w-full bg-green-600 text-white py-3 px-4 rounded-md hover:bg-green-700 transition duration-300"
                                 >
-                                    Proceed to Checkout
+                                    View Cart
                                 </button>
                             </Link>
                         </div>
