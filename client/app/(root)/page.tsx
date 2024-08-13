@@ -1,6 +1,7 @@
 import Card from '@/components/shared/Card';
 import Hero from '@/components/shared/Hero';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 import React from 'react';
 
 const Home = () => {
@@ -13,8 +14,7 @@ const Home = () => {
                     <div className="max-w-2xl mx-auto text-center">
                         <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl" data-aos="fade-up"
                             data-aos-duration="3000">How does it work?</h2>
-                        <p className="max-w-lg mx-auto mt-4 text-base leading-relaxed text-gray-600" data-aos="fade-up"
-     data-aos-duration="3000">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.</p>
+                        <p className="max-w-lg mx-auto mt-4 text-base leading-relaxed text-gray-600" data-aos="fade-up" data-aos-duration="3000">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.</p>
                     </div>
 
                     <div className="relative mt-12 lg:mt-20">
@@ -161,7 +161,9 @@ const Home = () => {
                                     </div>
                                 </div>
 
-                                <Button className='px-10 py-6 bg-emerald-800 hover:bg-emerald-900'>Start Shopping</Button>
+                                <Link href='/shop'>
+                                    <Button className='px-10 py-6 bg-emerald-800 hover:bg-emerald-900 text-white'>Start Shopping</Button>
+                                </Link>
                             </div>
                         </div>
                     </div>

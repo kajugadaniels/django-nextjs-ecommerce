@@ -1,6 +1,7 @@
 'use client';
 import React from 'react'
 import { Button } from '../ui/button'
+import Link from 'next/link';
 
 const Hero = () => {
     return (
@@ -18,7 +19,9 @@ const Hero = () => {
                         data-aos-duration="3000">Discover the Best Selection of Long-Lasting Produce.</h1>
 
                     <div className="mt-8 sm:mt-12">
-                        <Button className='px-10 py-6 bg-emerald-800 hover:bg-emerald-900'>Start Shopping</Button>
+                        <Link href='/shop'>
+                            <Button className='px-10 py-6 bg-emerald-800 hover:bg-emerald-900 text-white'>Start Shopping</Button>
+                        </Link>
                     </div>
                 </div>
             </div>
