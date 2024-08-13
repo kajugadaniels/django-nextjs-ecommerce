@@ -7,10 +7,13 @@ const Footer = () => {
                 <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
                     <div className="col-span-3 md:col-span-4 lg:col-span-3 lg:pr-8">
                     
-                        <h1 className='text-emerald-800 font-bold'>E-GREEN</h1>
-                        <p className="text-base leading-relaxed text-gray-600 mt-7">Discover the future of farming with our e-commerce platform, where cutting-edge technology meets sustainable agriculture. Connect with top-quality suppliers, access innovative products, and elevate your agricultural business to new heights.</p>
+                        <h1 className='text-emerald-800 font-bold' data-aos="fade-up"
+     data-aos-duration="3000">E-GREEN</h1>
+                        <p className="text-base leading-relaxed text-gray-600 mt-7" data-aos="fade-up"
+     data-aos-duration="3000">Discover the future of farming with our e-commerce platform, where cutting-edge technology meets sustainable agriculture. Connect with top-quality suppliers, access innovative products, and elevate your agricultural business to new heights.</p>
 
-                        <ul className="flex items-center space-x-3 mt-9">
+                        <ul className="flex items-center space-x-3 mt-9" data-aos="fade-up"
+     data-aos-duration="3000">
                             <li>
                                 <a href="#" title="" className="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-emerald-800 focus:bg-emerald-800">
                                     <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -55,7 +58,8 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div>
+                    <div data-aos="fade-up"
+     data-aos-duration="3000">
                         <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">Pages</p>
 
                         <ul className="mt-6 space-y-4">

@@ -8,7 +8,7 @@ SECRET_KEY = 'django-insecure-levm$gv6!p&jq)547(4+4ml5d+cs#g6ytp@8j%crnnl%a(gza7
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 INSTALLED_APPS = [
@@ -163,3 +163,5 @@ JAZZMIN_SETTINGS = {
     "changeform_format_overrides": {"auth.user": "collapsible", "auth.group": "vertical_tabs"},
     "related_modal_active": False,
 }
+
+CSRF_TRUSTED_ORIGINS = ['https://ecommerce-api-pro.up.railway.app','https://*.127.0.0.1']
