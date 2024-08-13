@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 interface CartItem {
     id: number;
     name: string;
-    price: number | string; // Allow for string prices
+    unit_price: number | string;
     image: string;
     quantity: number;
 }
@@ -29,7 +29,7 @@ export const useCartItems = () => {
         };
 
         loadCart();
-        const intervalId = setInterval(loadCart, 1000); // Refresh cart every second
+        const intervalId = setInterval(loadCart, 1000);
 
         return () => clearInterval(intervalId);
     }, []);
@@ -79,7 +79,7 @@ const CartModel: React.FC<CartModelProps> = ({ onClose }) => {
     };
 
     const calculateItemTotal = (item: CartItem): number => {
-        const itemPrice = typeof item.price === 'number' ? item.price : parseFloat(item.price) || 0;
+        const itemPrice = typeof item.unit_price === 'number' ? item.unit_price : parseFloat(item.unit_price) || 0;
         return itemPrice * item.quantity;
     };
 
@@ -112,7 +112,7 @@ const CartModel: React.FC<CartModelProps> = ({ onClose }) => {
                                     <Image src={item.image} alt={item.name} width={60} height={60} className="rounded-md" />
                                     <div className="flex-grow">
                                         <h3 className="text-sm font-medium text-gray-900">{item.name}</h3>
-                                        <p className="text-sm text-gray-500">${formatPrice(item.price)}</p>
+                                        <p className="text-sm text-gray-500">${formatPrice(item.unit_price)}</p>
                                         <p className="text-sm font-bold text-gray-700">Total: ${formatPrice(calculateItemTotal(item))}</p>
                                     </div>
                                     <div className="flex items-center space-x-2">
