@@ -4,12 +4,15 @@ import React, { useState, useEffect, useRef } from 'react';
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import CartModel, { useCartItems } from './CartModel'; // Ensure CartModel is correctly imported
+import CartModel, { useCartItems } from './CartModel';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar: React.FC = () => {
     const [isCartOpen, setIsCartOpen] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const cartItems = useCartItems();
     const cartRef = useRef<HTMLDivElement>(null);
+    const mobileMenuRef = useRef<HTMLDivElement>(null);
     const pathname = usePathname();
 
     const toggleCart = () => {
@@ -20,10 +23,21 @@ const Navbar: React.FC = () => {
         setIsCartOpen(false);
     };
 
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
+    const closeMobileMenu = () => {
+        setIsMobileMenuOpen(false);
+    };
+
     useEffect(() => {
         const handleOutsideClick = (event: MouseEvent) => {
             if (cartRef.current && !cartRef.current.contains(event.target as Node)) {
                 closeCart();
+            }
+            if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
+                closeMobileMenu();
             }
         };
 
@@ -36,9 +50,9 @@ const Navbar: React.FC = () => {
 
     useEffect(() => {
         closeCart();
+        closeMobileMenu();
     }, [pathname]);
 
-    // Count unique products in cart
     const uniqueProductCount = new Set(cartItems.map(item => item.id)).size;
 
     return (
@@ -46,7 +60,11 @@ const Navbar: React.FC = () => {
             <div className="bg-green-800 border-b border-gray-700">
                 <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                     <div className="flex items-center justify-between h-24 lg:h-[72px]">
-                        <button type="button" className="p-2 -m-2 text-gray-900 transition-all duration-200 lg:hidden hover:text-gray-700">
+                        <button 
+                            type="button" 
+                            className="p-2 -m-2 text-white transition-all duration-200 lg:hidden hover:text-white"
+                            onClick={toggleMobileMenu}
+                        >
                             <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
@@ -61,10 +79,10 @@ const Navbar: React.FC = () => {
                         <div className="flex items-center justify-end ml-auto">
                             <div className="hidden lg:flex lg:items-center lg:space-x-8">
                                 <SignedOut>
-                                    <Link href="/sign-in" className="text-base font-medium text-white transition-all duration-200 rounded hover:text-gray-700 focus:outline-none">
+                                    <Link href="/sign-in" className="text-base font-medium text-white transition-all duration-200 rounded hover:text-gray-300 focus:outline-none">
                                         Login
                                     </Link>
-                                    <Link href="/sign-up" className="text-base font-medium text-white transition-all duration-200 rounded hover:text-gray-700 focus:outline-none">
+                                    <Link href="/sign-up" className="text-base font-medium text-white transition-all duration-200 rounded hover:text-gray-300 focus:outline-none">
                                         Register
                                     </Link>
                                 </SignedOut>
@@ -73,8 +91,8 @@ const Navbar: React.FC = () => {
                             <div className="flex items-center justify-end space-x-5 relative">
                                 <span className="hidden w-px h-6 ml-6 bg-white lg:block" aria-hidden="true"></span>
 
-                                <button type="button" className="p-2 -m-2 text-gray-900 transition-all duration-200 hover:text-gray-700">
-                                    <svg className="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <button type="button" className="p-2 -m-2 text-white transition-all duration-200 hover:text-gray-300">
+                                    <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                     </svg>
                                 </button>
@@ -85,9 +103,9 @@ const Navbar: React.FC = () => {
                                     <button
                                         type="button"
                                         onClick={toggleCart}
-                                        className="inline-flex items-center p-2 -m-2 text-gray-900 transition-all duration-200 lg:ml-6 hover:text-gray-700"
+                                        className="inline-flex items-center p-2 -m-2 text-white transition-all duration-200 lg:ml-6 hover:text-gray-300"
                                     >
-                                        <svg className="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                                         </svg>
                                         {uniqueProductCount > 0 && (
@@ -110,23 +128,70 @@ const Navbar: React.FC = () => {
                 </div>
             </div>
 
-            <div className="bg-white">
+            <div className="bg-white py-3">
                 <div className="py-5">
                     <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-                        <nav className="flex items-center space-x-8">
-                            <Link href="/" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none hover:text-green-800 hover:underline">
+                        <nav className="hidden lg:flex items-center space-x-8">
+                            <Link href="/" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none hover:text-green-800">
                                 Home
                             </Link>
-                            <Link href="/shop" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-green-800 hover:underline focus:outline-none">
+                            <Link href="/shop" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-green-800 focus:outline-none">
                                 Shop
                             </Link>
-                            <Link href="/contact" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-green-900 hover:underline focus:outline-none">
+                            <Link href="/contact" className="text-sm font-medium text-gray-900 transition-all duration-200 rounded hover:text-green-800 focus:outline-none">
                                 Contact Us
                             </Link>
                         </nav>
                     </div>
                 </div>
             </div>
+
+            {/* Mobile Menu */}
+            <AnimatePresence>
+                {isMobileMenuOpen && (
+                    <motion.div
+                        ref={mobileMenuRef}
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.2 }}
+                        className="lg:hidden fixed inset-0 z-50 bg-white"
+                    >
+                        <div className="p-4">
+                            <button
+                                onClick={closeMobileMenu}
+                                className="absolute top-4 right-4 text-gray-600 hover:text-gray-900"
+                            >
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                            <nav className="mt-8 space-y-4">
+                                <Link href="/" className="block text-lg font-medium text-gray-900 hover:text-green-800" onClick={closeMobileMenu}>
+                                    Home
+                                </Link>
+                                <Link href="/shop" className="block text-lg font-medium text-gray-900 hover:text-green-800" onClick={closeMobileMenu}>
+                                    Shop
+                                </Link>
+                                <Link href="/contact" className="block text-lg font-medium text-gray-900 hover:text-green-800" onClick={closeMobileMenu}>
+                                    Contact Us
+                                </Link>
+                                <SignedOut>
+                                    <Link href="/sign-in" className="block text-lg font-medium text-gray-900 hover:text-green-800" onClick={closeMobileMenu}>
+                                        Login
+                                    </Link>
+                                    <Link href="/sign-up" className="block text-lg font-medium text-gray-900 hover:text-green-800" onClick={closeMobileMenu}>
+                                        Register
+                                    </Link>
+                                </SignedOut>
+                                <SignedIn>
+                                    <UserButton afterSignOutUrl='/' />
+                                </SignedIn>
+                            </nav>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </header>
     );
 };

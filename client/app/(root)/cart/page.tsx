@@ -128,7 +128,7 @@ function Cart() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="py-12 mt-20 bg-gray-50"
+            className="py-32 mt-20 bg-gray-50"
         >
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-12">Your Shopping Cart</h2>
