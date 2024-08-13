@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ViewCart() {
+function Cart() {
     return (
         <section className="py-12  mt-40">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 ">
@@ -60,4 +60,4 @@ function ViewCart() {
     )
 }
 
-export default ViewCart
+export default Cart

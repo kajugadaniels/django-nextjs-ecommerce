@@ -48,17 +48,15 @@ const Navbar = () => {
 
                                 <span className="w-px h-6 bg-gray-200 lg:hidden" aria-hidden="true"></span>
 
-                                <SignedIn>
-                                    <div className="relative">
-                                        <button type="button" onClick={toggleCart} className="inline-flex items-center p-2 -m-2 text-gray-900 transition-all duration-200 lg:ml-6 hover:text-gray-700">
-                                            <svg className="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                                            </svg>
-                                            <span className="inline-flex items-center justify-center w-5 h-5 ml-1 text-xs font-bold text-white bg-gray-600 rounded-full"> 2 </span>
-                                        </button>
-                                        {isCartOpen && <CartModel />}
-                                    </div>
-                                </SignedIn>
+                                <div className="relative">
+                                    <button type="button" onClick={toggleCart} className="inline-flex items-center p-2 -m-2 text-gray-900 transition-all duration-200 lg:ml-6 hover:text-gray-700">
+                                        <svg className="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                        </svg>
+                                        <span className="inline-flex items-center justify-center w-5 h-5 ml-1 text-xs font-bold text-white bg-gray-600 rounded-full"> 2 </span>
+                                    </button>
+                                    {isCartOpen && <CartModel />}
+                                </div>
 
                                 <div className="hidden lg:flex lg:items-center lg:space-x-8">
                                     <SignedIn>
