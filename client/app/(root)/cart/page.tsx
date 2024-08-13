@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
+import { useUser } from "@clerk/nextjs";
+import { useRouter } from 'next/navigation';
 
 interface CartItem {
     id: number;
@@ -39,6 +41,17 @@ function Cart() {
 
         return () => clearInterval(intervalId);
     }, []);
+
+    const { isSignedIn } = useUser();
+    const router = useRouter();
+
+    const handleCheckout = () => {
+        if (isSignedIn) {
+            router.push('/checkout');
+        } else {
+            router.push('/sign-in?redirect=/checkout');
+        }
+    };
 
     const showNotification = (message: string, icon: 'success' | 'error') => {
         const Toast = Swal.mixin({
@@ -218,6 +231,7 @@ function Cart() {
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
                                         className="mt-4 px-8 py-3 bg-green-600 text-white rounded-md shadow-md hover:bg-green-700 transition duration-300"
+                                        onClick={handleCheckout}
                                     >
                                         Proceed to Checkout
                                     </motion.button>
