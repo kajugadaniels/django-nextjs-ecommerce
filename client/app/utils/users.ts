@@ -1,4 +1,5 @@
-import { get, post, put } from './api';
+// utils/user.ts
+import { get, put } from './api';
 import { User } from './types';
 
 export async function getUser(clerkId: string): Promise<User | null> {
@@ -11,22 +12,15 @@ export async function getUser(clerkId: string): Promise<User | null> {
     }
 }
 
-export async function createUser(userData: Partial<User>): Promise<User> {
-    try {
-        const response = await post(`/api/users/`, userData);
-        return response.data as User;
-    } catch (error) {
-        console.error('Error creating user:', error);
-        throw error;
-    }
-}
-
-export async function updateUser(clerkId: string, userData: Partial<User>): Promise<User> {
+export async function createOrUpdateUser(
+    clerkId: string,
+    userData: Partial<User>
+): Promise<User> {
     try {
         const response = await put(`/api/users/${clerkId}`, userData);
         return response.data as User;
     } catch (error) {
-        console.error('Error updating user:', error);
+        console.error('Error creating/updating user:', error);
         throw error;
     }
 }

@@ -2,7 +2,7 @@
 import axios, { AxiosInstance, AxiosResponse } from 'axios';
 
 const api: AxiosInstance = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL, // Replace with your Django backend URL
+    baseURL: process.env.NEXT_PUBLIC_API_URL,
 });
 
 export async function get<T>(url: string): Promise<AxiosResponse<T>> {

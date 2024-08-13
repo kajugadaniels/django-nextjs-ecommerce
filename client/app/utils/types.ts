@@ -1,4 +1,3 @@
-// utils/types.ts
 export interface User {
     clerk_id: string;
     email: string;
