@@ -1,111 +1,148 @@
-import React, { useState } from 'react';
+"use client";
+
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
+interface CartItem {
+    id: number;
+    name: string;
+    price: number | string; // Allow for string prices
+    image: string;
+    quantity: number;
+}
 
 interface CartModelProps {
     onClose: () => void;
 }
 
-const CartModel: React.FC<CartModelProps> = ({ onClose }) => {
-    const cartItems = true;
+const CART_STORAGE_KEY = 'userCart';
 
-  return (
-    <div className='w-max absolute right-0 mt-2 p-4 rounded-md shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-white top-full flex flex-col gap-6 z-20'>
-      {!cartItems ? (
-        <div className='text-xl'>Cart is Empty</div>
-      ) : (
-        <>
-          <div className='flex justify-between'>
-            <h1 className=''>Shopping Cart</h1>
-            <button
-              onClick={onClose}
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
-            </button>
-          </div>
-          <div className='flex flex-col gap-8'>
-            <div className='flex gap-4'>
-              <img
-                src="https://i5.walmartimages.com/asr/a83e3e11-9128-4d98-8f6f-8c144e0d8e5e.a5fafdef89b7430bd13cae9037294d87.jpeg"
-                alt=""
-                width={72}
-                height={96}
-                className='object-cover rounded-md'
-              />
-              <div className='flex flex-col justify-between w-full'>
-                <div className='flex items-center justify-between gap-8'>
-                  <h3 className='font-semibold'>Product Name</h3>
-                  <div className='p-1 bg-gray-50 rounded-sm'>$49</div>
-                </div>
-                <div className='text-sm text-gray-500'>available</div>
-                <div className='flex justify-between text-sm pt-5'>
-                  <span className='text-gray-500'>QTY. 2</span>
-                  <span className='text-blue-500'>Remove</span>
-                </div>
-              </div>
-            </div>
-            <div className='flex gap-4'>
-              <img
-                src="https://i5.walmartimages.com/asr/a83e3e11-9128-4d98-8f6f-8c144e0d8e5e.a5fafdef89b7430bd13cae9037294d87.jpeg"
-                alt=""
-                width={72}
-                height={96}
-                className='object-cover rounded-md'
-              />
-              <div className='flex flex-col justify-between w-full'>
-                <div className='flex items-center justify-between gap-8'>
-                  <h3 className='font-semibold'>Product Name</h3>
-                  <div className='p-1 bg-gray-50 rounded-sm'>$49</div>
-                </div>
-                <div className='text-sm text-gray-500'>available</div>
-                <div className='flex justify-between text-sm pt-5'>
-                  <span className='text-gray-500'>QTY. 2</span>
-                  <span className='text-blue-500'>Remove</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className=''>
-            <div className='flex items-center justify-between font-semibold'>
-              <span>Subtotal</span>
-              <div>$46</div>
-            </div>
-            <p className='text-gray-500 text-sm mt-2 mb-4'>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            </p>
-            <div className='flex justify-between text-sm'>
-            <Link href="/cart">
-  <button className='rounded-md px-3 py-4 ring-1 ring-gray-300'>
-    View Carts
-  </button>
-  </Link>
-  <Link href="/checkout">
-              <button className='rounded-md px-3 py-4 bg-black text-white'>Checkout</button>
-              </Link>
-            </div>
-          </div>
-        </>
-      )}
-    </div>
-  );
+export const useCartItems = () => {
+    const [cartItems, setCartItems] = useState<CartItem[]>([]);
+
+    useEffect(() => {
+        const loadCart = () => {
+            const storedCart = JSON.parse(localStorage.getItem(CART_STORAGE_KEY) || '[]');
+            setCartItems(storedCart);
+        };
+
+        loadCart();
+        const intervalId = setInterval(loadCart, 1000); // Refresh cart every second
+
+        return () => clearInterval(intervalId);
+    }, []);
+
+    return cartItems;
 };
 
-const ParentComponent: React.FC = () => {
-    const [isCartOpen, setIsCartOpen] = useState(true);
+const CartModel: React.FC<CartModelProps> = ({ onClose }) => {
+    const cartItems = useCartItems();
 
-    const handleCartClose = () => {
-        setIsCartOpen(false);
+    const updateQuantity = (id: number, newQuantity: number) => {
+        if (newQuantity < 1) return;
+        const updatedCart = cartItems.map(item => 
+            item.id === id ? { ...item, quantity: newQuantity } : item
+        );
+        localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(updatedCart));
     };
 
+    const removeItem = (id: number) => {
+        const updatedCart = cartItems.filter(item => item.id !== id);
+        localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(updatedCart));
+    };
+
+    const formatPrice = (price: number | string): string => {
+        if (typeof price === 'number') {
+            return price.toFixed(2);
+        }
+        if (typeof price === 'string') {
+            const numPrice = parseFloat(price);
+            return isNaN(numPrice) ? '0.00' : numPrice.toFixed(2);
+        }
+        return '0.00';
+    };
+
+    const totalPrice = cartItems.reduce((total, item) => {
+        const itemPrice = typeof item.price === 'number' ? item.price : parseFloat(item.price) || 0;
+        return total + itemPrice * item.quantity;
+    }, 0);
+
     return (
-        <div>
-            {isCartOpen && <CartModel onClose={handleCartClose} />}
-        </div>
+        <motion.div
+            initial={{ opacity: 0, x: 300 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 300 }}
+            transition={{ duration: 0.3 }}
+            className="fixed top-0 right-0 h-full w-96 bg-white shadow-lg z-50 overflow-y-auto"
+        >
+            <div className="p-6">
+                <div className="flex justify-between items-center mb-6">
+                    <h2 className="text-2xl font-bold text-gray-800">Your Cart</h2>
+                    <button onClick={onClose} className="text-gray-500 hover:text-gray-700">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                {cartItems.length === 0 ? (
+                    <p className="text-gray-500 text-center py-8">Your cart is empty</p>
+                ) : (
+                    <>
+                        <div className="space-y-4">
+                            {cartItems.map((item) => (
+                                <div key={item.id} className="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg">
+                                    <Image src={item.image} alt={item.name} width={60} height={60} className="rounded-md" />
+                                    <div className="flex-grow">
+                                        <h3 className="text-sm font-medium text-gray-900">{item.name}</h3>
+                                        <p className="text-sm text-gray-500">${formatPrice(item.price)}</p>
+                                    </div>
+                                    <div className="flex items-center space-x-2">
+                                        <button 
+                                            className="text-gray-500 hover:text-gray-700"
+                                            onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                                        >
+                                            -
+                                        </button>
+                                        <span className="text-gray-700">{item.quantity}</span>
+                                        <button 
+                                            className="text-gray-500 hover:text-gray-700"
+                                            onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                                        >
+                                            +
+                                        </button>
+                                    </div>
+                                    <button 
+                                        className="text-red-500 hover:text-red-700"
+                                        onClick={() => removeItem(item.id)}
+                                    >
+                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="mt-8">
+                            <div className="flex justify-between items-center mb-4">
+                                <span className="text-lg font-medium text-gray-900">Total</span>
+                                <span className="text-lg font-bold text-gray-900">${formatPrice(totalPrice)}</span>
+                            </div>
+                            <Link href="/checkout" passHref>
+                                <button 
+                                    onClick={onClose} 
+                                    className="w-full bg-green-600 text-white py-3 px-4 rounded-md hover:bg-green-700 transition duration-300"
+                                >
+                                    Proceed to Checkout
+                                </button>
+                            </Link>
+                        </div>
+                    </>
+                )}
+            </div>
+        </motion.div>
     );
 };
 
-export default ParentComponent;
+export default CartModel;
