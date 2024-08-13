@@ -4,10 +4,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import Swal from 'sweetalert2';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 interface ProductData {
     id: number;
@@ -34,7 +36,7 @@ interface CartItem extends ProductData {
 }
 
 const CART_STORAGE_KEY = 'userCart';
-const CART_EXPIRY_TIME = 60 * 60 * 1000; // 1 hour in milliseconds
+const CART_EXPIRY_TIME = 60 * 60 * 1000;
 
 const Product = ({ params }: ProductProps) => {
     const [quantity, setQuantity] = useState(1);
@@ -85,20 +87,44 @@ const Product = ({ params }: ProductProps) => {
         setQuantity(prev => prev + 1);
     };
 
+    const showNotification = (message: string, icon: 'success' | 'error') => {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-start',
+            showConfirmButton: false,
+            timer: 4000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        });
+
+        Toast.fire({
+            icon: icon,
+            title: message
+        });
+    };
+
     const addToCart = () => {
         if (product) {
-            const cartItems: CartItem[] = JSON.parse(localStorage.getItem(CART_STORAGE_KEY) || '[]');
-            const existingItemIndex = cartItems.findIndex(item => item.id === product.id);
+            try {
+                const cartItems: CartItem[] = JSON.parse(localStorage.getItem(CART_STORAGE_KEY) || '[]');
+                const existingItemIndex = cartItems.findIndex(item => item.id === product.id);
 
-            if (existingItemIndex > -1) {
-                cartItems[existingItemIndex].quantity += quantity;
-                cartItems[existingItemIndex].timestamp = Date.now();
-            } else {
-                cartItems.push({ ...product, quantity, timestamp: Date.now() });
+                if (existingItemIndex > -1) {
+                    cartItems[existingItemIndex].quantity += quantity;
+                    cartItems[existingItemIndex].timestamp = Date.now();
+                } else {
+                    cartItems.push({ ...product, quantity, timestamp: Date.now() });
+                }
+
+                localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cartItems));
+                showNotification('Product added to cart!', 'success');
+            } catch (error) {
+                console.error('Error adding product to cart:', error);
+                showNotification('Failed to add product to cart. Please try again.', 'error');
             }
-
-            localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cartItems));
-            alert('Product added to cart!');
         }
     };
 

@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 interface CartItem {
     id: number;
@@ -33,9 +35,34 @@ function Cart() {
         return () => clearInterval(intervalId);
     }, []);
 
+    const showNotification = (message: string, icon: 'success' | 'error') => {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-start',
+            showConfirmButton: false,
+            timer: 4000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        });
+
+        Toast.fire({
+            icon: icon,
+            title: message
+        });
+    };
+
     const updateCart = (newCart: CartItem[]) => {
-        localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(newCart));
-        setCartItems(newCart);
+        try {
+            localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(newCart));
+            setCartItems(newCart);
+            showNotification('Cart updated successfully', 'success');
+        } catch (error) {
+            console.error('Error updating cart:', error);
+            showNotification('Failed to update cart. Please try again.', 'error');
+        }
     };
 
     const removeItem = (id: number) => {
@@ -52,8 +79,14 @@ function Cart() {
     };
 
     const clearCart = () => {
-        localStorage.removeItem(CART_STORAGE_KEY);
-        setCartItems([]);
+        try {
+            localStorage.removeItem(CART_STORAGE_KEY);
+            setCartItems([]);
+            showNotification('Cart cleared successfully', 'success');
+        } catch (error) {
+            console.error('Error clearing cart:', error);
+            showNotification('Failed to clear cart. Please try again.', 'error');
+        }
     };
 
     const calculateTotal = () => {
