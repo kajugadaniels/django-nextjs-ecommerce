@@ -8,7 +8,7 @@ SECRET_KEY = 'django-insecure-levm$gv6!p&jq)547(4+4ml5d+cs#g6ytp@8j%crnnl%a(gza7
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["ecommerce-api-pro.up.railway.app"]
 
 # Application definition
 INSTALLED_APPS = [
@@ -120,6 +120,7 @@ AUTH_USER_MODEL = 'account.User'
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "https://ecommerce-client.up.railway.app",
 ]
 
 REST_FRAMEWORK = {
@@ -166,3 +167,17 @@ JAZZMIN_SETTINGS = {
 
 CSRF_TRUSTED_ORIGINS = ['https://ecommerce-api-pro.up.railway.app','https://*.127.0.0.1']
 CLERK_WEBHOOK_SECRET="whsec_zYJUE0Vx4ohLLbMxInpPxSQDQQZCC2ey"
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'INFO',
+    },
+}
