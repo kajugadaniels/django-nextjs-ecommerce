@@ -137,7 +137,7 @@ const Product = ({ params }: ProductProps) => {
     }
 
     return (
-        <section className="py-36">
+        <section className="py-40">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2">
                     <div className="slider-box w-full h-full max-lg:mx-auto mx-0">
