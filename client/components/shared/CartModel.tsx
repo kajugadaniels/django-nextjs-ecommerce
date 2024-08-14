@@ -109,7 +109,14 @@ const CartModel: React.FC<CartModelProps> = ({ onClose }) => {
                         <div className="space-y-4">
                             {cartItems.map((item) => (
                                 <div key={item.id} className="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg">
-                                    <Image src={item.image} alt={item.name} width={60} height={60} className="rounded-md" />
+                                    <Image 
+                                        src={item.image} 
+                                        alt={item.name} 
+                                        width={60} 
+                                        height={60} 
+                                        className="rounded-md object-cover"
+                                        unoptimized
+                                    />
                                     <div className="flex-grow">
                                         <h3 className="text-sm font-medium text-gray-900">{item.name}</h3>
                                         <p className="text-sm text-gray-500">${formatPrice(item.unit_price)}</p>
