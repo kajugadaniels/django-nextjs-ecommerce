@@ -3,12 +3,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { useUser } from '@clerk/nextjs';
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
+import { getApiUrl, getMediaUrl } from '@/lib/apiConfig';
 
 interface Product {
     id: number;
@@ -30,7 +30,7 @@ const Card = () => {
     const router = useRouter();
     const { isSignedIn } = useUser();
 
-    const placeholderImage = `${process.env.NEXT_PUBLIC_API_IMAGE_URL}`;
+    const placeholderImage = `${getMediaUrl()}placeholder.png`;
 
     const showNotification = (message: string, icon: 'success' | 'error') => {
         const Toast = Swal.mixin({
@@ -77,8 +77,11 @@ const Card = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/products/`);
-                const allProducts: Product[] = response.data;
+                const response = await fetch(`${getApiUrl()}/products/`);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const allProducts: Product[] = await response.json();
 
                 // Shuffle and limit to 4 products
                 const shuffledProducts = allProducts.sort(() => 0.5 - Math.random());
