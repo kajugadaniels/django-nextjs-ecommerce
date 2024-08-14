@@ -1,11 +1,8 @@
 import { Webhook } from 'svix';
 import { NextResponse } from 'next/server';
 
-export const config = {
-    api: {
-        bodyParser: false,
-    },
-};
+// No longer need to export config
+export const runtime = 'edge';
 
 export async function POST(req: Request) {
     const rawBody = await req.text();
