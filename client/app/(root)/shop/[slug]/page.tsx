@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import Swal from 'sweetalert2';
@@ -10,6 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'sweetalert2/dist/sweetalert2.min.css';
+import { getApiUrl } from '@/lib/apiConfig';
 
 interface ProductData {
     id: number;
@@ -48,8 +48,12 @@ const Product = ({ params }: ProductProps) => {
         const fetchProduct = async () => {
             if (slug) {
                 try {
-                    const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/products/${slug}/`);
-                    setProduct(response.data);
+                    const response = await fetch(`${getApiUrl()}/products/${slug}/`);
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    const data = await response.json();
+                    setProduct(data);
                 } catch (error) {
                     console.error('Error fetching product:', error);
                 } finally {
