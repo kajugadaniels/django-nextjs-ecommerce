@@ -1,66 +1,148 @@
-import React from 'react'
+"use client";
 
-const Contact = () => {
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import PhoneInput from 'react-phone-number-input';
+import { E164Number } from 'libphonenumber-js';
+import 'react-phone-number-input/style.css';
+
+const Contact: React.FC = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState<E164Number | undefined>();
+    const [message, setMessage] = useState('');
+    const [errors, setErrors] = useState<{ [key: string]: string }>({});
+
+    const validateForm = () => {
+        const newErrors: { [key: string]: string } = {};
+
+        if (!name.trim()) newErrors.name = 'Name is required';
+        if (!email.trim()) newErrors.email = 'Email is required';
+        else if (!/\S+@\S+\.\S+/.test(email)) newErrors.email = 'Email is invalid';
+        if (!phone) newErrors.phone = 'Phone number is required';
+        if (!message.trim()) newErrors.message = 'Message is required';
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        if (validateForm()) {
+            // Here you would typically send the form data to your backend
+            console.log('Form submitted:', { name, email, phone, message });
+            // Reset form after submission
+            setName('');
+            setEmail('');
+            setPhone(undefined);
+            setMessage('');
+            alert('Thank you for your message. We will get back to you soon!');
+        }
+    };
+
     return (
-        <div className="flex flex-col md:flex-row p-6 bg-background rounded-lg shadow-lg py-40">
-            <div className="w-full md:w-1/2 p-4 ml-40">
-                <h2 className="text-lg font-semibold mb-4">Contact Us</h2>
-                <form>
-                    <div className="mb-4">
-                        <label className="block text-sm font-medium text-foreground">Full Name *</label>
-                        <input
-                            type="text"
-                            className="mt-1 block w-full border border-border rounded-md p-2"
-                            placeholder="Your name"
-                            required
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-sm font-medium text-foreground">Email Address *</label>
-                        <input
-                            type="email"
-                            className="mt-1 block w-full border border-border rounded-md p-2"
-                            placeholder="youremail@example.com"
-                            required
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-sm font-medium text-foreground">Phone Number *</label>
-                        <input
-                            type="tel"
-                            className="mt-1 block w-full border border-border rounded-md p-2"
-                            placeholder="+250 *** *** ***"
-                            required
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-sm font-medium text-foreground">Message *</label>
-                        <textarea
-                            className="mt-1 block w-full border border-border rounded-md p-2"
-                            placeholder="Your message"
-                            rows={4}
-                            required
-                        />
-                    </div>
-                    <div className="flex gap-24 mt-6 ml-28">
-                        <button type="reset" className="bg-gray-200 text-black p-4 rounded-lg w-1/3">Reset</button>
-                        <button type="submit" className="bg-green-900 text-primary-foreground p-4 rounded-lg w-1/3">Send Message</button>
-                    </div>
-                </form>
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8"
+        >
+            <div className="sm:mx-auto sm:w-full sm:max-w-md">
+                <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Contact Us</h2>
+                <p className="mt-2 text-center text-sm text-gray-600">
+                    We'd love to hear from you. Please fill out this form.
+                </p>
             </div>
-            <div className="w-full md:w-1/2 p-4">
-                <h2 className="text-lg font-semibold mb-4">Get in Touch</h2>
-                <div className="mb-4 border border-border rounded-md p-6 w-[250px] ">
-                    <p className="font-medium">Address:</p>
-                    <p className="text-sm">123 Main Street, Kigali, Rwanda</p>
-                    <p className="font-medium mt-4">Phone:</p>
-                    <p className="text-sm">+250 *** *** ***</p>
-                    <p className="font-medium mt-4">Email:</p>
-                    <p className="text-sm">info@example.com</p>
+
+            <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+                <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+                    <form className="space-y-6" onSubmit={handleSubmit}>
+                        <div>
+                            <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                                Name
+                            </label>
+                            <div className="mt-1">
+                                <input
+                                    id="name"
+                                    name="name"
+                                    type="text"
+                                    required
+                                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-emerald-950 focus:border-emerald-950 sm:text-sm"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                />
+                                {errors.name && <p className="mt-2 text-sm text-red-600">{errors.name}</p>}
+                            </div>
+                        </div>
+
+                        <div>
+                            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                                Email address
+                            </label>
+                            <div className="mt-1">
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    autoComplete="email"
+                                    required
+                                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-emerald-950 focus:border-emerald-950 sm:text-sm"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
+                                {errors.email && <p className="mt-2 text-sm text-red-600">{errors.email}</p>}
+                            </div>
+                        </div>
+
+                        <div>
+                            <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                                Phone number
+                            </label>
+                            <div className="mt-1">
+                                <PhoneInput
+                                    international
+                                    countryCallingCodeEditable={false}
+                                    defaultCountry="US"
+                                    value={phone}
+                                    onChange={setPhone}
+                                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-emerald-950 focus:border-emerald-950 sm:text-sm"
+                                />
+                                {errors.phone && <p className="mt-2 text-sm text-red-600">{errors.phone}</p>}
+                            </div>
+                        </div>
+
+                        <div>
+                            <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                                Message
+                            </label>
+                            <div className="mt-1">
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows={4}
+                                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-emerald-950 focus:border-emerald-950 sm:text-sm"
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
+                                ></textarea>
+                                {errors.message && <p className="mt-2 text-sm text-red-600">{errors.message}</p>}
+                            </div>
+                        </div>
+
+                        <div>
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                type="submit"
+                                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-950"
+                            >
+                                Send Message
+                            </motion.button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div>
-    )
-}
+        </motion.div>
+    );
+};
 
-export default Contact
+export default Contact;
