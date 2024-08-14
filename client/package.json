@@ -24,7 +24,7 @@
     "react-dom": "^18",
     "react-phone-number-input": "^3.4.5",
     "react-router-dom": "^6.26.0",
-    "svix": "^1.28.0",
+    "svix": "^1.29.0",
     "sweetalert2": "^11.12.4",
     "swiper": "^11.1.9",
     "tailwind-merge": "^2.4.0",
