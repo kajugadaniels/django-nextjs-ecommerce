@@ -165,3 +165,4 @@ JAZZMIN_SETTINGS = {
 }
 
 CSRF_TRUSTED_ORIGINS = ['https://ecommerce-api-pro.up.railway.app','https://*.127.0.0.1']
+CLERK_WEBHOOK_SECRET="whsec_zYJUE0Vx4ohLLbMxInpPxSQDQQZCC2ey"
