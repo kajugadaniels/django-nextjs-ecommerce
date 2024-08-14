@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { getApiUrl } from '@/lib/apiConfig';
 
 interface Category {
     id: number;
@@ -21,7 +22,7 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({ handleFilter, selectedC
         const fetchCategories = async () => {
             setIsLoading(true);
             try {
-                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories/`);
+                const response = await fetch(`${getApiUrl()}/categories/`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
