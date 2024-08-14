@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -10,6 +9,7 @@ import { useRouter } from 'next/navigation';
 import { useUser } from '@clerk/nextjs';
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
+import { getApiUrl, getMediaUrl } from '@/lib/apiConfig';
 
 interface Product {
     id: number;
@@ -36,7 +36,7 @@ const Shop: React.FC = () => {
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
     const itemsPerPage = 12;
 
-    const placeholderImage = `${process.env.NEXT_PUBLIC_API_IMAGE_URL}/placeholder.png`;
+    const placeholderImage = `${getMediaUrl()}placeholder.png`;
 
     const router = useRouter();
     const { isSignedIn } = useUser();
@@ -44,12 +44,16 @@ const Shop: React.FC = () => {
     const fetchProducts = async () => {
         setIsLoading(true);
         try {
-            let url = `${process.env.NEXT_PUBLIC_API_URL}/products/`;
+            let url = `${getApiUrl()}/products/`;
             if (selectedCategory) {
                 url += `category/${selectedCategory}/`;
             }
-            const response = await axios.get(url);
-            setAllProducts(response.data);
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            setAllProducts(data);
         } catch (error) {
             console.error('Error fetching products:', error);
         } finally {

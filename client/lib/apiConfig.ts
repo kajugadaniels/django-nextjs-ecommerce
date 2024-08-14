@@ -1,5 +1,3 @@
-// lib/apiConfig.ts
-
 const isProduction = process.env.NODE_ENV === 'production';
 
 const localApiUrl = 'http://127.0.0.1:8000/api';
@@ -14,13 +12,4 @@ export const getApiUrl = () => {
 
 export const getMediaUrl = () => {
     return isProduction ? productionMediaUrl : localMediaUrl;
-};
-
-export const getPlaceholderImageUrl = () => {
-    return `${getMediaUrl()}placeholder.png`;
-};
-
-export const getProductsUrl = (category?: string) => {
-    const baseUrl = `${getApiUrl()}/products/`;
-    return category ? `${baseUrl}category/${category}/` : baseUrl;
 };
