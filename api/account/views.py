@@ -1,27 +1,30 @@
-import logging
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from account.serializers import *
-from account.models import *
+from account.serializers import UserSerializer
+from account.models import User
+import logging
 
 logger = logging.getLogger(__name__)
 
 class UserCreateView(APIView):
     def post(self, request):
-        logger.info(f"Received data in UserCreateView: {request.data}")
-        serializer = UserSerializer(data=request.data)
+        logger.info(f"Received POST request: {request.data}")
+        
+        clerk_id = request.data.get('clerk_id')
+        
+        # Check if user already exists
+        try:
+            user = User.objects.get(clerk_id=clerk_id)
+            serializer = UserSerializer(user, data=request.data, partial=True)
+        except User.DoesNotExist:
+            # Create new user
+            serializer = UserSerializer(data=request.data)
+        
         if serializer.is_valid():
-            logger.info(f"Serializer is valid. Validated data: {serializer.validated_data}")
-            try:
-                user, created = User.objects.update_or_create(
-                    clerk_id=serializer.validated_data['clerk_id'],
-                    defaults=serializer.validated_data
-                )
-                logger.info(f"User {'created' if created else 'updated'}: {user}")
-                return Response(UserSerializer(user).data, status=status.HTTP_201_CREATED if created else status.HTTP_200_OK)
-            except Exception as e:
-                logger.error(f"Error creating/updating user: {str(e)}")
-                return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            user = serializer.save()
+            logger.info(f"User created/updated: {user}")
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        
         logger.error(f"Serializer errors: {serializer.errors}")
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
