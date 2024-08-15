@@ -156,3 +156,15 @@ C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\views.py cha
 C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\views.py changed, reloading.
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader

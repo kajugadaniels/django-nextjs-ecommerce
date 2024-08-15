@@ -7,7 +7,7 @@ class ProductList(generics.ListCreateAPIView):
     serializer_class = ProductSerializer
 
     def get_queryset(self):
-        queryset = Product.objects.all()
+        queryset = Product.objects.all().order_by('-created_at')
         category_slug = self.request.query_params.get('category_slug', None)
         if category_slug:
             queryset = queryset.filter(category__slug=category_slug)
