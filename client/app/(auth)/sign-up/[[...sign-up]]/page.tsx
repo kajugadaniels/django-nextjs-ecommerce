@@ -1,29 +1,65 @@
 'use client';
 
 import { SignUp, useSignUp } from "@clerk/nextjs";
-import { createUserInDjango } from '../../../utils/userSync';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function CustomSignUp() {
-    const { isLoaded, signUp } = useSignUp();
+    const { isLoaded, signUp, setActive } = useSignUp();
+    const [isSignUpComplete, setIsSignUpComplete] = useState(false);
+    const router = useRouter();
 
     useEffect(() => {
-        if (!isLoaded) return;
+        if (!isLoaded || !isSignUpComplete || !signUp?.createdUserId) return;
 
-        const createDjangoUser = async () => {
-            if (signUp.status === 'complete' && signUp.createdUserId) {
-                try {
-                    await createUserInDjango(signUp.createdUserId);
-                    console.log('User created in Django successfully');
-                } catch (error) {
-                    console.error('Failed to create user in Django:', error);
-                    // You might want to handle this error, perhaps by showing a message to the user
+        const syncUserWithDjango = async () => {
+            const userData = {
+                clerkUserId: signUp.createdUserId,
+                email: signUp.emailAddress,
+                firstName: signUp.firstName,
+                lastName: signUp.lastName,
+            };
+            console.log('Attempting to sync user with Django:', userData);
+
+            try {
+                const response = await fetch('/api/sync-user', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(userData),
+                });
+
+                const responseData = await response.json();
+                console.log('Response from sync-user API:', responseData);
+
+                if (response.ok) {
+                    console.log('User synced with Django successfully');
+                    await setActive({ session: signUp.createdSessionId });
+                    router.push('/');
+                } else {
+                    console.error('Failed to sync user with Django');
                 }
+            } catch (error) {
+                console.error('Error syncing user with Django:', error);
             }
         };
 
-        createDjangoUser();
-    }, [isLoaded, signUp]);
+        syncUserWithDjango();
+    }, [isLoaded, isSignUpComplete, signUp, setActive, router]);
 
-    return <SignUp />;
+    const handleComplete = () => {
+        setIsSignUpComplete(true);
+    };
+
+    return (
+        <SignUp
+            appearance={{
+                elements: {
+                    rootBox: "mx-auto",
+                    card: "bg-white shadow-md rounded-lg p-8",
+                },
+            }}
+            afterSignUpUrl="/"
+            redirectUrl="/"
+        />
+    );
 }

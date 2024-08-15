@@ -1,0 +1,158 @@
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\api\settings.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\api\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /admin/ HTTP/1.1" 200 44678
+"GET /admin/ HTTP/1.1" 200 44678
+Not Found: /api/users
+Not Found: /api/users
+"GET /api/users HTTP/1.1" 404 4669
+"GET /api/users HTTP/1.1" 404 4669
+Not Found: /api/account/users
+Not Found: /api/account/users
+"GET /api/account/users HTTP/1.1" 404 4693
+"GET /api/account/users HTTP/1.1" 404 4693
+"GET /api/auth/users HTTP/1.1" 301 0
+"GET /api/auth/users HTTP/1.1" 301 0
+Method Not Allowed: /api/auth/users/
+Method Not Allowed: /api/auth/users/
+"GET /api/auth/users/ HTTP/1.1" 405 5627
+"GET /api/auth/users/ HTTP/1.1" 405 5627
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+"GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+"GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+"GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+"GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+"GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+"GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+"GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+"GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+Method Not Allowed: /api/auth/users/
+Method Not Allowed: /api/auth/users/
+"GET /api/auth/users/ HTTP/1.1" 405 5627
+"GET /api/auth/users/ HTTP/1.1" 405 5627
+Method Not Allowed: /api/auth/users/
+Method Not Allowed: /api/auth/users/
+"GET /api/auth/users/ HTTP/1.1" 405 5627
+"GET /api/auth/users/ HTTP/1.1" 405 5627
+"GET /admin/ HTTP/1.1" 200 44678
+"GET /admin/ HTTP/1.1" 200 44678
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Method Not Allowed: /api/auth/users/
+Method Not Allowed: /api/auth/users/
+"GET /api/auth/users/ HTTP/1.1" 405 5627
+"GET /api/auth/users/ HTTP/1.1" 405 5627
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
