@@ -1,57 +1,58 @@
-import { Webhook } from 'svix';
+import { Webhook, WebhookRequiredHeaders } from 'svix';
 import { NextResponse } from 'next/server';
-
-// No longer need to export config
-export const runtime = 'edge';
+import { headers } from 'next/headers';
 
 export async function POST(req: Request) {
-    const rawBody = await req.text();
-    const secret = process.env.CLERK_WEBHOOK_SECRET;
+    const payload = await req.json();
+    const headersList = headers();
+    const webhookSecret = process.env.CLERK_WEBHOOK_SECRET;
 
-    if (!secret) {
+    if (!webhookSecret) {
         console.error('CLERK_WEBHOOK_SECRET is not set');
         return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
     }
 
-    const webhook = new Webhook(secret);
-    let payload;
+    // Create an object from the headers
+    const svixHeaders = {
+        'svix-id': headersList.get('svix-id'),
+        'svix-timestamp': headersList.get('svix-timestamp'),
+        'svix-signature': headersList.get('svix-signature'),
+    };
+
+    // Verify the webhook
+    const wh = new Webhook(webhookSecret);
+    let evt: any;
 
     try {
-        const headersList = Array.from(req.headers.entries());
-        const headersRecord: Record<string, string> = {};
-        headersList.forEach(([key, value]) => {
-            headersRecord[key] = value;
-        });
-
-        payload = webhook.verify(rawBody, headersRecord);
-        console.log('Webhook payload:', JSON.stringify(payload, null, 2));
+        evt = wh.verify(JSON.stringify(payload), svixHeaders as WebhookRequiredHeaders);
     } catch (err) {
-        console.error('Invalid webhook payload:', err);
+        console.error('Error verifying webhook:', err);
         return NextResponse.json({ error: 'Invalid webhook payload' }, { status: 400 });
     }
 
-    // Forward the webhook to your Django backend
+    // Process the webhook payload
     try {
-        const response = await fetch('https://ecommerce-api-pro.up.railway.app/api/clerk-webhook/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(payload),
-        });
+        const { type, data } = evt;
+        console.log('Webhook type:', type);
+        console.log('Webhook data:', JSON.stringify(data, null, 2));
 
-        if (!response.ok) {
-            const errorText = await response.text();
-            console.error('Failed to forward webhook. Status:', response.status, 'Error:', errorText);
-            return NextResponse.json({ error: 'Failed to forward webhook', details: errorText }, { status: 500 });
+        // Handle different event types
+        switch (type) {
+            case 'user.created':
+                // Handle user creation
+                break;
+            case 'user.updated':
+                // Handle user update
+                break;
+            case 'user.deleted':
+                // Handle user deletion
+                break;
+            // Add more cases as needed
         }
 
-        const responseData = await response.json();
-        console.log('Django response:', responseData);
-        return NextResponse.json({ message: 'Webhook processed successfully', data: responseData });
+        return NextResponse.json({ message: 'Webhook processed successfully' });
     } catch (error) {
-        console.error('Error forwarding webhook:', error);
-        const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
-        return NextResponse.json({ error: 'Error forwarding webhook', details: errorMessage }, { status: 500 });
+        console.error('Error processing webhook:', error);
+        return NextResponse.json({ error: 'Error processing webhook', details: (error as Error).message }, { status: 500 });
     }
 }
