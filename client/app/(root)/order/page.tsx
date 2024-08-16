@@ -19,13 +19,25 @@ const order = () => {
                     <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                         <select className="bg-white text-gray-500 px-4 py-2 border rounded w-full md:w-auto">
                             <option>Filter by: Completed</option>
+                            <option>Completed</option>
+                            <option>pre-order</option>
+                            <option>In Transit</option>
+                            <option>Cancelled</option>
                         </select>
                         <select className="bg-white text-gray-500  px-4 py-2 border rounded w-full md:w-auto">
                             <option>Last 7 days</option>
                         </select>
                     </div>
                 </div>
-
+                <div>
+                   <div>
+                    <img src='1.png' />
+                    <div>
+                                            <h3 className="font-semibold text-gray-800">beans</h3>
+                                            <p className="text-sm text-gray-600">Qty: 3</p>
+                                        </div>
+                   </div>
+                </div>
                 <div className="bg-white p-4 rounded-lg">
                     <div className="flex flex-col md:flex-row justify-between items-center mb-4 space-y-4 md:space-y-0">
                         <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
