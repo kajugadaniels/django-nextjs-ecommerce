@@ -8,18 +8,17 @@ const page = () => {
                     <input
                         type="text"
                         placeholder="Search by Order ID"
-                        className="bg-white text-white px-4 py-2 rounded-l focus:outline-none"
+                        className="bg-white text-gray-600 px-4 py-2 rounded-l focus:outline-none"
                     />
                     <button className="bg-blue-600 text-white px-4 py-2 rounded-r">
                         Search
                     </button>
                 </div>
                 <div className="flex space-x-4">
-                    <select className="bg-white text-white px-4 py-2 rounded">
+                    <select className="bg-white text-gray-500 px-4 py-2 rounded">
                         <option>Filter by: Completed</option>
-                        {/* Add more filter options as needed */}
                     </select>
-                    <select className="bg-white text-white px-4 py-2 rounded">
+                    <select className="bg-white text-gray-500  px-4 py-2 rounded">
                         <option>Last 7 days</option>
                     </select>
                 </div>
@@ -41,7 +40,7 @@ const page = () => {
                 </div>
 
                 <div className="mb-4">
-                    <a href="#" className="text-blue-500 underline">Download invoice</a>
+                    <a href="#" className="text-green-800 underline">Download invoice</a>
                 </div>
 
                 <div className="flex justify-between items-center mb-4">
@@ -51,11 +50,11 @@ const page = () => {
                     </div>
                     <div>
                         <span className="text-gray-400">Email:</span>
-                        <span className="text-white ml-2">name@example.com</span>
+                        <span className="text-gray-600 ml-2">name@example.com</span>
                     </div>
                     <div>
                         <span className="text-gray-400">Payment method:</span>
-                        <span className="text-white ml-2">Credit card</span>
+                        <span className="text-ray-600 ml-2">Credit card</span>
                     </div>
                 </div>
 
