@@ -10,7 +10,7 @@ const page = () => {
                         placeholder="Search by Order ID"
                         className="bg-white text-gray-600 px-4 py-2 rounded-l focus:outline-none"
                     />
-                    <button className="bg-blue-600 text-white px-4 py-2 rounded-r">
+                    <button className="bg-green-800 text-white px-4 py-2 rounded-r">
                         Search
                     </button>
                 </div>
