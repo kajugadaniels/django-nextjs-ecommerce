@@ -645,3 +645,77 @@ User created/updated: kajugadaniels@gmail.com
 "GET /admin/account/user/ HTTP/1.1" 200 35038
 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /media/products/product_cassava_32.jpg HTTP/1.1" 200 300740
+"GET /media/products/product_cassava_32.jpg HTTP/1.1" 200 300740
+"GET /media/products/product_cabbage_17.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_cabbage_17.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_watermelon_13.jpg HTTP/1.1" 200 422678
+"GET /media/products/product_watermelon_13.jpg HTTP/1.1" 200 422678
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"OPTIONS /api/auth/users/ HTTP/1.1" 200 0
+"OPTIONS /api/auth/users/ HTTP/1.1" 200 0
+Received POST request: {'clerk_id': 'user_2kj4bxLrkyBUb5W9RZiDYGOdG97', 'email': 'olivineuhiriwe2001@gmail.com', 'first_name': 'olivine', 'last_name': 'uhiriwe'}
+User created/updated: olivineuhiriwe2001@gmail.com
+"POST /api/auth/users/ HTTP/1.1" 201 131
+"POST /api/auth/users/ HTTP/1.1" 201 131
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/categories/ HTTP/1.1" 200 125
+"GET /api/categories/ HTTP/1.1" 200 125
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/categories/ HTTP/1.1" 200 125
+"GET /api/categories/ HTTP/1.1" 200 125
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/categories/ HTTP/1.1" 200 125
+"GET /api/categories/ HTTP/1.1" 200 125
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/categories/ HTTP/1.1" 200 125
+"GET /api/categories/ HTTP/1.1" 200 125
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /media/products/product_cabbage_17.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_cabbage_17.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_cassava_32.jpg HTTP/1.1" 200 300740
+"GET /media/products/product_cassava_32.jpg HTTP/1.1" 200 300740
+"GET /media/products/product_watermelon_13.jpg HTTP/1.1" 200 422678
+"GET /media/products/product_watermelon_13.jpg HTTP/1.1" 200 422678
+"GET /media/products/product_cassava_32.jpg HTTP/1.1" 200 300740
+"GET /media/products/product_cassava_32.jpg HTTP/1.1" 200 300740
+"GET /media/products/product_cabbage_17.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_cabbage_17.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_watermelon_13.jpg HTTP/1.1" 200 422678
+"GET /media/products/product_watermelon_13.jpg HTTP/1.1" 200 422678
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /media/products/product_watermelon_13.jpg HTTP/1.1" 304 0
+"GET /media/products/product_watermelon_13.jpg HTTP/1.1" 304 0
+"GET /media/products/product_cassava_32.jpg HTTP/1.1" 304 0
+"GET /media/products/product_cabbage_17.jpg HTTP/1.1" 304 0
+"GET /media/products/product_cassava_32.jpg HTTP/1.1" 304 0
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /media/products/product_cabbage_17.jpg HTTP/1.1" 304 0
+"GET /api/categories/ HTTP/1.1" 200 125
+"GET /api/categories/ HTTP/1.1" 200 125
+"GET /api/categories/ HTTP/1.1" 200 125
+"GET /api/categories/ HTTP/1.1" 200 125
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
