@@ -30,13 +30,14 @@ const order = () => {
                     </div>
                 </div>
                 <div>
-                   <div>
-                    <img src='1.png' />
                     <div>
-                                            <h3 className="font-semibold text-gray-800">beans</h3>
-                                            <p className="text-sm text-gray-600">Qty: 3</p>
-                                        </div>
-                   </div>
+                        <img src='gemin.jpeg' alt='' className='w-28 h-28' />
+                        <div>
+                            <h3 className="font-semibold text-gray-800">beans</h3>
+                            <p className="text-sm text-gray-600">Qty: 3</p>
+                            <p className="font-semibold text-emerald-900">$900</p>
+                        </div>
+                    </div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
                     <div className="flex flex-col md:flex-row justify-between items-center mb-4 space-y-4 md:space-y-0">
