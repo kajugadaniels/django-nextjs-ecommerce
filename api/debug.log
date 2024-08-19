@@ -4955,3 +4955,65 @@ Not Found: /api/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/
 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+"OPTIONS /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 0
+"OPTIONS /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 0
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /media/products/product_watermelon_12.jpg HTTP/1.1" 200 422678
+"GET /media/products/product_watermelon_12.jpg HTTP/1.1" 200 422678
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"POST /api/orders/ HTTP/1.1" 201 436
+"POST /api/orders/ HTTP/1.1" 201 436
+Not Found: /api/api/orders/
+Not Found: /api/api/orders/
+"GET /api/api/orders/ HTTP/1.1" 404 4871
+"GET /api/api/orders/ HTTP/1.1" 404 4871
+Not Found: /api/api/orders/
+Not Found: /api/api/orders/
+"GET /api/api/orders/ HTTP/1.1" 404 4871
+"GET /api/api/orders/ HTTP/1.1" 404 4871
+"GET /admin/home/order/ HTTP/1.1" 200 34192
+"GET /admin/home/order/ HTTP/1.1" 200 34192
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/8/change/ HTTP/1.1" 200 38582
+"GET /admin/home/order/8/change/ HTTP/1.1" 200 38582
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/orderitem/ HTTP/1.1" 200 34734
+"GET /admin/home/orderitem/ HTTP/1.1" 200 34734
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/ HTTP/1.1" 200 34192
+"GET /admin/home/order/ HTTP/1.1" 200 34192
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Not Found: /api/api/orders/
+Not Found: /api/api/orders/
+"GET /api/api/orders/ HTTP/1.1" 404 4871
+"GET /api/api/orders/ HTTP/1.1" 404 4871
+Method Not Allowed: /api/orders/
+Method Not Allowed: /api/orders/
+"GET /api/orders/ HTTP/1.1" 405 40
+"GET /api/orders/ HTTP/1.1" 405 40
+Method Not Allowed: /api/orders/
+Method Not Allowed: /api/orders/
+"GET /api/orders/ HTTP/1.1" 405 40
+"GET /api/orders/ HTTP/1.1" 405 40
+"GET /api/orders/list/ HTTP/1.1" 200 5313
+"GET /api/orders/list/ HTTP/1.1" 200 5313
+"GET /admin/home/order/ HTTP/1.1" 200 34192
+"GET /admin/home/order/ HTTP/1.1" 200 34192
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/orderitem/ HTTP/1.1" 200 34734
+"GET /admin/home/orderitem/ HTTP/1.1" 200 34734
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/ HTTP/1.1" 200 34192
+"GET /admin/home/order/ HTTP/1.1" 200 34192
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342

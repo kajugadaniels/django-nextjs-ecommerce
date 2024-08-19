@@ -1,79 +1,85 @@
-"use client";
-
-import React, { useState, useEffect } from 'react';
-import { useAuth, useUser } from "@clerk/nextjs";
-
-interface OrderItem {
-    product_name: string;
-    quantity: number;
-    unit_price: string;
-}
-
-interface Order {
-    id: string;
-    total_amount: string;
-    payment_status: string;
-    created_at: string;
-    items: OrderItem[];
-}
+import React from 'react'
 
 const Orders = () => {
-    const [orders, setOrders] = useState<Order[]>([]);
-    const { user, isLoaded, isSignedIn } = useUser();
-    const { getToken } = useAuth();
-
-    useEffect(() => {
-        const fetchOrders = async () => {
-            if (isSignedIn && user) {
-                try {
-                    const token = await getToken();
-                    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders/`, {
-                        headers: {
-                            'Authorization': `Bearer ${token}`
-                        }
-                    });
-                    if (response.ok) {
-                        const data = await response.json();
-                        setOrders(data);
-                    } else {
-                        console.error('Failed to fetch orders');
-                    }
-                } catch (error) {
-                    console.error('Error fetching orders:', error);
-                }
-            }
-        };
-
-        fetchOrders();
-    }, [isSignedIn, user, getToken]);
-
-    if (!isLoaded || !isSignedIn) {
-        return <div>Loading...</div>;
-    }
-
     return (
         <div className='bg-gray-50 py-20'>
-            <h2 className="text-3xl font-extrabold text-green-800 text-center pt-20 md:pt-44">Order Details</h2>
+            <h2 className="text-3xl font-extrabold text-green-800 text-center pt-20 md:pt-44">Order Detail</h2>
             <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg mt-12 mb-10">
-                {orders.map((order) => (
-                    <div key={order.id} className="mb-8 border-b pb-4">
-                        <h3 className="text-xl font-semibold mb-2">Order ID: {order.id}</h3>
-                        <p>Total Amount: ${order.total_amount}</p>
-                        <p>Status: {order.payment_status}</p>
-                        <p>Date: {new Date(order.created_at).toLocaleDateString()}</p>
-                        <h4 className="font-semibold mt-4">Items:</h4>
-                        <ul>
-                            {order.items.map((item, index) => (
-                                <li key={index}>
-                                    {item.product_name} - Quantity: {item.quantity} - Price: ${item.unit_price}
-                                </li>
-                            ))}
-                        </ul>
+                <div className="flex flex-col md:flex-row justify-between items-center mb-4 space-y-4 md:space-y-0">
+                    <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2 w-full">
+                        <input
+                            type="text"
+                            placeholder="Search by Order ID"
+                            className="bg-white text-gray-600 px-4 md:px-12 py-3 border rounded-l focus:outline-none w-full md:w-auto"
+                        />
+                        <button className="bg-green-800 text-white px-4 py-2 rounded-r w-full md:w-auto">
+                            Search
+                        </button>
                     </div>
-                ))}
+                    <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 w-full md:w-auto">
+                        <select className="bg-white text-gray-500 px-4 py-2 border rounded w-full md:w-auto">
+                            <option>Filter by: Completed</option>
+                            <option>Completed</option>
+                            <option>Pre-order</option>
+                            <option>In Transit</option>
+                            <option>Cancelled</option>
+                        </select>
+                        <select className="bg-white text-gray-500 px-4 py-2 border rounded w-full md:w-auto">
+                            <option>Last 7 days</option>
+                            <option>Last 14 days</option>
+                            <option>Last 30 days</option>
+                        </select>
+                    </div>
+                </div>
+                <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 p-4">
+                    <img src="gemin.jpeg" alt="beans" className="w-28 h-28 md:w-36 md:h-36 object-cover" />
+                    <div>
+                        <h3 className="font-semibold text-gray-800 text-center md:text-left">Beans</h3>
+                        <p className="text-sm text-gray-600 text-center md:text-left">Qty: 3</p>
+                        <p className="font-semibold text-emerald-900 text-center md:text-left">Total: $900</p>
+                    </div>
+                </div>
+
+                <div className="bg-white p-4 rounded-lg">
+                    <div className="flex flex-col md:flex-row justify-between items-center mb-4 space-y-4 md:space-y-0">
+                        <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
+                            <div className="flex space-x-2">
+                                <span className="text-gray-400">Order ID:</span>
+                                <span className="text-black font-semibold">#FWB1273643</span>
+                            </div>
+                            <span className="text-green-800 bg-gray-300 px-3 py-2 text-sm rounded">Pre-order</span>
+                        </div>
+                        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 w-full md:w-auto">
+                            <button className="bg-red-600 text-white px-4 py-2 rounded w-full md:w-auto">Cancel order</button>
+                            <button className="bg-gray-400 text-white px-4 py-2 rounded w-full md:w-auto">Track order</button>
+                            <button className="bg-orange-400 text-white px-4 py-2 rounded w-full md:w-auto">Order details</button>
+                        </div>
+                    </div>
+                    <div className="mb-4 text-center md:text-left">
+                        <a href="#" className="text-green-800 underline">Download invoice</a>
+                    </div>
+                    <div className="flex flex-col md:flex-row justify-between items-center mb-4 space-y-2 md:space-y-0">
+                        <div>
+                            <span className="text-gray-400">Order date:</span>
+                            <span className="text-gray-600 ml-2">24 January 2024</span>
+                        </div>
+                        <div>
+                            <span className="text-gray-400">Email:</span>
+                            <span className="text-gray-600 ml-2">name@example.com</span>
+                        </div>
+                        <div>
+                            <span className="text-gray-400">Payment method:</span>
+                            <span className="text-gray-600 ml-2">Credit card</span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div className="bg-white p-4 rounded-lg text-center md:text-left">
+                        <span className="text-orange-400">Expected delivery on Monday 16 Jul 2024</span>
+                    </div>
+                </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Orders;
+export default Orders
