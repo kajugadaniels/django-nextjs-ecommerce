@@ -1,9 +1,10 @@
-from rest_framework import status
-from rest_framework.response import Response
-from rest_framework.views import APIView
-from account.serializers import UserSerializer
-from account.models import User
 import logging
+from account.models import User
+from rest_framework import status
+from rest_framework import generics
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from account.serializers import UserSerializer
 
 logger = logging.getLogger(__name__)
 
@@ -28,3 +29,8 @@ class UserCreateView(APIView):
         
         logger.error(f"Serializer errors: {serializer.errors}")
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class UserDetailView(generics.RetrieveUpdateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    lookup_field = 'slug'

@@ -2,6 +2,7 @@ from home.models import *
 from home.serializers import *
 from rest_framework import generics
 from rest_framework.exceptions import NotFound
+from rest_framework.permissions import IsAuthenticated
 
 class ProductList(generics.ListCreateAPIView):
     serializer_class = ProductSerializer
@@ -59,10 +60,23 @@ class ProfileDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
 
-class OrderList(generics.ListCreateAPIView):
-    queryset = Order.objects.all()
+class OrderCreateView(generics.CreateAPIView):
     serializer_class = OrderSerializer
+    permission_classes = [IsAuthenticated]
 
-class OrderDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Order.objects.all()
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
+class OrderListView(generics.ListAPIView):
     serializer_class = OrderSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        return Order.objects.filter(user=self.request.user)
+
+class OrderDetailView(generics.RetrieveAPIView):
+    serializer_class = OrderSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        return Order.objects.filter(user=self.request.user)
