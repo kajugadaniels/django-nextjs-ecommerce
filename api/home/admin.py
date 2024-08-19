@@ -32,9 +32,3 @@ class ProductAdmin(admin.ModelAdmin):
 class ProfileAdmin(admin.ModelAdmin):
     list_display = ('name', 'email', 'phone_number')
     search_fields = ('name', 'email', 'phone_number', 'address')
-
-@admin.register(Order)
-class OrderAdmin(admin.ModelAdmin):
-    list_display = ('profile', 'product', 'quantity', 'total_price', 'created_at')
-    search_fields = ('profile__name', 'product__name')
-    list_filter = ('created_at',)
