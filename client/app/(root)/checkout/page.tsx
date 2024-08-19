@@ -72,7 +72,7 @@ const CheckOut = () => {
             return;
         }
 
-        setShowModal(true); // Show the modal with the order details before placing the order
+        setShowModal(true);
     };
 
     const confirmOrder = async () => {
@@ -80,7 +80,10 @@ const CheckOut = () => {
         try {
             const token = await getToken();
             const orderData = {
-                user_email: user?.primaryEmailAddress?.emailAddress ?? '',
+                user_email: user?.primaryEmailAddress?.emailAddress,
+                user_first_name: user?.firstName,
+                user_last_name: user?.lastName,
+                user_pk: user?.id,
                 total_amount: calculateTotal(),
                 payment_status: 'Not Paid',
                 items: cartItems.map(item => ({
@@ -89,10 +92,10 @@ const CheckOut = () => {
                     quantity: item.quantity,
                     unit_price: item.unit_price
                 })),
-                shipping_info: shippingInfo,
-                user_first_name: user?.firstName ?? '',
-                user_last_name: user?.lastName ?? '',
-                user_pk: user?.id ?? ''  // Ensure you handle user.pk according to your actual user structure
+                shipping_address: shippingInfo.address,
+                shipping_city: shippingInfo.city,
+                shipping_zip_code: shippingInfo.zipCode,
+                shipping_phone: shippingInfo.phone
             };
 
             const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/orders/`, {
@@ -109,15 +112,8 @@ const CheckOut = () => {
                 localStorage.removeItem('userCart');
                 router.push('/orders');
             } else {
-                const responseText = await response.text();
-                if (response.headers.get('Content-Type')?.includes('application/json')) {
-                    const errorData = JSON.parse(responseText);
-                    console.error('Error response:', errorData);
-                    showNotification(`Failed to place order: ${errorData.message}`, 'error');
-                } else {
-                    console.error('Unexpected response:', responseText);
-                    showNotification('Failed to place order. Please try again.', 'error');
-                }
+                const errorData = await response.json();
+                showNotification(`Failed to place order: ${errorData.message || 'Unknown error'}`, 'error');
             }
         } catch (error) {
             console.error('Error placing order:', error);

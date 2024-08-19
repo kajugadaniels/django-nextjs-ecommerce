@@ -70,19 +70,7 @@ class OrderCreateView(APIView):
         serializer = OrderSerializer(data=request.data)
         if serializer.is_valid():
             order = serializer.save()
-            
-            # Create OrderItems
-            items_data = request.data.get('items', [])
-            for item_data in items_data:
-                OrderItem.objects.create(
-                    order=order,
-                    product_id=item_data['product_id'],
-                    product_name=item_data['product_name'],
-                    quantity=item_data['quantity'],
-                    unit_price=item_data['unit_price']
-                )
-            
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
+            return Response(OrderSerializer(order).data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class OrderListView(generics.ListAPIView):
