@@ -1,4 +1,5 @@
 from home.models import *
+from account.models import *
 from home.serializers import *
 from django.db import transaction
 from rest_framework import status
@@ -69,8 +70,13 @@ class OrderCreateView(APIView):
     def post(self, request):
         serializer = OrderSerializer(data=request.data)
         if serializer.is_valid():
-            order = serializer.save()
-            
+            order_data = serializer.validated_data
+            user_pk = order_data.pop('user_pk')
+            user = User.objects.get(pk=user_pk)  # Get the user instance
+
+            # Create Order
+            order = Order.objects.create(user=user, **order_data)
+
             # Create OrderItems
             items_data = request.data.get('items', [])
             for item_data in items_data:

@@ -61,17 +61,17 @@ class OrderItemSerializer(serializers.ModelSerializer):
         model = OrderItem
         fields = ['product_id', 'product_name', 'quantity', 'unit_price']
 
+class OrderItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = OrderItem
+        fields = ['product_id', 'product_name', 'quantity', 'unit_price']
+
 class OrderSerializer(serializers.ModelSerializer):
     items = OrderItemSerializer(many=True)
+    user_pk = serializers.IntegerField(write_only=True)  # Added to handle user PK
 
     class Meta:
         model = Order
-        fields = ['id', 'user', 'total_amount', 'payment_status', 'created_at', 'updated_at', 'items', 'shipping_address', 'shipping_city', 'shipping_zip_code', 'shipping_phone']
+        fields = ['id', 'user', 'total_amount', 'payment_status', 'created_at', 'updated_at', 'items', 
+                    'shipping_address', 'shipping_city', 'shipping_zip_code', 'shipping_phone', 'user_pk']
         read_only_fields = ['id', 'created_at', 'updated_at']
-
-    def create(self, validated_data):
-        items_data = validated_data.pop('items')
-        order = Order.objects.create(**validated_data)
-        for item_data in items_data:
-            OrderItem.objects.create(order=order, **item_data)
-        return order

@@ -3463,3 +3463,37 @@ C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\models.py chang
 C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\models.py changed, reloading.
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
+"GET /api/categories/ HTTP/1.1" 200 51
+"GET /api/categories/ HTTP/1.1" 200 51
+"GET /api/categories/ HTTP/1.1" 200 51
+"GET /api/categories/ HTTP/1.1" 200 51
+"GET /api/products/ HTTP/1.1" 200 554
+"GET /api/products/ HTTP/1.1" 200 554
+"GET /api/products/ HTTP/1.1" 200 554
+"GET /api/products/ HTTP/1.1" 200 554
+"GET /api/products/ibijumba/ HTTP/1.1" 200 552
+"GET /api/products/ibijumba/ HTTP/1.1" 200 552
+"GET /api/products/ibijumba/ HTTP/1.1" 200 552
+"GET /api/products/ibijumba/ HTTP/1.1" 200 552
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\models.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
