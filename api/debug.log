@@ -1193,3 +1193,143 @@ Watching for file changes with StatReloader
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
+"GET /admin/home/order/add/ HTTP/1.1" 200 34236
+"GET /admin/home/order/add/ HTTP/1.1" 200 34236
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/orderitem/ HTTP/1.1" 200 30467
+"GET /admin/home/orderitem/ HTTP/1.1" 200 30467
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/orderitem/add/ HTTP/1.1" 200 35999
+"GET /admin/home/orderitem/add/ HTTP/1.1" 200 35999
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"GET /api/orders HTTP/1.1" 301 0
+"GET /api/orders HTTP/1.1" 301 0
+Method Not Allowed: /api/orders/
+Method Not Allowed: /api/orders/
+"GET /api/orders/ HTTP/1.1" 405 8332
+"GET /api/orders/ HTTP/1.1" 405 8332
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+"GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+"GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+"GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+"GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+"GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+"GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+"GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+"GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2446
+"GET /favicon.ico HTTP/1.1" 404 2446
+"GET /api/products/ HTTP/1.1" 200 12885
+"GET /api/products/ HTTP/1.1" 200 12885
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"OPTIONS /api/api/orders/ HTTP/1.1" 200 0
+"OPTIONS /api/api/orders/ HTTP/1.1" 200 0
+Not Found: /api/api/orders/
+Not Found: /api/api/orders/
+"POST /api/api/orders/ HTTP/1.1" 404 4872
+"POST /api/api/orders/ HTTP/1.1" 404 4872
+Not Found: /api/api/orders/
+Not Found: /api/api/orders/
+"POST /api/api/orders/ HTTP/1.1" 404 4872
+"POST /api/api/orders/ HTTP/1.1" 404 4872
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+Not Found: /api/api/orders/
+Not Found: /api/api/orders/
+"POST /api/api/orders/ HTTP/1.1" 404 4872
+"POST /api/api/orders/ HTTP/1.1" 404 4872
+Not Found: /api/api/orders/
+Not Found: /api/api/orders/
+"POST /api/api/orders/ HTTP/1.1" 404 4872
+"POST /api/api/orders/ HTTP/1.1" 404 4872
+Method Not Allowed: /api/orders/
+Method Not Allowed: /api/orders/
+"GET /api/orders/ HTTP/1.1" 405 5616
+"GET /api/orders/ HTTP/1.1" 405 5616
+"GET /api/orders/list HTTP/1.1" 301 0
+"GET /api/orders/list HTTP/1.1" 301 0
+"GET /api/orders/list/ HTTP/1.1" 200 5313
+"GET /api/orders/list/ HTTP/1.1" 200 5313
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Method Not Allowed: /api/orders/
+Method Not Allowed: /api/orders/
+"GET /api/orders/ HTTP/1.1" 405 8332
+"GET /api/orders/ HTTP/1.1" 405 8332
+"GET /api/products/ HTTP/1.1" 200 12885
+"GET /api/products/ HTTP/1.1" 200 12885
+Not Found: /api/users
+Not Found: /api/users
+"GET /api/users HTTP/1.1" 404 4853
+"GET /api/users HTTP/1.1" 404 4853
+Not Found: /api/users
+Not Found: /api/users
+"GET /api/users HTTP/1.1" 404 4853
+"GET /api/users HTTP/1.1" 404 4853
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /api/api/orders/
+Not Found: /api/api/orders/
+"GET /api/api/orders/ HTTP/1.1" 404 4871
+"GET /api/api/orders/ HTTP/1.1" 404 4871

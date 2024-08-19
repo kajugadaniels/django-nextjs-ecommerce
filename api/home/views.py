@@ -1,6 +1,10 @@
 from home.models import *
 from home.serializers import *
+from django.db import transaction
+from rest_framework import status
 from rest_framework import generics
+from rest_framework.views import APIView
+from rest_framework.response import Response
 from rest_framework.exceptions import NotFound
 from rest_framework.permissions import IsAuthenticated
 
@@ -60,12 +64,26 @@ class ProfileDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
 
-class OrderCreateView(generics.CreateAPIView):
-    serializer_class = OrderSerializer
-    permission_classes = [IsAuthenticated]
-
-    def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
+class OrderCreateView(APIView):
+    @transaction.atomic
+    def post(self, request):
+        serializer = OrderSerializer(data=request.data)
+        if serializer.is_valid():
+            order = serializer.save()
+            
+            # Create OrderItems
+            items_data = request.data.get('items', [])
+            for item_data in items_data:
+                OrderItem.objects.create(
+                    order=order,
+                    product_id=item_data['product_id'],
+                    product_name=item_data['product_name'],
+                    quantity=item_data['quantity'],
+                    unit_price=item_data['unit_price']
+                )
+            
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class OrderListView(generics.ListAPIView):
     serializer_class = OrderSerializer

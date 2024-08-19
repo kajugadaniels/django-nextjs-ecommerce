@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useUser } from "@clerk/nextjs";
+import { useAuth, useUser } from "@clerk/nextjs";
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { MomoApi } from '@/app/utils/momoApi';
+import Swal from 'sweetalert2';
 
 interface CartItem {
     id: number;
@@ -17,11 +17,18 @@ interface CartItem {
 
 const CheckOut = () => {
     const [cartItems, setCartItems] = useState<CartItem[]>([]);
-    const { user } = useUser();
+    const { user, isLoaded, isSignedIn } = useUser();
+    const { getToken } = useAuth();
     const [isLoading, setIsLoading] = useState(true);
-    const [phone, setPhone] = useState('');
     const [isProcessing, setIsProcessing] = useState(false);
     const router = useRouter();
+
+    const [shippingInfo, setShippingInfo] = useState({
+        address: '',
+        city: '',
+        zipCode: '',
+        phone: '',
+    });
 
     useEffect(() => {
         const storedCart = JSON.parse(localStorage.getItem('userCart') || '[]');
@@ -33,28 +40,81 @@ const CheckOut = () => {
         return cartItems.reduce((total, item) => total + parseFloat(item.unit_price) * item.quantity, 0).toFixed(2);
     };
 
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setShippingInfo(prev => ({ ...prev, [name]: value }));
+    };
+
     const handlePlaceOrder = async () => {
+        if (!isSignedIn || !user) {
+            Swal.fire({
+                title: 'Please Sign In',
+                text: 'You need to be signed in to place an order.',
+                icon: 'warning',
+                confirmButtonText: 'Sign In'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    router.push('/sign-in');
+                }
+            });
+            return;
+        }
+
         setIsProcessing(true);
         try {
-            const response = await MomoApi.collectMoney(phone, calculateTotal());
-            
-            if (response.status === "SUCCESS") {
-                alert('Payment initiated. Please check your phone for the payment prompt.');
-                // Clear cart and redirect to a thank you page
-                localStorage.removeItem('userCart');
-                router.push('/thank-you');
+            const token = await getToken();
+            const orderData = {
+                user_email: user.primaryEmailAddress?.emailAddress,
+                total_amount: calculateTotal(),
+                payment_status: 'Not Paid',
+                items: cartItems.map(item => ({
+                    product_id: item.id,
+                    product_name: item.name,
+                    quantity: item.quantity,
+                    unit_price: item.unit_price
+                })),
+                shipping_info: shippingInfo
+            };
+
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders/`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify(orderData),
+            });
+
+            if (response.ok) {
+                Swal.fire({
+                    title: 'Order Placed!',
+                    text: 'Your order has been placed successfully.',
+                    icon: 'success',
+                    confirmButtonText: 'View Orders'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        localStorage.removeItem('userCart');
+                        router.push('/orders');
+                    }
+                });
             } else {
-                alert('Payment failed: ' + response.message);
+                const errorData = await response.json();
+                throw new Error(errorData.message || 'Failed to place order');
             }
         } catch (error) {
-            console.error('Error processing payment:', error);
-            alert('An error occurred while processing your payment. Please try again.');
+            console.error('Error placing order:', error);
+            Swal.fire({
+                title: 'Error',
+                text: 'Failed to place order. Please try again.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
         } finally {
             setIsProcessing(false);
         }
     };
 
-    if (isLoading) {
+    if (!isLoaded || isLoading) {
         return (
             <div className="flex justify-center items-center h-screen bg-gray-50">
                 <motion.div
@@ -91,6 +151,7 @@ const CheckOut = () => {
                                             name="firstName"
                                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                                             defaultValue={user?.firstName || ''}
+                                            readOnly
                                         />
                                     </div>
                                     <div>
@@ -103,6 +164,7 @@ const CheckOut = () => {
                                             name="lastName"
                                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                                             defaultValue={user?.lastName || ''}
+                                            readOnly
                                         />
                                     </div>
                                 </div>
@@ -114,6 +176,8 @@ const CheckOut = () => {
                                         type="text"
                                         id="address"
                                         name="address"
+                                        value={shippingInfo.address}
+                                        onChange={handleInputChange}
                                         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                                     />
                                 </div>
@@ -126,6 +190,8 @@ const CheckOut = () => {
                                             type="text"
                                             id="city"
                                             name="city"
+                                            value={shippingInfo.city}
+                                            onChange={handleInputChange}
                                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                                         />
                                     </div>
@@ -137,22 +203,23 @@ const CheckOut = () => {
                                             type="text"
                                             id="zipCode"
                                             name="zipCode"
+                                            value={shippingInfo.zipCode}
+                                            onChange={handleInputChange}
                                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                                         />
                                     </div>
                                 </div>
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="phone">
-                                        Phone Number (for payment)
+                                        Phone Number
                                     </label>
                                     <input
                                         type="tel"
                                         id="phone"
                                         name="phone"
-                                        value={phone}
-                                        onChange={(e) => setPhone(e.target.value)}
+                                        value={shippingInfo.phone}
+                                        onChange={handleInputChange}
                                         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-                                        placeholder="Enter your phone number for payment"
                                     />
                                 </div>
                             </form>
