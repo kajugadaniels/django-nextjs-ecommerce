@@ -14,7 +14,7 @@ const Home = () => {
                     <div className="max-w-2xl mx-auto text-center">
                         <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl" data-aos="fade-up"
                             data-aos-duration="3000">How does it work?</h2>
-                        <p className="max-w-lg mx-auto mt-4 text-base leading-relaxed text-gray-600" data-aos="fade-up" data-aos-duration="3000">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.</p>
+                        <p className="max-w-lg mx-auto mt-4 text-base leading-relaxed text-gray-600" data-aos="fade-up" data-aos-duration="3000">Browse through our extensive selection of high-quality produce that is designed to last. Use our smart search and filter options to quickly find the perfect item. Each fruit or vegetable comes with detailed descriptions, customer reviews, and ratings to help you make informed choices. </p>
                     </div>
 
                     <div className="relative mt-12 lg:mt-20">
@@ -28,8 +28,8 @@ const Home = () => {
                                 <div className="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
                                     <span className="text-xl font-semibold text-gray-700"> 1 </span>
                                 </div>
-                                <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10" >Step One</h3>
-                                <p className="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                                <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10" > Explore & Discover</h3>
+                                <p className="mt-4 text-base text-gray-600">Browse through our extensive selection of high-quality products that are designed to last. Use our smart search and filter options to quickly find the perfect item. Each product comes with detailed descriptions, customer reviews, and ratings to help you make informed choices. </p>
                             </div>
 
                             <div data-aos="fade-up"
@@ -37,8 +37,8 @@ const Home = () => {
                                 <div className="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
                                     <span className="text-xl font-semibold text-gray-700"> 2 </span>
                                 </div>
-                                <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Step Two</h3>
-                                <p className="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                                <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Order & Pay</h3>
+                                <p className="mt-4 text-base text-gray-600">Once you’ve found what you need, add it to your cart and proceed to a smooth, secure checkout. We offer multiple payment options for your convenience. Enjoy fast delivery and track your order in real-time, with updates every step of the way. </p>
                             </div>
 
                             <div data-aos="fade-up"
@@ -46,8 +46,8 @@ const Home = () => {
                                 <div className="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
                                     <span className="text-xl font-semibold text-gray-700"> 3 </span>
                                 </div>
-                                <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Step Three</h3>
-                                <p className="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                                <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Receive & Support</h3>
+                                <p className="mt-4 text-base text-gray-600">Get your order delivered quickly and with care. If anything isn’t right, our hassle-free return process and responsive customer support are here to help. We focus on offering durable products that contribute to a sustainable shopping experience. </p>
                             </div>
                         </div>
                     </div>
