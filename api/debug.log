@@ -951,3 +951,73 @@ Watching for file changes with StatReloader
 "GET /media/products/product_ibijumba_32.jpg HTTP/1.1" 200 661151
 "GET /media/products/product_ibijumba_32.jpg HTTP/1.1" 200 661151
 "GET /media/products/product_ibijumba_32.jpg HTTP/1.1" 200 661151
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/account/user/ HTTP/1.1" 200 34562
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Received POST request: {'clerk_id': 'user_2ks6nM6MpelvToz3ouUyHITcYXi', 'email': 'kajugadaniels@gmail.com', 'first_name': 'KAJUGA', 'last_name': 'Daniel'}
+User created/updated: kajugadaniels@gmail.com
+"POST /api/auth/users/ HTTP/1.1" 201 124
+"POST /api/auth/users/ HTTP/1.1" 201 124
+"GET /api/products/ HTTP/1.1" 200 554
+"GET /api/products/ HTTP/1.1" 200 554
+"GET /api/products/ HTTP/1.1" 200 554
+"GET /api/products/ HTTP/1.1" 200 554
+"GET /media/products/product_ibijumba_32.jpg HTTP/1.1" 304 0
+"GET /media/products/product_ibijumba_32.jpg HTTP/1.1" 304 0
+"GET /admin/account/user/ HTTP/1.1" 200 35038
+"GET /admin/account/user/ HTTP/1.1" 200 35038
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/account/user/2/change/ HTTP/1.1" 200 49532
+"GET /admin/account/user/2/change/ HTTP/1.1" 200 49532
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\account\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
