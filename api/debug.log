@@ -5129,3 +5129,281 @@ C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py change
 C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 200 6385
+"GET /api/orders/list/ HTTP/1.1" 200 6385
+"GET /admin/home/orderitem/ HTTP/1.1" 200 34734
+"GET /admin/home/orderitem/ HTTP/1.1" 200 34734
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/orderitem/17/change/ HTTP/1.1" 200 36799
+"GET /admin/home/orderitem/17/change/ HTTP/1.1" 200 36799
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/ HTTP/1.1" 200 34192
+"GET /admin/home/order/ HTTP/1.1" 200 34192
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/8/change/ HTTP/1.1" 200 38582
+"GET /admin/home/order/8/change/ HTTP/1.1" 200 38582
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/ HTTP/1.1" 403 58
+"GET /api/orders/list/ HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/?search=&status=&date= HTTP/1.1" 403 58
+"GET /api/orders/list/?search=&status=&date= HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/?search=&status=&date= HTTP/1.1" 403 58
+"GET /api/orders/list/?search=&status=&date= HTTP/1.1" 403 58
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 304 0
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 304 0
+"GET /media/products/product_watermelon_12.jpg HTTP/1.1" 304 0
+"GET /media/products/product_watermelon_12.jpg HTTP/1.1" 304 0
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/?search=&status=&date= HTTP/1.1" 403 58
+"GET /api/orders/list/?search=&status=&date= HTTP/1.1" 403 58
+Forbidden: /api/orders/list/
+Forbidden: /api/orders/list/
+"GET /api/orders/list/?search=&status=&date= HTTP/1.1" 403 58
+"GET /api/orders/list/?search=&status=&date= HTTP/1.1" 403 58
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 438
+"GET /api/orders/list/ HTTP/1.1" 200 438
+"GET /api/orders/list/ HTTP/1.1" 200 438
+"GET /api/orders/list/ HTTP/1.1" 200 438
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+Not Found: /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/
+Not Found: /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 404 26
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 404 26
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/products/ HTTP/1.1" 200 1020
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 438
+"GET /api/orders/list/ HTTP/1.1" 200 438
+Method Not Allowed: /api/orders/
+Method Not Allowed: /api/orders/
+"GET /api/orders/ HTTP/1.1" 405 40
+"GET /api/orders/ HTTP/1.1" 405 40
+Method Not Allowed: /api/orders/
+Method Not Allowed: /api/orders/
+"GET /api/orders/ HTTP/1.1" 405 40
+"GET /api/orders/ HTTP/1.1" 405 40
+Method Not Allowed: /api/orders/
+Method Not Allowed: /api/orders/
+"GET /api/orders/ HTTP/1.1" 405 40
+"GET /api/orders/ HTTP/1.1" 405 40
+Method Not Allowed: /api/orders/
+Method Not Allowed: /api/orders/
+"GET /api/orders/ HTTP/1.1" 405 40
+"GET /api/orders/ HTTP/1.1" 405 40
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 438
+"GET /api/orders/list/ HTTP/1.1" 200 438
+"GET /api/orders/list/ HTTP/1.1" 200 438
+"GET /api/orders/list/ HTTP/1.1" 200 438
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 438
+"GET /api/orders/list/ HTTP/1.1" 200 438
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 438
+"GET /api/orders/list/ HTTP/1.1" 200 438
