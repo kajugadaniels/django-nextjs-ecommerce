@@ -162,7 +162,7 @@ const Orders = () => {
                                 <div key={item.id} className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 p-4 border-t border-gray-200">
                                     <div className="w-28 h-28 relative">
                                         <Image
-                                            src={getProductImageUrl(item.product.image)}
+                                            src={item.product.image}
                                             alt={item.product.name}
                                             layout="fill"
                                             objectFit="cover"

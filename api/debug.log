@@ -7121,3 +7121,33 @@ C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py 
 C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
+"GET /api/orders/list/ HTTP/1.1" 200 7839
+"GET /api/orders/list/ HTTP/1.1" 200 7839
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"OPTIONS /api/orders/list/ HTTP/1.1" 200 0
+"OPTIONS /api/orders/list/ HTTP/1.1" 200 0
+"GET /api/orders/list/ HTTP/1.1" 200 842
+"GET /api/orders/list/ HTTP/1.1" 200 842
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 842
+"GET /api/orders/list/ HTTP/1.1" 200 842
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /api/orders/list/ HTTP/1.1" 200 842
+"GET /api/orders/list/ HTTP/1.1" 200 842
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 842
+"GET /api/orders/list/ HTTP/1.1" 200 842
