@@ -21,6 +21,7 @@ const CheckOut = () => {
     const { getToken } = useAuth();
     const [isLoading, setIsLoading] = useState(true);
     const [isProcessing, setIsProcessing] = useState(false);
+    const [showModal, setShowModal] = useState(false);
     const router = useRouter();
 
     const [shippingInfo, setShippingInfo] = useState({
@@ -45,26 +46,41 @@ const CheckOut = () => {
         setShippingInfo(prev => ({ ...prev, [name]: value }));
     };
 
-    const handlePlaceOrder = async () => {
+    const showNotification = (message: string, icon: 'success' | 'error') => {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-start',
+            showConfirmButton: false,
+            timer: 4000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer);
+                toast.addEventListener('mouseleave', Swal.resumeTimer);
+            }
+        });
+
+        Toast.fire({
+            icon: icon,
+            title: message
+        });
+    };
+
+    const handlePlaceOrder = () => {
         if (!isSignedIn || !user) {
-            Swal.fire({
-                title: 'Please Sign In',
-                text: 'You need to be signed in to place an order.',
-                icon: 'warning',
-                confirmButtonText: 'Sign In'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    router.push('/sign-in');
-                }
-            });
+            showNotification('Please sign in to place an order.', 'error');
+            router.push('/sign-in');
             return;
         }
 
+        setShowModal(true); // Show the modal with the order details before placing the order
+    };
+
+    const confirmOrder = async () => {
         setIsProcessing(true);
         try {
             const token = await getToken();
             const orderData = {
-                user_email: user.primaryEmailAddress?.emailAddress,
+                user_email: user?.primaryEmailAddress?.emailAddress ?? '',
                 total_amount: calculateTotal(),
                 payment_status: 'Not Paid',
                 items: cartItems.map(item => ({
@@ -73,10 +89,13 @@ const CheckOut = () => {
                     quantity: item.quantity,
                     unit_price: item.unit_price
                 })),
-                shipping_info: shippingInfo
+                shipping_info: shippingInfo,
+                user_first_name: user?.firstName ?? '',
+                user_last_name: user?.lastName ?? '',
+                user_pk: user?.id ?? ''  // Ensure you handle user.pk according to your actual user structure
             };
 
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders/`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/orders/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -86,31 +105,26 @@ const CheckOut = () => {
             });
 
             if (response.ok) {
-                Swal.fire({
-                    title: 'Order Placed!',
-                    text: 'Your order has been placed successfully.',
-                    icon: 'success',
-                    confirmButtonText: 'View Orders'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        localStorage.removeItem('userCart');
-                        router.push('/orders');
-                    }
-                });
+                showNotification('Order placed successfully!', 'success');
+                localStorage.removeItem('userCart');
+                router.push('/orders');
             } else {
-                const errorData = await response.json();
-                throw new Error(errorData.message || 'Failed to place order');
+                const responseText = await response.text();
+                if (response.headers.get('Content-Type')?.includes('application/json')) {
+                    const errorData = JSON.parse(responseText);
+                    console.error('Error response:', errorData);
+                    showNotification(`Failed to place order: ${errorData.message}`, 'error');
+                } else {
+                    console.error('Unexpected response:', responseText);
+                    showNotification('Failed to place order. Please try again.', 'error');
+                }
             }
         } catch (error) {
             console.error('Error placing order:', error);
-            Swal.fire({
-                title: 'Error',
-                text: 'Failed to place order. Please try again.',
-                icon: 'error',
-                confirmButtonText: 'OK'
-            });
+            showNotification('Failed to place order. Please try again.', 'error');
         } finally {
             setIsProcessing(false);
+            setShowModal(false);
         }
     };
 
@@ -233,40 +247,71 @@ const CheckOut = () => {
                                     <div className="flex items-center">
                                         <Image src={item.image} alt={item.name} width={60} height={60} className="rounded-md mr-4" />
                                         <div>
-                                            <h3 className="font-semibold text-gray-800">{item.name}</h3>
-                                            <p className="text-sm text-gray-600">Qty: {item.quantity}</p>
+                                            <h3 className="text-lg font-medium text-gray-900">{item.name}</h3>
+                                            <p className="text-sm text-gray-600">Quantity: {item.quantity}</p>
                                         </div>
                                     </div>
-                                    <p className="font-semibold text-emerald-900">${(parseFloat(item.unit_price) * item.quantity).toFixed(2)}</p>
+                                    <div className="text-lg font-medium text-gray-900">
+                                        ${parseFloat(item.unit_price) * item.quantity}
+                                    </div>
                                 </div>
                             ))}
-                            <div className="border-t border-gray-200 pt-4 mt-4">
-                                <div className="flex justify-between mb-2">
-                                    <p className="text-gray-600">Subtotal</p>
-                                    <p className="font-semibold text-gray-800">${calculateTotal()}</p>
-                                </div>
-                                <div className="flex justify-between mb-2">
-                                    <p className="text-gray-600">Shipping</p>
-                                    <p className="font-semibold text-gray-800">$0.00</p>
-                                </div>
-                                <div className="flex justify-between mt-4 pt-4 border-t border-gray-200">
-                                    <p className="text-lg font-semibold text-gray-800">Total</p>
-                                    <p className="text-lg font-semibold text-emerald-900">${calculateTotal()}</p>
-                                </div>
+                            <div className="text-xl font-bold text-emerald-900 mt-6">
+                                Total: ${calculateTotal()}
                             </div>
-                            <motion.button
-                                whileHover={{ scale: 1.02 }}
-                                whileTap={{ scale: 0.98 }}
-                                className="w-full mt-8 bg-emerald-900 text-white py-3 px-4 rounded-md hover:bg-emerald-800 transition duration-300 font-semibold text-lg"
+                            <button
                                 onClick={handlePlaceOrder}
+                                className="mt-6 w-full px-4 py-2 bg-emerald-900 text-white text-lg font-semibold rounded-md hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
                                 disabled={isProcessing}
                             >
-                                {isProcessing ? 'Processing...' : 'Place Order'}
-                            </motion.button>
+                                {isProcessing ? "Processing..." : "Place Order"}
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
+
+            {/* Modal */}
+            {showModal && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+                    <div className="bg-white rounded-lg p-8 w-full max-w-md mx-auto">
+                        <h2 className="text-2xl font-semibold text-emerald-900 mb-6">Order Confirmation</h2>
+                        <div>
+                            <h3 className="text-lg font-medium text-gray-900 mb-2">Products:</h3>
+                            {cartItems.map((item) => (
+                                <div key={item.id} className="flex justify-between mb-2">
+                                    <span>{item.name} (x{item.quantity})</span>
+                                    <span>${parseFloat(item.unit_price) * item.quantity}</span>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="text-lg font-bold text-emerald-900 mt-4">
+                            Total: ${calculateTotal()}
+                        </div>
+                        <div className="mt-6">
+                            <h3 className="text-lg font-medium text-gray-900 mb-2">User Information:</h3>
+                            <p><strong>First Name:</strong> {user?.firstName ?? 'N/A'}</p>
+                            <p><strong>Last Name:</strong> {user?.lastName ?? 'N/A'}</p>
+                            <p><strong>Primary Key:</strong> {user?.id ?? 'N/A'}</p>
+                        </div>
+                        <div className="mt-6 flex justify-end">
+                            <button
+                                onClick={confirmOrder}
+                                className="px-4 py-2 bg-emerald-900 text-white text-lg font-semibold rounded-md hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                                disabled={isProcessing}
+                            >
+                                {isProcessing ? "Processing..." : "Confirm Order"}
+                            </button>
+                            <button
+                                onClick={() => setShowModal(false)}
+                                className="ml-4 px-4 py-2 bg-gray-300 text-lg font-semibold rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+                            >
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </motion.div>
     );
 };
