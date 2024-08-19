@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^5.3.1",
+    "@headlessui/react": "^2.1.2",
     "@radix-ui/react-slot": "^1.1.0",
     "@types/react-router-dom": "^5.3.3",
     "aos": "^2.3.4",

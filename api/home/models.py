@@ -141,10 +141,8 @@ class Order(models.Model):
 
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, related_name='items', on_delete=models.CASCADE)
-    product_id = models.IntegerField()
-    product_name = models.CharField(max_length=255, null=True, blank=True)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True, blank=True)
     quantity = models.IntegerField(null=True, blank=True)
-    unit_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
 
     def __str__(self):
-        return f"{self.quantity} x {self.product_name} in Order {self.order.id}"
+        return f"{self.quantity} x {self.product.name} in Order {self.order.id}"
