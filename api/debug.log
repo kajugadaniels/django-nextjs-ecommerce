@@ -719,3 +719,11 @@ User created/updated: olivineuhiriwe2001@gmail.com
 "GET /api/products/ HTTP/1.1" 200 2768
 "GET /api/products/ HTTP/1.1" 200 2768
 "GET /api/products/ HTTP/1.1" 200 2768
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+"GET /api/products/ HTTP/1.1" 200 2768
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
