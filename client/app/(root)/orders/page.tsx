@@ -1,14 +1,19 @@
-"use client";
+"use client"
 
 import React, { useState, useEffect } from 'react';
 import { useUser, useAuth } from "@clerk/nextjs";
 import Image from 'next/image';
+import { getApiUrl, getMediaUrl } from '@/lib/apiConfig';
 
 interface OrderItem {
     id: number;
-    product_name: string;
+    product: {
+        id: number;
+        name: string;
+        image: string;
+        unit_price: number;
+    };
     quantity: number;
-    unit_price: string;
 }
 
 interface Order {
@@ -42,9 +47,9 @@ const Orders = () => {
             if (isSignedIn && user) {
                 try {
                     const token = await getToken();
-                    
+
                     // Fetch user data
-                    const userResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/users/${user.id}/`, {
+                    const userResponse = await fetch(`${getApiUrl()}/auth/users/${user.id}/`, {
                         headers: {
                             'Authorization': `Bearer ${token}`
                         }
@@ -58,7 +63,7 @@ const Orders = () => {
                     setUserData(userData);
 
                     // Fetch all orders
-                    const ordersResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/orders/list/`, {
+                    const ordersResponse = await fetch(`${getApiUrl()}/orders/list/`, {
                         headers: {
                             'Authorization': `Bearer ${token}`
                         }
@@ -69,7 +74,7 @@ const Orders = () => {
                     }
 
                     const allOrders = await ordersResponse.json();
-                    
+
                     // Filter orders for the current user
                     const userOrders = allOrders.filter((order: Order) => order.user === userData.id);
                     setOrders(userOrders);
@@ -93,6 +98,13 @@ const Orders = () => {
     if (!isSignedIn) {
         return <div className="text-center py-20">Please sign in to view your orders.</div>;
     }
+
+    const getProductImageUrl = (imagePath: string) => {
+        if (imagePath) {
+            return `${getMediaUrl()}${imagePath}`;
+        }
+        return '/placeholder.png'; // Placeholder image URL
+    };
 
     return (
         <div className='bg-gray-50 py-20'>
@@ -122,7 +134,7 @@ const Orders = () => {
                         </select>
                     </div>
                 </div>
-                
+
                 {orders.length === 0 ? (
                     <p className="text-center py-10">No orders found.</p>
                 ) : (
@@ -135,8 +147,8 @@ const Orders = () => {
                                         <span className="text-black font-semibold">#{order.id}</span>
                                     </div>
                                     <span className={`text-sm px-3 py-1 rounded ${
-                                        order.payment_status === 'Not Paid' 
-                                            ? 'bg-red-100 text-red-800' 
+                                        order.payment_status === 'Not Paid'
+                                            ? 'bg-red-100 text-red-800'
                                             : 'bg-green-100 text-green-800'
                                     }`}>
                                         {order.payment_status}
@@ -146,13 +158,21 @@ const Orders = () => {
                                     <button className="bg-gray-400 text-white px-4 py-2 rounded w-full md:w-auto">Order details</button>
                                 </div>
                             </div>
-                            {order.items.map((item, index) => (
-                                <div key={index} className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 p-4 border-t border-gray-200">
-                                    <div className="w-28 h-28 bg-gray-200 rounded-md"></div>
+                            {order.items.map((item) => (
+                                <div key={item.id} className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 p-4 border-t border-gray-200">
+                                    <div className="w-28 h-28 relative">
+                                        <Image
+                                            src={getProductImageUrl(item.product.image)}
+                                            alt={item.product.name}
+                                            layout="fill"
+                                            objectFit="cover"
+                                            className="rounded-md"
+                                        />
+                                    </div>
                                     <div>
-                                        <h3 className="font-semibold text-gray-800 text-center md:text-left">{item.product_name}</h3>
+                                        <h3 className="font-semibold text-gray-800 text-center md:text-left">{item.product.name}</h3>
                                         <p className="text-sm text-gray-600 text-center md:text-left">Qty: {item.quantity}</p>
-                                        <p className="font-semibold text-emerald-900 text-center md:text-left">Price: ${parseFloat(item.unit_price).toFixed(2)}</p>
+                                        <p className="font-semibold text-emerald-900 text-center md:text-left">Price: ${item.product.unit_price}</p>
                                     </div>
                                 </div>
                             ))}
