@@ -3,7 +3,6 @@ from home.serializers import *
 from django.db import transaction
 from rest_framework import status
 from rest_framework import generics
-from django.db.models import Prefetch
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.exceptions import NotFound
@@ -74,15 +73,12 @@ class OrderCreateView(APIView):
             return Response(OrderSerializer(order).data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
 class OrderListView(generics.ListAPIView):
     serializer_class = OrderSerializer
     # permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        return Order.objects.prefetch_related(
-            Prefetch('items', queryset=OrderItem.objects.select_related('product'))
-        )
+        return Order.objects.all()
 
 class OrderDetailView(generics.RetrieveAPIView):
     serializer_class = OrderSerializer

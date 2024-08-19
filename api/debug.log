@@ -7151,3 +7151,1233 @@ Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
 "GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
 "GET /api/orders/list/ HTTP/1.1" 200 842
 "GET /api/orders/list/ HTTP/1.1" 200 842
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 842
+"GET /api/orders/list/ HTTP/1.1" 200 842
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 304 0
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 304 0
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 304 0
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 304 0
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+Bad Request: /api/orders/
+Bad Request: /api/orders/
+"POST /api/orders/ HTTP/1.1" 400 98
+"POST /api/orders/ HTTP/1.1" 400 98
+Not Found: /api/products/2/
+Not Found: /api/products/2/
+"GET /api/products/2/ HTTP/1.1" 404 30
+"GET /api/products/2/ HTTP/1.1" 404 30
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+Not Found: /api/products/2/
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+Not Found: /api/products/2/
+"GET /api/products/2/ HTTP/1.1" 404 30
+"GET /api/products/2/ HTTP/1.1" 404 30
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+Bad Request: /api/orders/
+Bad Request: /api/orders/
+"POST /api/orders/ HTTP/1.1" 400 98
+"POST /api/orders/ HTTP/1.1" 400 98
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+Bad Request: /api/orders/
+Bad Request: /api/orders/
+"POST /api/orders/ HTTP/1.1" 400 98
+"POST /api/orders/ HTTP/1.1" 400 98
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 842
+"GET /api/orders/list/ HTTP/1.1" 200 842
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /admin/home/order/ HTTP/1.1" 200 34191
+"GET /admin/home/order/ HTTP/1.1" 200 34191
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/2/change/ HTTP/1.1" 200 38581
+"GET /admin/home/order/2/change/ HTTP/1.1" 200 38581
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/home/order/2/change/ HTTP/1.1" 302 0
+"POST /admin/home/order/2/change/ HTTP/1.1" 302 0
+"GET /admin/home/order/ HTTP/1.1" 200 34773
+"GET /admin/home/order/ HTTP/1.1" 200 34773
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 838
+"GET /api/orders/list/ HTTP/1.1" 200 838
+"GET /admin/home/order/2/change/ HTTP/1.1" 200 38577
+"GET /admin/home/order/2/change/ HTTP/1.1" 200 38577
+"POST /admin/home/order/2/change/ HTTP/1.1" 302 0
+"POST /admin/home/order/2/change/ HTTP/1.1" 302 0
+"GET /admin/home/order/ HTTP/1.1" 200 34777
+"GET /admin/home/order/ HTTP/1.1" 200 34777
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 304 0
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 304 0
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+Bad Request: /api/orders/
+Bad Request: /api/orders/
+"POST /api/orders/ HTTP/1.1" 400 98
+"POST /api/orders/ HTTP/1.1" 400 98
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /admin/account/user/ HTTP/1.1" 200 35519
+"GET /admin/account/user/ HTTP/1.1" 200 35519
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /api/orders/ HTTP/1.1" 201 306
+"POST /api/orders/ HTTP/1.1" 201 306
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 615
+"GET /api/orders/list/ HTTP/1.1" 200 615
+"GET /api/orders/list/ HTTP/1.1" 200 615
+"GET /api/orders/list/ HTTP/1.1" 200 615
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 1589
+"GET /api/orders/list/ HTTP/1.1" 200 1589
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 304 0
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 304 0
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"OPTIONS /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 0
+"OPTIONS /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 0
+"OPTIONS /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 0
+"OPTIONS /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 0
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+Not Found: /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/
+Not Found: /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 404 26
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 404 26
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+Not Found: /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/
+Not Found: /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 404 26
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 404 26
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /admin/account/user/ HTTP/1.1" 200 35519
+"GET /admin/account/user/ HTTP/1.1" 200 35519
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+Received POST request: {'clerk_id': 'user_2kskxO8YEFXK6qbCnmalwjazcHw', 'email': 'beniobed02@gmail.com', 'first_name': 'MUNYESHYA', 'last_name': 'Beni Obed'}
+User created/updated: beniobed02@gmail.com
+"POST /api/auth/users/ HTTP/1.1" 201 163
+"POST /api/auth/users/ HTTP/1.1" 201 163
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+Bad Request: /api/orders/
+Bad Request: /api/orders/
+"POST /api/orders/ HTTP/1.1" 400 98
+"POST /api/orders/ HTTP/1.1" 400 98
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/orders/list/ HTTP/1.1" 200 615
+"GET /api/orders/list/ HTTP/1.1" 200 615
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 304 0
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 304 0
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 615
+"GET /api/orders/list/ HTTP/1.1" 200 615
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"POST /api/orders/ HTTP/1.1" 201 306
+"POST /api/orders/ HTTP/1.1" 201 306
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/orders/list/ HTTP/1.1" 200 922
+"GET /api/orders/list/ HTTP/1.1" 200 922
+"GET /api/orders/list/ HTTP/1.1" 200 922
+"GET /api/orders/list/ HTTP/1.1" 200 922
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/orders/list/ HTTP/1.1" 200 991
+"GET /api/orders/list/ HTTP/1.1" 200 991
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 304 0
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 304 0
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 991
+"GET /api/orders/list/ HTTP/1.1" 200 991
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 922
+"GET /api/orders/list/ HTTP/1.1" 200 922
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 922
+"GET /api/orders/list/ HTTP/1.1" 200 922
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+Internal Server Error: /api/orders/list/
+Traceback (most recent call last):
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\generics.py", line 203, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py", line 90, in to_representation
+    representation = super().to_representation(instance)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\serializers.py", line 523, in to_representation
+    for field in fields:
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\serializers.py", line 373, in fields
+    fields[key] = value
+    ~~~~~~^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\utils\serializer_helpers.py", line 167, in __setitem__
+    field.bind(field_name=key, parent=self.serializer)
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\fields.py", line 360, in bind
+    assert self.source != field_name, (
+AssertionError: It is redundant to specify `source='items'` on field 'ListSerializer' in serializer 'OrderSerializer', because it is the same as the field name. Remove the `source` keyword argument.
+Internal Server Error: /api/orders/list/
+Traceback (most recent call last):
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\generics.py", line 203, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py", line 90, in to_representation
+    representation = super().to_representation(instance)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\serializers.py", line 523, in to_representation
+    for field in fields:
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\serializers.py", line 373, in fields
+    fields[key] = value
+    ~~~~~~^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\utils\serializer_helpers.py", line 167, in __setitem__
+    field.bind(field_name=key, parent=self.serializer)
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\fields.py", line 360, in bind
+    assert self.source != field_name, (
+AssertionError: It is redundant to specify `source='items'` on field 'ListSerializer' in serializer 'OrderSerializer', because it is the same as the field name. Remove the `source` keyword argument.
+"GET /api/orders/list/ HTTP/1.1" 500 151089
+"GET /api/orders/list/ HTTP/1.1" 500 151089
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 922
+"GET /api/orders/list/ HTTP/1.1" 200 922
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 2336
+"GET /api/orders/list/ HTTP/1.1" 200 2336
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 922
+"GET /api/orders/list/ HTTP/1.1" 200 922
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 2336
+"GET /api/orders/list/ HTTP/1.1" 200 2336
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2ks9E45tkf4jLKbJGHtx6UlkoNw/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 2336
+"GET /api/orders/list/ HTTP/1.1" 200 2336
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 304 0
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 304 0
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/orders/list/ HTTP/1.1" 200 2336
+"GET /api/orders/list/ HTTP/1.1" 200 2336
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Bad Request: /api/orders/
+Bad Request: /api/orders/
+"POST /api/orders/ HTTP/1.1" 400 98
+"POST /api/orders/ HTTP/1.1" 400 98
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Bad Request: /api/orders/
+Bad Request: /api/orders/
+"POST /api/orders/ HTTP/1.1" 400 98
+"POST /api/orders/ HTTP/1.1" 400 98
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Bad Request: /api/orders/
+Bad Request: /api/orders/
+"POST /api/orders/ HTTP/1.1" 400 98
+"POST /api/orders/ HTTP/1.1" 400 98
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Bad Request: /api/orders/
+Bad Request: /api/orders/
+"POST /api/orders/ HTTP/1.1" 400 98
+"POST /api/orders/ HTTP/1.1" 400 98
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Bad Request: /api/orders/
+Bad Request: /api/orders/
+"POST /api/orders/ HTTP/1.1" 400 98
+"POST /api/orders/ HTTP/1.1" 400 98
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/orders/list/ HTTP/1.1" 200 2336
+"GET /api/orders/list/ HTTP/1.1" 200 2336
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/orders/list/ HTTP/1.1" 200 2336
+"GET /api/orders/list/ HTTP/1.1" 200 2336
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/orders/list/ HTTP/1.1" 200 2336
+"GET /api/orders/list/ HTTP/1.1" 200 2336
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/orders/list/ HTTP/1.1" 200 2336
+"GET /api/orders/list/ HTTP/1.1" 200 2336
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/orders/list/ HTTP/1.1" 200 922
+"GET /api/orders/list/ HTTP/1.1" 200 922
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 304 0
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 304 0
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"POST /api/orders/ HTTP/1.1" 201 275
+"POST /api/orders/ HTTP/1.1" 201 275
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/orders/list/ HTTP/1.1" 200 1198
+"GET /api/orders/list/ HTTP/1.1" 200 1198
+"GET /api/orders/list/ HTTP/1.1" 200 1198
+"GET /api/orders/list/ HTTP/1.1" 200 1198
+"GET /admin/home/order/ HTTP/1.1" 200 35870
+"GET /admin/home/order/ HTTP/1.1" 200 35870
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/4/change/ HTTP/1.1" 200 38629
+"GET /admin/home/order/4/change/ HTTP/1.1" 200 38629
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/ HTTP/1.1" 200 35870
+"GET /admin/home/order/ HTTP/1.1" 200 35870
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/5/change/ HTTP/1.1" 200 38562
+"GET /admin/home/order/5/change/ HTTP/1.1" 200 38562
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/ HTTP/1.1" 200 35870
+"GET /admin/home/order/ HTTP/1.1" 200 35870
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/home/order/ HTTP/1.1" 200 31550
+"POST /admin/home/order/ HTTP/1.1" 200 31550
+"GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+"GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+"POST /admin/home/order/ HTTP/1.1" 302 0
+"POST /admin/home/order/ HTTP/1.1" 302 0
+"GET /admin/home/order/ HTTP/1.1" 200 30932
+"GET /admin/home/order/ HTTP/1.1" 200 30932
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/ HTTP/1.1" 200 30434
+"GET /admin/home/order/ HTTP/1.1" 200 30434
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/orders/list/ HTTP/1.1" 200 2
+"GET /api/orders/list/ HTTP/1.1" 200 2
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+Bad Request: /api/orders/
+Bad Request: /api/orders/
+"POST /api/orders/ HTTP/1.1" 400 98
+"POST /api/orders/ HTTP/1.1" 400 98
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+Bad Request: /api/orders/
+Bad Request: /api/orders/
+"POST /api/orders/ HTTP/1.1" 400 98
+"POST /api/orders/ HTTP/1.1" 400 98
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+Bad Request: /api/orders/
+Bad Request: /api/orders/
+"POST /api/orders/ HTTP/1.1" 400 98
+"POST /api/orders/ HTTP/1.1" 400 98
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/products/?ids=2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"POST /api/orders/ HTTP/1.1" 201 305
+"POST /api/orders/ HTTP/1.1" 201 305
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/orders/list/ HTTP/1.1" 200 307
+"GET /api/orders/list/ HTTP/1.1" 200 307
+"GET /api/orders/list/ HTTP/1.1" 200 307
+"GET /api/orders/list/ HTTP/1.1" 200 307
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/orders/list/ HTTP/1.1" 200 307
+"GET /api/orders/list/ HTTP/1.1" 200 307
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/orders/list/ HTTP/1.1" 200 307
+"GET /api/orders/list/ HTTP/1.1" 200 307
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/orders/list/ HTTP/1.1" 200 307
+"GET /api/orders/list/ HTTP/1.1" 200 307
+"GET /admin/home/order/ HTTP/1.1" 200 34184
+"GET /admin/home/order/ HTTP/1.1" 200 34184
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"POST /admin/home/order/ HTTP/1.1" 200 30573
+"POST /admin/home/order/ HTTP/1.1" 200 30573
+"POST /admin/home/order/ HTTP/1.1" 302 0
+"POST /admin/home/order/ HTTP/1.1" 302 0
+"GET /admin/home/order/ HTTP/1.1" 200 30931
+"GET /admin/home/order/ HTTP/1.1" 200 30931
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 304 0
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 304 0
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"POST /api/orders/ HTTP/1.1" 201 306
+"POST /api/orders/ HTTP/1.1" 201 306
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/orders/list/ HTTP/1.1" 200 308
+"GET /api/orders/list/ HTTP/1.1" 200 308
+"GET /api/orders/list/ HTTP/1.1" 200 308
+"GET /api/orders/list/ HTTP/1.1" 200 308
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /api/orders/list/ HTTP/1.1" 200 6021
+"GET /admin/home/order/ HTTP/1.1" 200 34185
+"GET /admin/home/order/ HTTP/1.1" 200 34185
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/7/change/ HTTP/1.1" 200 38629
+"GET /admin/home/order/7/change/ HTTP/1.1" 200 38629
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/home/order/7/change/ HTTP/1.1" 302 0
+"POST /admin/home/order/7/change/ HTTP/1.1" 302 0
+"GET /admin/home/order/ HTTP/1.1" 200 34768
+"GET /admin/home/order/ HTTP/1.1" 200 34768
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/home/order/ HTTP/1.1" 200 30575
+"POST /admin/home/order/ HTTP/1.1" 200 30575
+"POST /admin/home/order/ HTTP/1.1" 302 0
+"POST /admin/home/order/ HTTP/1.1" 302 0
+"GET /admin/home/order/ HTTP/1.1" 200 30931
+"GET /admin/home/order/ HTTP/1.1" 200 30931
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"OPTIONS /api/orders/list/ HTTP/1.1" 200 0
+"OPTIONS /api/orders/list/ HTTP/1.1" 200 0
+"GET /api/orders/list/ HTTP/1.1" 200 2
+"GET /api/orders/list/ HTTP/1.1" 200 2
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 304 0
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 304 0
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 304 0
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 304 0
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"OPTIONS /api/orders/ HTTP/1.1" 200 0
+"OPTIONS /api/orders/ HTTP/1.1" 200 0
+"POST /api/orders/ HTTP/1.1" 201 306
+"POST /api/orders/ HTTP/1.1" 201 306
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/orders/list/ HTTP/1.1" 200 308
+"GET /api/orders/list/ HTTP/1.1" 200 308
+"GET /api/orders/list/ HTTP/1.1" 200 308
+"GET /api/orders/list/ HTTP/1.1" 200 308
+"GET /admin/ HTTP/1.1" 200 42963
+"GET /admin/ HTTP/1.1" 200 42963
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
