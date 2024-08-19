@@ -1,15 +1,12 @@
 from home.models import *
-from account.models import *
 from home.serializers import *
 from django.db import transaction
 from rest_framework import status
 from rest_framework import generics
-from django.http import JsonResponse
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.exceptions import NotFound
 from rest_framework.permissions import IsAuthenticated
-from django.views.decorators.http import require_http_methods
 
 class ProductList(generics.ListCreateAPIView):
     serializer_class = ProductSerializer
@@ -67,30 +64,13 @@ class ProfileDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
 
-@require_http_methods(["GET"])
-def get_user_pk(request):
-    user_pk = request.GET.get('user_pk')
-    if not user_pk:
-        return JsonResponse({'error': 'User PK is required'}, status=400)
-    
-    try:
-        user = User.objects.get(clerk_id=user_pk)
-        return JsonResponse({'user_id': user.pk})
-    except User.DoesNotExist:
-        return JsonResponse({'error': 'User not found'}, status=404)
-
 class OrderCreateView(APIView):
     @transaction.atomic
     def post(self, request):
         serializer = OrderSerializer(data=request.data)
         if serializer.is_valid():
-            order_data = serializer.validated_data
-            user_pk = order_data.pop('user_pk')
-            user = User.objects.get(pk=user_pk)  # Get the user instance
-
-            # Create Order
-            order = Order.objects.create(user=user, **order_data)
-
+            order = serializer.save()
+            
             # Create OrderItems
             items_data = request.data.get('items', [])
             for item_data in items_data:
