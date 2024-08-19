@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useUser } from "@clerk/nextjs";
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { MomoApi } from '@/app/utils/momoApi';
 
 interface CartItem {
     id: number;
@@ -17,6 +19,9 @@ const CheckOut = () => {
     const [cartItems, setCartItems] = useState<CartItem[]>([]);
     const { user } = useUser();
     const [isLoading, setIsLoading] = useState(true);
+    const [phone, setPhone] = useState('');
+    const [isProcessing, setIsProcessing] = useState(false);
+    const router = useRouter();
 
     useEffect(() => {
         const storedCart = JSON.parse(localStorage.getItem('userCart') || '[]');
@@ -26,6 +31,27 @@ const CheckOut = () => {
 
     const calculateTotal = () => {
         return cartItems.reduce((total, item) => total + parseFloat(item.unit_price) * item.quantity, 0).toFixed(2);
+    };
+
+    const handlePlaceOrder = async () => {
+        setIsProcessing(true);
+        try {
+            const response = await MomoApi.collectMoney(phone, calculateTotal());
+            
+            if (response.status === "SUCCESS") {
+                alert('Payment initiated. Please check your phone for the payment prompt.');
+                // Clear cart and redirect to a thank you page
+                localStorage.removeItem('userCart');
+                router.push('/thank-you');
+            } else {
+                alert('Payment failed: ' + response.message);
+            }
+        } catch (error) {
+            console.error('Error processing payment:', error);
+            alert('An error occurred while processing your payment. Please try again.');
+        } finally {
+            setIsProcessing(false);
+        }
     };
 
     if (isLoading) {
@@ -117,13 +143,16 @@ const CheckOut = () => {
                                 </div>
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="phone">
-                                        Phone Number
+                                        Phone Number (for payment)
                                     </label>
                                     <input
                                         type="tel"
                                         id="phone"
                                         name="phone"
+                                        value={phone}
+                                        onChange={(e) => setPhone(e.target.value)}
                                         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                                        placeholder="Enter your phone number for payment"
                                     />
                                 </div>
                             </form>
@@ -162,8 +191,10 @@ const CheckOut = () => {
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 className="w-full mt-8 bg-emerald-900 text-white py-3 px-4 rounded-md hover:bg-emerald-800 transition duration-300 font-semibold text-lg"
+                                onClick={handlePlaceOrder}
+                                disabled={isProcessing}
                             >
-                                Place Order
+                                {isProcessing ? 'Processing...' : 'Place Order'}
                             </motion.button>
                         </div>
                     </div>
