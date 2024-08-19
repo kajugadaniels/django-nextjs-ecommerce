@@ -1081,3 +1081,115 @@ C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\urls.py changed
 C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\urls.py changed, reloading.
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /admin/account/user/ HTTP/1.1" 302 0
+"GET /admin/account/user/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/account/user/ HTTP/1.1" 200 3170
+"GET /admin/login/?next=/admin/account/user/ HTTP/1.1" 200 3170
+"POST /admin/login/?next=/admin/account/user/ HTTP/1.1" 302 0
+"POST /admin/login/?next=/admin/account/user/ HTTP/1.1" 302 0
+"GET /admin/account/user/ HTTP/1.1" 200 34090
+"GET /admin/account/user/ HTTP/1.1" 200 34090
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /api/products/ HTTP/1.1" 200 2
+"GET /api/products/ HTTP/1.1" 200 2
+"GET /api/products/ HTTP/1.1" 200 2
+"GET /api/products/ HTTP/1.1" 200 2
+"GET /admin/home/product/ HTTP/1.1" 200 31797
+"GET /admin/home/product/ HTTP/1.1" 200 31797
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Received POST request: {'clerk_id': 'user_2ks9E45tkf4jLKbJGHtx6UlkoNw', 'email': 'kajugadaniels@gmail.com', 'first_name': 'KAJUGA', 'last_name': 'Daniel'}
+User created/updated: kajugadaniels@gmail.com
+"POST /api/auth/users/ HTTP/1.1" 201 154
+"POST /api/auth/users/ HTTP/1.1" 201 154
+"GET /api/products/ HTTP/1.1" 200 2
+"GET /api/products/ HTTP/1.1" 200 2
+"GET /api/products/ HTTP/1.1" 200 2
+"GET /api/products/ HTTP/1.1" 200 2
+"GET /admin/account/user/ HTTP/1.1" 200 34566
+"GET /admin/account/user/ HTTP/1.1" 200 34566
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/account/user/2/change/ HTTP/1.1" 200 50196
+"GET /admin/account/user/2/change/ HTTP/1.1" 200 50196
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ HTTP/1.1" 200 34119
+"GET /admin/ HTTP/1.1" 200 34119
+"GET /admin/home/product/ HTTP/1.1" 200 31797
+"GET /admin/home/product/ HTTP/1.1" 200 31797
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/product/add/ HTTP/1.1" 200 46390
+"GET /admin/home/product/add/ HTTP/1.1" 200 46390
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 9421
+"GET /admin/home/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 9421
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/home/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 396
+"POST /admin/home/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 396
+"POST /admin/home/product/add/ HTTP/1.1" 302 0
+"POST /admin/home/product/add/ HTTP/1.1" 302 0
+"GET /admin/home/product/ HTTP/1.1" 200 38346
+"GET /admin/home/product/ HTTP/1.1" 200 38346
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /api/products/ HTTP/1.1" 200 554
+"GET /api/products/ HTTP/1.1" 200 554
+"GET /api/products/ HTTP/1.1" 200 554
+"GET /api/products/ HTTP/1.1" 200 554
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_32.jpg HTTP/1.1" 304 0
+"GET /media/products/product_ibijumba_32.jpg HTTP/1.1" 304 0
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_43.jpg HTTP/1.1" 200 661151
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\admin.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\admin.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\admin.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\admin.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\admin.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\admin.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /admin/home/product/ HTTP/1.1" 200 38256
+"GET /admin/home/product/ HTTP/1.1" 200 38256
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/ HTTP/1.1" 200 29953
+"GET /admin/home/order/ HTTP/1.1" 200 29953
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/add/ HTTP/1.1" 200 33755
+"GET /admin/home/order/add/ HTTP/1.1" 200 33755
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\admin.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader

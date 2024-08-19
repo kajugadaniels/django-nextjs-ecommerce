@@ -32,3 +32,11 @@ class ProductAdmin(admin.ModelAdmin):
 class ProfileAdmin(admin.ModelAdmin):
     list_display = ('name', 'email', 'phone_number')
     search_fields = ('name', 'email', 'phone_number', 'address')
+
+@admin.register(Order)
+class OrderAdmin(admin.ModelAdmin):
+    list_display = ('user', 'total_amount', 'payment_status', 'created_at')
+
+@admin.register(OrderItem)
+class OrderItemAdmin(admin.ModelAdmin):
+    list_display = ('order', 'product_name', 'quantity', 'unit_price')
