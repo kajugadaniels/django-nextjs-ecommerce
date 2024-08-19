@@ -15,6 +15,15 @@ interface CartItem {
     quantity: number;
 }
 
+interface UserData {
+    id: number;
+    clerk_id: string;
+    email: string;
+    first_name: string;
+    last_name: string;
+    slug: string;
+}
+
 const CheckOut = () => {
     const [cartItems, setCartItems] = useState<CartItem[]>([]);
     const { user, isLoaded, isSignedIn } = useUser();
@@ -22,6 +31,7 @@ const CheckOut = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [isProcessing, setIsProcessing] = useState(false);
     const [showModal, setShowModal] = useState(false);
+    const [userData, setUserData] = useState<UserData | null>(null);
     const router = useRouter();
 
     const [shippingInfo, setShippingInfo] = useState({
@@ -36,6 +46,31 @@ const CheckOut = () => {
         setCartItems(storedCart);
         setIsLoading(false);
     }, []);
+
+    useEffect(() => {
+        const fetchUserData = async () => {
+            if (isSignedIn && user?.id) {
+                try {
+                    const token = await getToken();
+                    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/users/${user.id}/`, {
+                        headers: {
+                            'Authorization': `Bearer ${token}`
+                        }
+                    });
+                    if (response.ok) {
+                        const data = await response.json();
+                        setUserData(data);
+                    } else {
+                        console.error('Failed to fetch user data');
+                    }
+                } catch (error) {
+                    console.error('Error fetching user data:', error);
+                }
+            }
+        };
+
+        fetchUserData();
+    }, [isSignedIn, user, getToken]);
 
     const calculateTotal = () => {
         return cartItems.reduce((total, item) => total + parseFloat(item.unit_price) * item.quantity, 0).toFixed(2);
@@ -80,10 +115,7 @@ const CheckOut = () => {
         try {
             const token = await getToken();
             const orderData = {
-                user_email: user?.primaryEmailAddress?.emailAddress,
-                user_first_name: user?.firstName,
-                user_last_name: user?.lastName,
-                user_pk: user?.id,
+                user: userData?.id,
                 total_amount: calculateTotal(),
                 payment_status: 'Not Paid',
                 items: cartItems.map(item => ({
@@ -160,7 +192,7 @@ const CheckOut = () => {
                                             id="firstName"
                                             name="firstName"
                                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-                                            defaultValue={user?.firstName || ''}
+                                            value={userData?.first_name || ''}
                                             readOnly
                                         />
                                     </div>
@@ -173,10 +205,23 @@ const CheckOut = () => {
                                             id="lastName"
                                             name="lastName"
                                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-                                            defaultValue={user?.lastName || ''}
+                                            value={userData?.last_name || ''}
                                             readOnly
                                         />
                                     </div>
+                                </div>
+                                <div className="mb-6">
+                                    <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="email">
+                                        Email
+                                    </label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                                        value={userData?.email || ''}
+                                        readOnly
+                                    />
                                 </div>
                                 <div className="mb-6">
                                     <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="address">
@@ -267,7 +312,6 @@ const CheckOut = () => {
                 </div>
             </div>
 
-            {/* Modal */}
             {showModal && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
                     <div className="bg-white rounded-lg p-8 w-full max-w-md mx-auto">
@@ -286,9 +330,11 @@ const CheckOut = () => {
                         </div>
                         <div className="mt-6">
                             <h3 className="text-lg font-medium text-gray-900 mb-2">User Information:</h3>
-                            <p><strong>First Name:</strong> {user?.firstName ?? 'N/A'}</p>
-                            <p><strong>Last Name:</strong> {user?.lastName ?? 'N/A'}</p>
-                            <p><strong>Primary Key:</strong> {user?.id ?? 'N/A'}</p>
+                            <p><strong>First Name:</strong> {userData?.first_name ?? 'N/A'}</p>
+                            <p><strong>Last Name:</strong> {userData?.last_name ?? 'N/A'}</p>
+                            <p><strong>Email:</strong> {userData?.email ?? 'N/A'}</p>
+                            <p><strong>Slug:</strong> {userData?.slug ?? 'N/A'}</p>
+                            <p><strong>Django User ID:</strong> {userData?.id ?? 'N/A'}</p>
                         </div>
                         <div className="mt-6 flex justify-end">
                             <button
