@@ -146,4 +146,4 @@ class OrderItem(models.Model):
     quantity = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
-        return f"{self.quantity} x {self.product.name} in Order {self.order.id}"
+        return f"{self.quantity} x {self.product} in Order {self.order.id}"
