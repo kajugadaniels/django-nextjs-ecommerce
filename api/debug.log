@@ -9447,3 +9447,129 @@ Watching for file changes with StatReloader
 "GET /admin/home/order/ HTTP/1.1" 200 30434
 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"POST /api/orders/ HTTP/1.1" 201 343
+"POST /api/orders/ HTTP/1.1" 201 343
+Sending payment request to InTouch: {'username': 'testa', 'timestamp': '20200131115242', 'amount': '40.00', 'password': '1282ca34d230edd806bedbd19bd02ec0e0eb8123e17bfddaaf4e2a563eb4d1aa', 'mobilephone': '0781862349', 'requesttransactionid': '6443131217', 'callbackurl': 'https://your-django-backend.com/api/payment-webhook/'}
+Response from InTouch: {"response": {"msg": "Payment Method Not Supported", "status": "Failed", "statuscode": "1201"}, "success": false}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 64
+"POST /api/payment/ HTTP/1.1" 400 64
+"GET /admin/home/order/ HTTP/1.1" 200 34153
+"GET /admin/home/order/ HTTP/1.1" 200 34153
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/18/change/ HTTP/1.1" 200 39503
+"GET /admin/home/order/18/change/ HTTP/1.1" 200 39503
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/account/user/ HTTP/1.1" 200 35995
+"GET /admin/account/user/ HTTP/1.1" 200 35995
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/ HTTP/1.1" 200 34153
+"GET /admin/home/order/ HTTP/1.1" 200 34153
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/18/change/ HTTP/1.1" 200 39503
+"GET /admin/home/order/18/change/ HTTP/1.1" 200 39503
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/home/order/18/change/ HTTP/1.1" 302 0
+"POST /admin/home/order/18/change/ HTTP/1.1" 302 0
+"GET /admin/home/order/ HTTP/1.1" 200 34774
+"GET /admin/home/order/ HTTP/1.1" 200 34774
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/18/change/ HTTP/1.1" 200 39520
+"GET /admin/home/order/18/change/ HTTP/1.1" 200 39520
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/orderitem/ HTTP/1.1" 200 34243
+"GET /admin/home/orderitem/ HTTP/1.1" 200 34243
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/orderitem/19/change/ HTTP/1.1" 200 36017
+"GET /admin/home/orderitem/19/change/ HTTP/1.1" 200 36017
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/ HTTP/1.1" 200 34189
+"GET /admin/home/order/ HTTP/1.1" 200 34189
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+Sending payment request to InTouch: {'username': 'testa', 'timestamp': '20200131115242', 'amount': '40.00', 'password': '1282ca34d230edd806bedbd19bd02ec0e0eb8123e17bfddaaf4e2a563eb4d1aa', 'mobilephone': '0781862349', 'requesttransactionid': '51824244697', 'callbackurl': 'https://your-django-backend.com/api/payment-webhook/'}
+Response from InTouch: {"response": {"msg": "Payment Method Not Supported", "status": "Failed", "statuscode": "1201"}, "success": false}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 64
+"POST /api/payment/ HTTP/1.1" 400 64
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\urls.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader

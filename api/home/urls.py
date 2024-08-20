@@ -17,7 +17,7 @@ urlpatterns = [
     path('orders/list/', OrderListView.as_view(), name='order-list'),
     path('orders/<int:pk>/', OrderDetailView.as_view(), name='order-detail'),
     
-    path('payment/', InTouchPaymentView.as_view(), name='intouch-payment'),
+    path('payment/', PaymentView.as_view(), name='intouch-payment'),
 ]
 
 if settings.DEBUG:

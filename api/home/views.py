@@ -3,6 +3,7 @@ import hashlib
 import logging
 import requests
 from home.models import *
+from dotenv import load_dotenv
 from home.serializers import *
 from django.conf import settings
 from django.db import transaction
@@ -92,63 +93,78 @@ class OrderDetailView(generics.RetrieveAPIView):
     def get_queryset(self):
         return Order.objects.filter(user=self.request.user)
 
+load_dotenv()
+
 logger = logging.getLogger(__name__)
 
-class InTouchPaymentView(APIView):
+class MomoApi:
+    @staticmethod
+    def CollectMoney(phone, amount):
+        password = os.environ.get('PAYMENT_PASSWORD')
+        hashedPassword = hashlib.sha256(password.encode('utf-8')).hexdigest()
+        tran = random.randint(19000, 80000000000)
+        data = {
+            'username': os.environ.get('PAYMENT_USERNAME'),
+            'timestamp': 20200131115242,
+            'amount': amount,
+            'password': hashedPassword,
+            'mobilephone': phone,
+            'requesttransactionid': tran,
+            'callbackurl': 'https://api.hellomed.rw/api/pay-webhook'
+        }
+        response = requests.post(
+            'https://www.intouchpay.co.rw/api/requestpayment/', data=data)
+        res = response.json()
+        return res
+
+class PaymentView(APIView):
     def post(self, request):
         phone = request.data.get('phone')
         amount = request.data.get('amount')
-        order_id = request.data.get('order_id')
+        order_data = request.data.get('order_data')
 
-        if not phone or not amount or not order_id:
-            return Response({'error': 'Phone, amount, and order_id are required'}, status=status.HTTP_400_BAD_REQUEST)
+        if not phone or not amount or not order_data:
+            return Response({'error': 'Phone, amount, and order data are required'}, status=status.HTTP_400_BAD_REQUEST)
 
         try:
-            order = Order.objects.get(id=order_id)
-            password = settings.PAYMENT_PASSWORD
-            username = settings.PAYMENT_USERNAME
-            timestamp = '20200131115242'  # You might want to generate this dynamically
+            # Initiate payment using MomoApi
+            payment_response = MomoApi.CollectMoney(phone, amount)
+            logger.info(f"Payment response: {payment_response}")
 
-            hashed_password = hashlib.sha256(password.encode('utf-8')).hexdigest()
-            tran = random.randint(19000, 80000000000)
-
-            data = {
-                'username': username,
-                'timestamp': timestamp,
-                'amount': amount,
-                'password': hashed_password,
-                'mobilephone': phone,
-                'requesttransactionid': str(tran),
-                'callbackurl': 'https://your-django-backend.com/api/payment-webhook/'  # Update this URL
-            }
-
-            logger.info(f"Sending payment request to InTouch: {data}")
-            response = requests.post('https://www.intouchpay.co.rw/api/requestpayment/', data=data)
-            logger.info(f"Response from InTouch: {response.text}")
-            
-            res = response.json()
-            
-            if res.get('status') == 'SUCCESS':
-                order.payment_status = 'Paid'
-                order.transaction_id = res.get('transactionid')
-                order.save()
+            if payment_response.get('status') == 'SUCCESS':
+                # Create order only if payment is successful
+                order = Order.objects.create(
+                    user=request.user,
+                    total_amount=amount,
+                    payment_status='Paid',
+                    transaction_id=payment_response.get('transactionid'),
+                    shipping_address=order_data.get('shipping_address'),
+                    shipping_city=order_data.get('shipping_city'),
+                    shipping_zip_code=order_data.get('shipping_zip_code'),
+                    shipping_phone=phone
+                )
+                # Create order items
+                for item in order_data.get('items', []):
+                    OrderItem.objects.create(
+                        order=order,
+                        product_id=item['product_id'],
+                        product_name=item['product_name'],
+                        quantity=item['quantity'],
+                        unit_price=item['unit_price']
+                    )
                 return Response({
                     'status': 'SUCCESS',
-                    'message': 'Payment successful',
-                    'transaction_id': res.get('transactionid')
+                    'message': 'Payment successful and order created',
+                    'transaction_id': payment_response.get('transactionid'),
+                    'order_id': order.id
                 }, status=status.HTTP_200_OK)
             else:
                 return Response({
                     'status': 'FAILED',
-                    'message': res.get('msg', 'Payment failed'),
-                    'error_code': res.get('statuscode')
+                    'message': payment_response.get('msg', 'Payment failed'),
+                    'error_code': payment_response.get('statuscode')
                 }, status=status.HTTP_400_BAD_REQUEST)
 
-        except Order.DoesNotExist:
-            return Response({'error': 'Order not found'}, status=status.HTTP_404_NOT_FOUND)
-        except requests.RequestException as e:
-            logger.error(f"Error communicating with InTouch API: {str(e)}")
-            return Response({'error': 'Failed to communicate with payment provider'}, status=status.HTTP_503_SERVICE_UNAVAILABLE)
         except Exception as e:
             logger.error(f"Unexpected error in payment process: {str(e)}")
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

@@ -143,7 +143,6 @@ const CheckOut = () => {
             const orderData = {
                 user_email: user?.primaryEmailAddress?.emailAddress,
                 total_amount: calculateTotal(),
-                payment_status: 'Not Paid',
                 items: cartItems.map(item => ({
                     product_id: item.id,
                     product_name: item.name,
@@ -156,34 +155,17 @@ const CheckOut = () => {
                 shipping_phone: shippingInfo.phone
             };
 
-            // Create order
-            const orderResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/orders/`, {
+            // Send payment request along with order data
+            const paymentResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/payment/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`
                 },
-                body: JSON.stringify(orderData),
-            });
-
-            if (!orderResponse.ok) {
-                const orderError = await orderResponse.text();
-                throw new Error(`Failed to create order: ${orderError}`);
-            }
-
-            const orderResult = await orderResponse.json();
-            console.log('Order created:', orderResult);
-
-            // Initiate payment
-            const paymentResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/payment/`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
                 body: JSON.stringify({
                     phone: shippingInfo.phone,
                     amount: calculateTotal(),
-                    order_id: orderResult.id
+                    order_data: orderData
                 }),
             });
 
@@ -191,15 +173,15 @@ const CheckOut = () => {
             console.log('Payment response:', paymentResult);
 
             if (paymentResult.status === "SUCCESS") {
-                showNotification(`Payment successful. Transaction ID: ${paymentResult.transaction_id}`, 'success');
+                showNotification(`Payment successful. Order ID: ${paymentResult.order_id}`, 'success');
                 localStorage.removeItem('userCart');
                 router.push('/orders');
             } else {
                 showNotification(`Payment failed: ${paymentResult.message}`, 'error');
             }
         } catch (error) {
-            console.error('Error processing order and payment:', error);
-            showNotification(`Failed to process order and payment: ${error instanceof Error ? error.message : 'Unknown error'}`, 'error');
+            console.error('Error processing payment:', error);
+            showNotification(`Failed to process payment: ${error instanceof Error ? error.message : 'Unknown error'}`, 'error');
         } finally {
             setIsProcessing(false);
             setShowModal(false);
