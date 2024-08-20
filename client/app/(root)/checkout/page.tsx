@@ -141,68 +141,39 @@ const CheckOut = () => {
         try {
             const token = await getToken();
             const orderData = {
-                user_email: user?.primaryEmailAddress?.emailAddress,
+                user: userData?.id,
                 total_amount: calculateTotal(),
                 payment_status: 'Not Paid',
-                items: cartItems.map(item => ({
-                    product_id: item.id,
-                    product_name: item.name,
+                items: cartItems.map((item) => ({
+                    product: item.id,
                     quantity: item.quantity,
-                    unit_price: item.unit_price
                 })),
                 shipping_address: shippingInfo.address,
                 shipping_city: shippingInfo.city,
                 shipping_zip_code: shippingInfo.zipCode,
-                shipping_phone: shippingInfo.phone
+                shipping_phone: shippingInfo.phone,
             };
 
-            // Create order
-            const orderResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/orders/`, {
+            const response = await fetch(`${getApiUrl()}/orders/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
+                    Authorization: `Bearer ${token}`,
                 },
                 body: JSON.stringify(orderData),
             });
 
-            if (!orderResponse.ok) {
-                const orderError = await orderResponse.text();
-                throw new Error(`Failed to create order: ${orderError}`);
-            }
-
-            const orderResult = await orderResponse.json();
-            console.log('Order created:', orderResult);
-
-            // Initiate payment
-            const paymentResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/payment/`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    phone: shippingInfo.phone,
-                    amount: calculateTotal(),
-                }),
-            });
-
-            const paymentResult = await paymentResponse.json();
-            console.log('Payment response:', paymentResult);
-
-            if (!paymentResponse.ok) {
-                throw new Error(`Failed to initiate payment: ${paymentResult.error || 'Unknown error'}`);
-            }
-
-            if (paymentResult.status === "SUCCESS") {
-                showNotification('Payment initiated. Please check your phone for the payment prompt.', 'success');
+            if (response.ok) {
+                showNotification('Order placed successfully!', 'success');
                 localStorage.removeItem('userCart');
                 router.push('/orders');
             } else {
-                showNotification(`Payment failed: ${paymentResult.message || 'Unknown error'}`, 'error');
+                const errorData = await response.json();
+                showNotification(`Failed to place order: ${errorData.message || 'Unknown error'}`, 'error');
             }
         } catch (error) {
-            console.error('Error processing order and payment:', error);
-            showNotification(`Failed to process order and payment: ${error instanceof Error ? error.message : 'Unknown error'}`, 'error');
+            console.error('Error placing order:', error);
+            showNotification('Failed to place order. Please try again.', 'error');
         } finally {
             setIsProcessing(false);
             setShowModal(false);
@@ -413,9 +384,15 @@ const CheckOut = () => {
                             <button
                                 onClick={confirmOrder}
                                 className="px-4 py-2 bg-emerald-900 text-white text-lg font-semibold rounded-md hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
-                                disabled={isProcessing}
+                                // disable={isProcessing}
                             >
-                                {isProcessing ? "Processing..." : "Confirm Order and Pay"}
+                                {isProcessing ? "Processing..." : "Confirm Order"}
+                            </button>
+                            <button
+                                onClick={() => setShowModal(false)}
+                                className="ml-4 px-4 py-2 bg-gray-300 text-lg font-semibold rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+                            >
+                                Cancel
                             </button>
                         </div>
                     </div>
