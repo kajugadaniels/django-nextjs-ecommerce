@@ -94,24 +94,30 @@ class OrderDetailView(generics.RetrieveAPIView):
         return Order.objects.filter(user=self.request.user)
 
 load_dotenv()
-
 logger = logging.getLogger(__name__)
 
 class MomoApi:
     @staticmethod
     def CollectMoney(phone, amount):
-        password = os.environ.get('PAYMENT_PASSWORD')
-        hashedPassword = hashlib.sha256(password.encode('utf-8')).hexdigest()
+        username = os.environ.get('PAYMENT_USERNAME')
+        account_no = os.environ.get('PAYMENT_ACCOUNT_NO')
+        partner_password = os.environ.get('PAYMENT_PARTNER_PASSWORD')
+        timestamp = 20200131115242  # Replace with your desired timestamp
+        
+        password = f"{username}{account_no}{partner_password}{timestamp}"
+        hashed_password = hashlib.sha256(password.encode('utf-8')).hexdigest()
         tran = random.randint(19000, 80000000000)
+        
         data = {
-            'username': os.environ.get('PAYMENT_USERNAME'),
-            'timestamp': 20200131115242,
+            'username': username,
+            'timestamp': timestamp,
             'amount': amount,
-            'password': hashedPassword,
+            'password': hashed_password,
             'mobilephone': phone,
             'requesttransactionid': tran,
             'callbackurl': 'https://api.hellomed.rw/api/pay-webhook'
         }
+        
         response = requests.post(
             'https://www.intouchpay.co.rw/api/requestpayment/', data=data)
         res = response.json()
@@ -122,15 +128,15 @@ class PaymentView(APIView):
         phone = request.data.get('phone')
         amount = request.data.get('amount')
         order_data = request.data.get('order_data')
-
+        
         if not phone or not amount or not order_data:
             return Response({'error': 'Phone, amount, and order data are required'}, status=status.HTTP_400_BAD_REQUEST)
-
+        
         try:
             # Initiate payment using MomoApi
             payment_response = MomoApi.CollectMoney(phone, amount)
             logger.info(f"Payment response: {payment_response}")
-
+            
             if payment_response.get('status') == 'SUCCESS':
                 # Create order only if payment is successful
                 order = Order.objects.create(
@@ -143,6 +149,7 @@ class PaymentView(APIView):
                     shipping_zip_code=order_data.get('shipping_zip_code'),
                     shipping_phone=phone
                 )
+                
                 # Create order items
                 for item in order_data.get('items', []):
                     OrderItem.objects.create(
@@ -152,6 +159,7 @@ class PaymentView(APIView):
                         quantity=item['quantity'],
                         unit_price=item['unit_price']
                     )
+                
                 return Response({
                     'status': 'SUCCESS',
                     'message': 'Payment successful and order created',
@@ -164,7 +172,6 @@ class PaymentView(APIView):
                     'message': payment_response.get('msg', 'Payment failed'),
                     'error_code': payment_response.get('statuscode')
                 }, status=status.HTTP_400_BAD_REQUEST)
-
         except Exception as e:
             logger.error(f"Unexpected error in payment process: {str(e)}")
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

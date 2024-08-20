@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import Swal from 'sweetalert2';
 import { getApiUrl, getMediaUrl } from '@/lib/apiConfig';
+import { parsePhoneNumber, isValidPhoneNumber, AsYouType } from 'libphonenumber-js';
 
 interface CartItem {
     id: number;
@@ -140,6 +141,22 @@ const CheckOut = () => {
         setIsProcessing(true);
         try {
             const token = await getToken();
+
+            // Format phone number to E.164
+            let formattedPhone;
+            try {
+                const phoneNumber = parsePhoneNumber(shippingInfo.phone, 'RW'); // Assuming 'RW' for Rwanda
+                if (isValidPhoneNumber(shippingInfo.phone, 'RW')) {
+                    formattedPhone = phoneNumber.format('E.164');
+                } else {
+                    throw new Error('Invalid phone number');
+                }
+            } catch (error) {
+                showNotification('Invalid phone number. Please check and try again.', 'error');
+                setIsProcessing(false);
+                return;
+            }
+
             const orderData = {
                 user_email: user?.primaryEmailAddress?.emailAddress,
                 total_amount: calculateTotal(),
@@ -152,7 +169,7 @@ const CheckOut = () => {
                 shipping_address: shippingInfo.address,
                 shipping_city: shippingInfo.city,
                 shipping_zip_code: shippingInfo.zipCode,
-                shipping_phone: shippingInfo.phone
+                shipping_phone: formattedPhone // Use the formatted phone number
             };
 
             // Send payment request along with order data
@@ -163,7 +180,7 @@ const CheckOut = () => {
                     'Authorization': `Bearer ${token}`
                 },
                 body: JSON.stringify({
-                    phone: shippingInfo.phone,
+                    phone: formattedPhone, // Use the formatted phone number
                     amount: calculateTotal(),
                     order_data: orderData
                 }),
@@ -185,6 +202,25 @@ const CheckOut = () => {
         } finally {
             setIsProcessing(false);
             setShowModal(false);
+        }
+    };
+
+    const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const inputValue = e.target.value;
+        const asYouType = new AsYouType('RW'); // Assuming 'RW' for Rwanda
+        const formattedInput = asYouType.input(inputValue);
+
+        setShippingInfo(prev => ({
+            ...prev,
+            phone: formattedInput
+        }));
+    };
+
+    const isPhoneValid = () => {
+        try {
+            return isValidPhoneNumber(shippingInfo.phone, 'RW');
+        } catch {
+            return false;
         }
     };
 
@@ -313,9 +349,20 @@ const CheckOut = () => {
                                         id="phone"
                                         name="phone"
                                         value={shippingInfo.phone}
-                                        onChange={handleInputChange}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                                        onChange={handlePhoneChange}
+                                        className={`w-full px-4 py-2 border ${
+                                            isPhoneValid() ? 'border-gray-300' : 'border-red-500'
+                                        } rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent`}
+                                        placeholder="+250 7x xxx xxxx"
                                     />
+                                    {!isPhoneValid() && shippingInfo.phone && (
+                                        <p className="mt-1 text-sm text-red-600">Please enter a valid phone number.</p>
+                                    )}
+                                    {isPhoneValid() && (
+                                        <p className="mt-1 text-sm text-green-600">
+                                            E.164 format: {parsePhoneNumber(shippingInfo.phone, 'RW').format('E.164')}
+                                        </p>
+                                    )}
                                 </div>
                             </form>
                         </div>

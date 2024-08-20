@@ -9573,3 +9573,399 @@ C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\urls.py changed
 C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\urls.py changed, reloading.
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+Payment response: {'response': {'msg': 'Payment Method Not Supported', 'status': 'Failed', 'statuscode': '1201'}, 'success': False}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 64
+"POST /api/payment/ HTTP/1.1" 400 64
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+Payment response: {'response': {'msg': 'Payment Method Not Supported', 'status': 'Failed', 'statuscode': '1201'}, 'success': False}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 64
+"POST /api/payment/ HTTP/1.1" 400 64
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Payment response: {'detail': 'Invalid Password'}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 64
+"POST /api/payment/ HTTP/1.1" 400 64
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+Payment response: {'detail': 'Invalid Password'}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 69
+"POST /api/payment/ HTTP/1.1" 400 69
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+Payment response: {'detail': 'Invalid Password'}
+Payment failed with response: {'detail': 'Invalid Password'}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 69
+"POST /api/payment/ HTTP/1.1" 400 69
+"GET /api/payment HTTP/1.1" 301 0
+"GET /api/payment HTTP/1.1" 301 0
+Method Not Allowed: /api/payment/
+Method Not Allowed: /api/payment/
+"GET /api/payment/ HTTP/1.1" 405 40
+"GET /api/payment/ HTTP/1.1" 405 40
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"OPTIONS /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 0
+"OPTIONS /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 0
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 304 0
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 304 0
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 304 0
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 304 0
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"OPTIONS /api/payment/ HTTP/1.1" 200 0
+"OPTIONS /api/payment/ HTTP/1.1" 200 0
+Payment response: {'detail': 'Invalid Password'}
+Payment failed with response: {'detail': 'Invalid Password'}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 69
+"POST /api/payment/ HTTP/1.1" 400 69
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Payment response: {'detail': 'Invalid Password'}
+Payment failed with response: {'detail': 'Invalid Password'}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 69
+"POST /api/payment/ HTTP/1.1" 400 69
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Payment response: {'detail': 'Invalid Password'}
+Payment failed with response: {'detail': 'Invalid Password'}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 69
+"POST /api/payment/ HTTP/1.1" 400 69
+"GET /api/payment HTTP/1.1" 301 0
+"GET /api/payment HTTP/1.1" 301 0
+Method Not Allowed: /api/payment/
+Method Not Allowed: /api/payment/
+"GET /api/payment/ HTTP/1.1" 405 40
+"GET /api/payment/ HTTP/1.1" 405 40
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Internal Server Error: /api/payment/
+Traceback (most recent call last):
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py", line 110, in post
+    logger.info(f"Payment response: {payment_response}")
+    ^^^^^^
+NameError: name 'logger' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py", line 151, in post
+    logger.exception(f"Unexpected error in payment process: {str(e)}")
+    ^^^^^^
+NameError: name 'logger' is not defined
+Internal Server Error: /api/payment/
+Traceback (most recent call last):
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py", line 110, in post
+    logger.info(f"Payment response: {payment_response}")
+    ^^^^^^
+NameError: name 'logger' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py", line 151, in post
+    logger.exception(f"Unexpected error in payment process: {str(e)}")
+    ^^^^^^
+NameError: name 'logger' is not defined
+"POST /api/payment/ HTTP/1.1" 500 105310
+"POST /api/payment/ HTTP/1.1" 500 105310
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Payment response: {'detail': 'Invalid Password'}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 69
+"POST /api/payment/ HTTP/1.1" 400 69
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Payment response: {'detail': 'Invalid Password'}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 69
+"POST /api/payment/ HTTP/1.1" 400 69
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
