@@ -1,5 +1,10 @@
+import random
+import hashlib
+import logging
+import requests
 from home.models import *
 from home.serializers import *
+from django.conf import settings
 from django.db import transaction
 from rest_framework import status
 from rest_framework import generics
@@ -86,3 +91,44 @@ class OrderDetailView(generics.RetrieveAPIView):
 
     def get_queryset(self):
         return Order.objects.filter(user=self.request.user)
+
+logger = logging.getLogger(__name__)
+
+class InTouchPaymentView(APIView):
+    def post(self, request):
+        phone = request.data.get('phone')
+        amount = request.data.get('amount')
+
+        if not phone or not amount:
+            return Response({'error': 'Phone and amount are required'}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            password = settings.PAYMENT_PASSWORD
+            username = settings.PAYMENT_USERNAME
+            timestamp = '20200131115242'  # You might want to generate this dynamically
+
+            hashed_password = hashlib.sha256(password.encode('utf-8')).hexdigest()
+            tran = random.randint(19000, 80000000000)
+
+            data = {
+                'username': username,
+                'timestamp': timestamp,
+                'amount': amount,
+                'password': hashed_password,
+                'mobilephone': phone,
+                'requesttransactionid': str(tran),
+                'callbackurl': 'https://your-django-backend.com/api/payment-webhook/'  # Update this URL
+            }
+
+            logger.info(f"Sending payment request to InTouch: {data}")
+            response = requests.post('https://www.intouchpay.co.rw/api/requestpayment/', data=data)
+            logger.info(f"Response from InTouch: {response.text}")
+            
+            res = response.json()
+            return Response(res, status=status.HTTP_200_OK)
+        except requests.RequestException as e:
+            logger.error(f"Error communicating with InTouch API: {str(e)}")
+            return Response({'error': 'Failed to communicate with payment provider'}, status=status.HTTP_503_SERVICE_UNAVAILABLE)
+        except Exception as e:
+            logger.error(f"Unexpected error in payment process: {str(e)}")
+            return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

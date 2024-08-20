@@ -194,3 +194,6 @@ LOGGING = {
         },
     },
 }
+
+PAYMENT_PASSWORD = 'testa250160000011+$J<wtZktTDs&-Mk("h5=<PH#Jf769P5/Z<*xbR~20200131115242'
+PAYMENT_USERNAME = 'testa'
