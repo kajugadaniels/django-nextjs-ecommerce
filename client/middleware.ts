@@ -8,7 +8,9 @@ export default authMiddleware({
         '/shop/:id',
         '/cart',
         '/contact',
-        '/api/webhook/clerk'
+        '/api/webhook/clerk',
+        '/sign-in',
+        '/sign-up'
     ]
 });
 
