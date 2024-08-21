@@ -61,7 +61,7 @@ const Home = () => {
                         <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl" data-aos="fade-up"
                             data-aos-duration="3000">Our featured items</h2>
                         <p className="mt-4 text-base font-normal leading-7 text-gray-600" data-aos="fade-up"
-                            data-aos-duration="3000">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus faucibus massa dignissim tempus.</p>
+                            data-aos-duration="3000">Discover our curated selection of the freshest, organic fruits and vegetables, delivered straight to your door. Enjoy vibrant, flavorful produce that supports local farmers and adds nutritious, pesticide-free goodness to your meals. Savor the true taste of freshness with our premium range, perfect for a healthy lifestyle. Our items are carefully chosen to bring nature's finest directly to your home, ensuring you always get the highest quality. Make healthy choices effortlessly with our handpicked selection, designed to nourish your body and delight your taste buds.</p>
                     </div>
                     <Card />
                 </div>
@@ -76,7 +76,7 @@ const Home = () => {
                                 Fresh Products
                             </h1>
                             <p className="mt-4 text-xl text-gray-500">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, voluptate!
+                            Juicy, refreshing, and packed with natural sweetness, our watermelons are the perfect treat for staying hydrated and enjoying a burst of summer flavor. With vibrant red flesh and a crisp, refreshing texture, they’re a delicious way to satisfy your thirst and nourish your body    
                             </p>
                         </div>
                         <div>
