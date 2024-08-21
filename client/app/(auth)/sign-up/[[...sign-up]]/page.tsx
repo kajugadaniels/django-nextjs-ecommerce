@@ -8,9 +8,7 @@ export default function CustomSignUp() {
 
     const handleComplete = (result: any) => {
         console.log('SignUp completed:', result);
-        
-        // Redirect to profile page with user data as query parameters
-        router.push(`/profile?clerk_id=${result.createdUserId}&email=${encodeURIComponent(result.emailAddress)}&first_name=${encodeURIComponent(result.firstName)}&last_name=${encodeURIComponent(result.lastName)}`);
+        router.push('/profile');
     };
 
     return (
@@ -23,6 +21,7 @@ export default function CustomSignUp() {
             }}
             afterSignUpUrl="/profile"
             redirectUrl="/profile"
+            onComplete={handleComplete}
         />
     );
 }
