@@ -9969,3 +9969,140 @@ C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py change
 C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Payment response: {'detail': 'Invalid Password'}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 64
+"POST /api/payment/ HTTP/1.1" 400 64
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Payment response: {'detail': 'Invalid Password'}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 64
+"POST /api/payment/ HTTP/1.1" 400 64
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kskxO8YEFXK6qbCnmalwjazcHw/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Payment response: {'detail': 'Invalid Password'}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 64
+"POST /api/payment/ HTTP/1.1" 400 64
+"OPTIONS /api/auth/users/ HTTP/1.1" 200 0
+"OPTIONS /api/auth/users/ HTTP/1.1" 200 0
+Received POST request: {'clerk_id': 'user_2ks9E45tkf4jLKbJGHtx6UlkoNw', 'email': 'kajugadaniels@gmail.com', 'first_name': 'KAJUGA', 'last_name': 'Daniel'}
+User created/updated: kajugadaniels@gmail.com
+"POST /api/auth/users/ HTTP/1.1" 201 154
+"POST /api/auth/users/ HTTP/1.1" 201 154
+Received POST request: {'clerk_id': 'user_2kvZHtmEC84x8XBLfXEXmX5vNIb', 'email': 'kajugadaniels@gmail.com', 'first_name': 'KAJUGA', 'last_name': 'Daniel'}
+Serializer errors: {'email': [ErrorDetail(string='user with this email already exists.', code='unique')]}
+Bad Request: /api/auth/users/
+Bad Request: /api/auth/users/
+"POST /api/auth/users/ HTTP/1.1" 400 50
+"POST /api/auth/users/ HTTP/1.1" 400 50
+Received POST request: {'clerk_id': 'user_2kvZHtmEC84x8XBLfXEXmX5vNIb', 'email': 'kajugadaniels@gmail.com', 'first_name': 'KAJUGA', 'last_name': 'Daniel'}
+Serializer errors: {'email': [ErrorDetail(string='user with this email already exists.', code='unique')]}
+Bad Request: /api/auth/users/
+Bad Request: /api/auth/users/
+"POST /api/auth/users/ HTTP/1.1" 400 50
+"POST /api/auth/users/ HTTP/1.1" 400 50
+Received POST request: {'clerk_id': 'user_2kvZHtmEC84x8XBLfXEXmX5vNIb', 'email': 'kajugadaniels@gmail.com', 'first_name': 'KAJUGA', 'last_name': 'Daniel'}
+Serializer errors: {'email': [ErrorDetail(string='user with this email already exists.', code='unique')]}
+Bad Request: /api/auth/users/
+Bad Request: /api/auth/users/
+"POST /api/auth/users/ HTTP/1.1" 400 50
+"POST /api/auth/users/ HTTP/1.1" 400 50
+Received POST request: {'clerk_id': 'user_2kvZHtmEC84x8XBLfXEXmX5vNIb', 'email': 'kajugadaniels@gmail.com', 'first_name': 'KAJUGA', 'last_name': 'Daniel'}
+Serializer errors: {'email': [ErrorDetail(string='user with this email already exists.', code='unique')]}
+Bad Request: /api/auth/users/
+Bad Request: /api/auth/users/
+"POST /api/auth/users/ HTTP/1.1" 400 50
+"POST /api/auth/users/ HTTP/1.1" 400 50
+Received POST request: {'clerk_id': 'user_2kvZHtmEC84x8XBLfXEXmX5vNIb', 'email': 'kajugadaniels@gmail.com', 'first_name': 'KAJUGA', 'last_name': 'Daniel'}
+Serializer errors: {'email': [ErrorDetail(string='user with this email already exists.', code='unique')]}
+Bad Request: /api/auth/users/
+Bad Request: /api/auth/users/
+"POST /api/auth/users/ HTTP/1.1" 400 50
+"POST /api/auth/users/ HTTP/1.1" 400 50
+Received POST request: {'clerk_id': 'user_2kvZHtmEC84x8XBLfXEXmX5vNIb', 'email': 'kajugadaniels@gmail.com', 'first_name': 'KAJUGA', 'last_name': 'Daniel'}
+Serializer errors: {'email': [ErrorDetail(string='user with this email already exists.', code='unique')]}
+Bad Request: /api/auth/users/
+Bad Request: /api/auth/users/
+"POST /api/auth/users/ HTTP/1.1" 400 50
+"POST /api/auth/users/ HTTP/1.1" 400 50
+Received POST request: {'clerk_id': 'user_2kvZHtmEC84x8XBLfXEXmX5vNIb', 'email': 'kajugadaniels@gmail.com', 'first_name': 'KAJUGA', 'last_name': 'Daniel'}
+Serializer errors: {'email': [ErrorDetail(string='user with this email already exists.', code='unique')]}
+Bad Request: /api/auth/users/
+Bad Request: /api/auth/users/
+"POST /api/auth/users/ HTTP/1.1" 400 50
+"POST /api/auth/users/ HTTP/1.1" 400 50
+Received POST request: {'clerk_id': 'user_2kvZHtmEC84x8XBLfXEXmX5vNIb', 'email': 'kajugadaniels@gmail.com', 'first_name': 'KAJUGA', 'last_name': 'Daniel'}
+Serializer errors: {'email': [ErrorDetail(string='user with this email already exists.', code='unique')]}
+Bad Request: /api/auth/users/
+Bad Request: /api/auth/users/
+"POST /api/auth/users/ HTTP/1.1" 400 50
+"POST /api/auth/users/ HTTP/1.1" 400 50
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
