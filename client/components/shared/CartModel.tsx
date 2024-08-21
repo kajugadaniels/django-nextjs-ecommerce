@@ -11,6 +11,7 @@ interface CartItem {
     unit_price: number | string;
     image: string;
     quantity: number;
+    timestamp: number;
 }
 
 interface CartModelProps {
@@ -18,6 +19,7 @@ interface CartModelProps {
 }
 
 const CART_STORAGE_KEY = 'userCart';
+const CART_EXPIRY_TIME = 60 * 60 * 1000; // 1 hour in milliseconds
 
 export const useCartItems = () => {
     const [cartItems, setCartItems] = useState<CartItem[]>([]);
@@ -25,11 +27,14 @@ export const useCartItems = () => {
     useEffect(() => {
         const loadCart = () => {
             const storedCart = JSON.parse(localStorage.getItem(CART_STORAGE_KEY) || '[]');
-            setCartItems(storedCart);
+            const currentTime = Date.now();
+            const validItems = storedCart.filter((item: CartItem) => currentTime - item.timestamp < CART_EXPIRY_TIME);
+            setCartItems(validItems);
+            localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(validItems));
         };
 
         loadCart();
-        const intervalId = setInterval(loadCart, 1000);
+        const intervalId = setInterval(loadCart, 60000); // Check every minute
 
         return () => clearInterval(intervalId);
     }, []);
@@ -43,11 +48,14 @@ const CartModel: React.FC<CartModelProps> = ({ onClose }) => {
     useEffect(() => {
         const loadCart = () => {
             const storedCart = JSON.parse(localStorage.getItem(CART_STORAGE_KEY) || '[]');
-            setCartItems(storedCart);
+            const currentTime = Date.now();
+            const validItems = storedCart.filter((item: CartItem) => currentTime - item.timestamp < CART_EXPIRY_TIME);
+            setCartItems(validItems);
+            localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(validItems));
         };
 
         loadCart();
-        const intervalId = setInterval(loadCart, 1000); // Refresh cart every second
+        const intervalId = setInterval(loadCart, 60000); // Check every minute
 
         return () => clearInterval(intervalId);
     }, []);
@@ -55,7 +63,7 @@ const CartModel: React.FC<CartModelProps> = ({ onClose }) => {
     const updateQuantity = (id: number, newQuantity: number) => {
         if (newQuantity < 1) return;
         const updatedCart = cartItems.map(item => 
-            item.id === id ? { ...item, quantity: newQuantity } : item
+            item.id === id ? { ...item, quantity: newQuantity, timestamp: Date.now() } : item
         );
         setCartItems(updatedCart);
         localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(updatedCart));
