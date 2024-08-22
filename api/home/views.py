@@ -96,36 +96,32 @@ class OrderDetailView(generics.RetrieveAPIView):
 load_dotenv()
 logger = logging.getLogger(__name__)
 
-class MomoApi:
-    @staticmethod
-    def CollectMoney(phone, amount):
-        username = os.environ.get('PAYMENT_USERNAME')
-        account_no = os.environ.get('PAYMENT_ACCOUNT_NO')
-        partner_password = os.environ.get('PAYMENT_PARTNER_PASSWORD')
-        timestamp = 20200131115242  # Replace with your desired timestamp
-        
-        password = f"{username}{account_no}{partner_password}{timestamp}"
-        hashed_password = hashlib.sha256(password.encode('utf-8')).hexdigest()
+class MomoApi():
+    def CollectMoney(phone,amount):
+        password = os.environ.get('PAYMENT_PASSWORD')
+        #password =username+accountno+partnerpassword+timestamp
+        hashedPassword = hashlib.sha256(password.encode('utf-8')).hexdigest()
         tran = random.randint(19000, 80000000000)
-        
+
         data = {
-            'username': username,
-            'timestamp': timestamp,
-            'amount': amount,
-            'password': hashed_password,
-            'mobilephone': phone,
-            'requesttransactionid': tran,
-            'callbackurl': 'https://api.hellomed.rw/api/pay-webhook'
-        }
-        
+                'username': os.environ.get('PAYMENT_USERNAME'),
+                'timestamp':20200131115242,
+                'amount': amount,
+                'password': hashedPassword,
+                'mobilephone': phone,
+                'requesttransactionid': tran,
+                'callbackurl':'https://api.hellomed.rw/api/pay-webhook'
+            }
         response = requests.post(
-            'https://www.intouchpay.co.rw/api/requestpayment/', data=data)
+                'https://www.intouchpay.co.rw/api/requestpayment/', data=data)
         res = response.json()
         return res
 
 class PaymentView(APIView):
     def post(self, request):
-        phone = request.data.get('phone')
+        telephone = request.data.get('phone')
+        phone = telephone.replace("+", "")
+        # print(f"Phone number: {phone}")
         amount = request.data.get('amount')
         order_data = request.data.get('order_data')
         

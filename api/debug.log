@@ -10192,3 +10192,345 @@ User created/updated: kajugadaniels@gmail.com
 "GET /admin/account/user/ HTTP/1.1" 200 35519
 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"OPTIONS /api/auth/users/ HTTP/1.1" 200 0
+"OPTIONS /api/auth/users/ HTTP/1.1" 200 0
+Received POST request: {'clerk_id': 'user_2kxZU4kKHiC9H4h1mbbXTyILUuW', 'email': 'kajugadaniels@gmail.com', 'first_name': 'KAJUGA', 'last_name': 'Daniel'}
+User created/updated: kajugadaniels@gmail.com
+"POST /api/auth/users/ HTTP/1.1" 201 154
+"POST /api/auth/users/ HTTP/1.1" 201 154
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /admin/account/user/ HTTP/1.1" 200 35519
+"GET /admin/account/user/ HTTP/1.1" 200 35519
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/account/user/ HTTP/1.1" 200 35519
+"GET /admin/account/user/ HTTP/1.1" 200 35519
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/account/user/ HTTP/1.1" 200 30379
+"POST /admin/account/user/ HTTP/1.1" 200 30379
+"POST /admin/account/user/ HTTP/1.1" 302 0
+"POST /admin/account/user/ HTTP/1.1" 302 0
+"GET /admin/account/user/ HTTP/1.1" 200 35539
+"GET /admin/account/user/ HTTP/1.1" 200 35539
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Received POST request: {'clerk_id': 'user_2kxc9I2FUVyzzkWIXXMawECDMez', 'email': 'kajugadaniels@gmail.com', 'first_name': 'KAJUGA', 'last_name': 'Daniel'}
+User created/updated: kajugadaniels@gmail.com
+"POST /api/auth/users/ HTTP/1.1" 201 154
+"POST /api/auth/users/ HTTP/1.1" 201 154
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /admin/account/user/ HTTP/1.1" 200 35519
+"GET /admin/account/user/ HTTP/1.1" 200 35519
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/account/user/ HTTP/1.1" 200 35519
+"GET /admin/account/user/ HTTP/1.1" 200 35519
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/account/user/ HTTP/1.1" 200 30379
+"POST /admin/account/user/ HTTP/1.1" 200 30379
+"POST /admin/account/user/ HTTP/1.1" 302 0
+"POST /admin/account/user/ HTTP/1.1" 302 0
+"GET /admin/account/user/ HTTP/1.1" 200 35539
+"GET /admin/account/user/ HTTP/1.1" 200 35539
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+Received POST request: {'clerk_id': 'user_2kxcljYcFcZSDyFycFyWsw5Gh8s', 'email': 'kajugadaniels@gmail.com', 'first_name': 'KAJUGA', 'last_name': 'Daniel'}
+User created/updated: kajugadaniels@gmail.com
+"POST /api/auth/users/ HTTP/1.1" 201 154
+"POST /api/auth/users/ HTTP/1.1" 201 154
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /admin/account/user/ HTTP/1.1" 200 35519
+"GET /admin/account/user/ HTTP/1.1" 200 35519
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Received POST request: {'clerk_id': 'user_2kxcqZqajwD4UEsgZlFlLI33QNW', 'email': 'beniobed02@gmail.com', 'first_name': 'MUNYESHYA', 'last_name': 'Beni Obed'}
+User created/updated: beniobed02@gmail.com
+"POST /api/auth/users/ HTTP/1.1" 201 163
+"POST /api/auth/users/ HTTP/1.1" 201 163
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /admin/account/user/ HTTP/1.1" 200 35995
+"GET /admin/account/user/ HTTP/1.1" 200 35995
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 304 0
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 304 0
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 304 0
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 304 0
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ibijumba/ HTTP/1.1" 200 535
+"GET /api/products/ibijumba/ HTTP/1.1" 200 535
+"GET /api/products/ibijumba/ HTTP/1.1" 200 535
+"GET /api/products/ibijumba/ HTTP/1.1" 200 535
+"GET /media/products/add_on/2618_2024-08-19.jpg HTTP/1.1" 200 257864
+"GET /media/products/add_on/2618_2024-08-19.jpg HTTP/1.1" 200 257864
+"GET /media/products/add_on/8565_2024-08-19.jpg HTTP/1.1" 200 276669
+"GET /media/products/add_on/8565_2024-08-19.jpg HTTP/1.1" 200 276669
+"GET /media/products/add_on/4295_2024-08-19.jpg HTTP/1.1" 200 417624
+"GET /media/products/add_on/4295_2024-08-19.jpg HTTP/1.1" 200 417624
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"OPTIONS /api/auth/users/user_2kxcqZqajwD4UEsgZlFlLI33QNW/ HTTP/1.1" 200 0
+"OPTIONS /api/auth/users/user_2kxcqZqajwD4UEsgZlFlLI33QNW/ HTTP/1.1" 200 0
+"OPTIONS /api/auth/users/user_2kxcqZqajwD4UEsgZlFlLI33QNW/ HTTP/1.1" 200 0
+"OPTIONS /api/auth/users/user_2kxcqZqajwD4UEsgZlFlLI33QNW/ HTTP/1.1" 200 0
+"GET /api/auth/users/user_2kxcqZqajwD4UEsgZlFlLI33QNW/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kxcqZqajwD4UEsgZlFlLI33QNW/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kxcqZqajwD4UEsgZlFlLI33QNW/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kxcqZqajwD4UEsgZlFlLI33QNW/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"OPTIONS /api/payment/ HTTP/1.1" 200 0
+"OPTIONS /api/payment/ HTTP/1.1" 200 0
+Payment response: {'detail': 'Invalid Password'}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 64
+"POST /api/payment/ HTTP/1.1" 400 64
+Method Not Allowed: /api/payment/
+Method Not Allowed: /api/payment/
+"GET /api/payment/ HTTP/1.1" 405 5551
+"GET /api/payment/ HTTP/1.1" 405 5551
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2446
+"GET /favicon.ico HTTP/1.1" 404 2446
+Payment response: {'detail': 'Invalid Password'}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 64
+"POST /api/payment/ HTTP/1.1" 400 64
+Payment response: {'detail': 'Invalid Password'}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 64
+"POST /api/payment/ HTTP/1.1" 400 64
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Payment response: {'detail': 'Invalid Password'}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 64
+"POST /api/payment/ HTTP/1.1" 400 64
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Payment response: {'detail': 'Invalid Password'}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 64
+"POST /api/payment/ HTTP/1.1" 400 64
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Payment response: {'response': {'msg': 'Payment Method Not Supported', 'status': 'Failed', 'statuscode': '1201'}, 'success': False}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 64
+"POST /api/payment/ HTTP/1.1" 400 64
+Payment response: {'response': {'msg': 'Payment Method Not Supported', 'status': 'Failed', 'statuscode': '1201'}, 'success': False}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 64
+"POST /api/payment/ HTTP/1.1" 400 64
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Unexpected error in payment process: HTTPSConnectionPool(host='www.intouchpay.co.rw', port=443): Max retries exceeded with url: /api/requestpayment/ (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002CF9932B7A0>: Failed to resolve 'www.intouchpay.co.rw' ([Errno 11001] getaddrinfo failed)"))
+Internal Server Error: /api/payment/
+Internal Server Error: /api/payment/
+"POST /api/payment/ HTTP/1.1" 500 303
+"POST /api/payment/ HTTP/1.1" 500 303
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Payment response: {'message': 'The total amount to be paid should be greater than 100 RWF', 'responsecode': '2200', 'success': False}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 64
+"POST /api/payment/ HTTP/1.1" 400 64
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /api/auth/users/user_2kxcqZqajwD4UEsgZlFlLI33QNW/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kxcqZqajwD4UEsgZlFlLI33QNW/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kxcqZqajwD4UEsgZlFlLI33QNW/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kxcqZqajwD4UEsgZlFlLI33QNW/ HTTP/1.1" 200 163
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Payment response: {'status': 'Pending', 'requesttransactionid': '61772453902', 'success': True, 'responsecode': '1000', 'transactionid': '183313620240822093823027630', 'message': 'Your Payment transaction of 120RWF is Pending. Dial *182*7*1# to approve it.'}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 64
+"POST /api/payment/ HTTP/1.1" 400 64
+Unexpected error in payment process: HTTPSConnectionPool(host='www.intouchpay.co.rw', port=443): Max retries exceeded with url: /api/requestpayment/ (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000021227B4A840>: Failed to resolve 'www.intouchpay.co.rw' ([Errno 11001] getaddrinfo failed)"))
+Internal Server Error: /api/payment/
+Internal Server Error: /api/payment/
+"POST /api/payment/ HTTP/1.1" 500 303
+"POST /api/payment/ HTTP/1.1" 500 303
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2kxcqZqajwD4UEsgZlFlLI33QNW/ HTTP/1.1" 200 163
+"GET /api/auth/users/user_2kxcqZqajwD4UEsgZlFlLI33QNW/ HTTP/1.1" 200 163
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Payment response: {'status': 'Pending', 'requesttransactionid': '64020284085', 'success': True, 'responsecode': '1000', 'transactionid': '183318220240822095338476078', 'message': 'Your Payment transaction of 120RWF is Pending. Dial *182*7*1# to approve it.'}
+Bad Request: /api/payment/
+Bad Request: /api/payment/
+"POST /api/payment/ HTTP/1.1" 400 64
+"POST /api/payment/ HTTP/1.1" 400 64
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
