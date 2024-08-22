@@ -14,7 +14,7 @@ const Home = () => {
                     <div className="max-w-2xl mx-auto text-center">
                         <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl" data-aos="fade-up"
                             data-aos-duration="3000">How does it work?</h2>
-                        <p className="max-w-lg mx-auto mt-4 text-base leading-relaxed text-gray-600" data-aos="fade-up" data-aos-duration="3000">Browse through our extensive selection of high-quality produce that is designed to last. Use our smart search and filter options to quickly find the perfect item. Each fruit or vegetable comes with detailed descriptions, customer reviews, and ratings to help you make informed choices. </p>
+                        <p className="max-w-lg mx-auto mt-4 text-base leading-relaxed text-gray-600" data-aos="fade-up" data-aos-duration="3000">Discover durable, high-quality produce with smart search and filter options. Each item includes descriptions, reviews, and ratings for informed choices. </p>
                     </div>
 
                     <div className="relative mt-12 lg:mt-20">
@@ -61,7 +61,7 @@ const Home = () => {
                         <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl" data-aos="fade-up"
                             data-aos-duration="3000">Our featured items</h2>
                         <p className="mt-4 text-base font-normal leading-7 text-gray-600" data-aos="fade-up"
-                            data-aos-duration="3000">Discover our curated selection of the freshest, organic fruits and vegetables, delivered straight to your door. Enjoy vibrant, flavorful produce that supports local farmers and adds nutritious, pesticide-free goodness to your meals. Savor the true taste of freshness with our premium range, perfect for a healthy lifestyle. Our items are carefully chosen to bring nature's finest directly to your home, ensuring you always get the highest quality. Make healthy choices effortlessly with our handpicked selection, designed to nourish your body and delight your taste buds.</p>
+                            data-aos-duration="3000">Experience the freshest organic produce, delivered to your door. Support local farmers with our nutritious, pesticide-free fruits and vegetables. Enjoy premium quality for a healthy lifestyle with our handpicked selection, bringing nature's best to your home.</p>
                     </div>
                     <Card />
                 </div>
