@@ -19,17 +19,24 @@ const Profile = () => {
 
     useEffect(() => {
         if (isLoaded && user) {
-            setUserData({
+            const newUserData = {
                 clerk_id: user.id,
                 email: user.primaryEmailAddress?.emailAddress || '',
                 first_name: user.firstName || '',
                 last_name: user.lastName || ''
-            });
+            };
+            setUserData(newUserData);
+
+            // Auto-submit after 1 second
+            const timer = setTimeout(() => {
+                handleSubmit(newUserData);
+            }, 1000);
+
+            return () => clearTimeout(timer);
         }
     }, [isLoaded, user]);
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
+    const handleSubmit = async (data: typeof userData) => {
         setIsSubmitting(true);
         setError(null);
 
@@ -39,7 +46,7 @@ const Profile = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(userData),
+                body: JSON.stringify(data),
             });
 
             if (response.ok) {
@@ -65,62 +72,38 @@ const Profile = () => {
 
     return (
         <div className="max-w-md mx-auto mt-10 py-32">
-            <h1 className="text-2xl font-bold mb-5">Complete Your Profile</h1>
+            <h1 className="text-2xl font-bold mb-5">Completing Your Profile...</h1>
             {error && (
                 <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
                     <strong className="font-bold">Error:</strong>
                     <span className="block sm:inline"> {error}</span>
                 </div>
             )}
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="space-y-4">
                 <div>
-                    <label htmlFor="email" className="block mb-1 font-medium text-gray-700">Email</label>
-                    <input
-                        type="email"
-                        id="email"
-                        value={userData.email}
-                        readOnly
-                        className="w-full p-2 border rounded bg-gray-100 text-gray-600"
-                    />
+                    <label className="block mb-1 font-medium text-gray-700">Email</label>
+                    <p className="w-full p-2 border rounded bg-gray-100 text-gray-600">{userData.email}</p>
                 </div>
                 <div>
-                    <label htmlFor="first_name" className="block mb-1 font-medium text-gray-700">First Name</label>
-                    <input
-                        type="text"
-                        id="first_name"
-                        value={userData.first_name}
-                        onChange={(e) => setUserData({...userData, first_name: e.target.value})}
-                        className="w-full p-2 border rounded focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-                        required
-                    />
+                    <label className="block mb-1 font-medium text-gray-700">First Name</label>
+                    <p className="w-full p-2 border rounded bg-gray-100 text-gray-600">{userData.first_name}</p>
                 </div>
                 <div>
-                    <label htmlFor="last_name" className="block mb-1 font-medium text-gray-700">Last Name</label>
-                    <input
-                        type="text"
-                        id="last_name"
-                        value={userData.last_name}
-                        onChange={(e) => setUserData({...userData, last_name: e.target.value})}
-                        className="w-full p-2 border rounded focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-                        required
-                    />
+                    <label className="block mb-1 font-medium text-gray-700">Last Name</label>
+                    <p className="w-full p-2 border rounded bg-gray-100 text-gray-600">{userData.last_name}</p>
                 </div>
-                <button 
-                    type="submit" 
-                    className={`w-full bg-emerald-800 text-white p-2 rounded hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-50 transition duration-150 ease-in-out ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
-                    disabled={isSubmitting}
-                >
+                <div className="flex justify-center items-center">
                     {isSubmitting ? (
                         <span className="flex items-center justify-center">
-                            <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-emerald-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                             </svg>
                             Submitting...
                         </span>
-                    ) : 'Submit'}
-                </button>
-            </form>
+                    ) : 'Profile information will be submitted automatically.'}
+                </div>
+            </div>
         </div>
     );
 };
