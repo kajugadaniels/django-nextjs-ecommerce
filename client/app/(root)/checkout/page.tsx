@@ -108,7 +108,7 @@ const CheckOut = () => {
         setShippingInfo((prev) => ({ ...prev, [name]: value }));
     };
 
-    const showNotification = (message: string, icon: 'success' | 'error') => {
+    const showNotification = (message: string, icon: 'success' | 'error' | 'warning') => {
         const Toast = Swal.mixin({
             toast: true,
             position: 'top-start',
@@ -158,7 +158,7 @@ const CheckOut = () => {
             }
 
             const orderData = {
-                user_id: userData?.clerk_id, // Use clerk_id from userData
+                user_id: userData?.clerk_id,
                 user_email: userData?.email,
                 total_amount: calculateTotal(),
                 items: cartItems.map(item => ({
@@ -190,8 +190,12 @@ const CheckOut = () => {
             const paymentResult = await paymentResponse.json();
             console.log('Payment response:', paymentResult);
 
-            if (paymentResult.status === "SUCCESS") {
-                showNotification(`Payment successful. Order ID: ${paymentResult.order_id}`, 'success');
+            if (paymentResult.status === "SUCCESS" || paymentResult.status === "Pending") {
+                const message = paymentResult.status === "SUCCESS"
+                    ? `Payment successful. Order ID: ${paymentResult.order_id}`
+                    : `Payment is pending. Order ID: ${paymentResult.order_id}`;
+                
+                showNotification(message, 'success');
                 localStorage.removeItem('userCart');
                 router.push('/orders');
             } else {

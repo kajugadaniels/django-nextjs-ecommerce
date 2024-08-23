@@ -11776,3 +11776,30 @@ Watching for file changes with StatReloader
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
+Payment response: {'status': 'Pending', 'requesttransactionid': '74674152708', 'success': True, 'responsecode': '1000', 'transactionid': '183641720240823114521638518', 'message': 'Your Payment transaction of 144RWF is Pending. Dial *182*7*1# to approve it.'}
+"POST /api/payment/ HTTP/1.1" 200 126
+"POST /api/payment/ HTTP/1.1" 200 126
+"GET /admin/home/order/ HTTP/1.1" 200 34745
+"GET /admin/home/order/ HTTP/1.1" 200 34745
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/3/change/ HTTP/1.1" 200 42212
+"GET /admin/home/order/3/change/ HTTP/1.1" 200 42212
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/ HTTP/1.1" 200 34745
+"GET /admin/home/order/ HTTP/1.1" 200 34745
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/home/order/ HTTP/1.1" 200 30904
+"POST /admin/home/order/ HTTP/1.1" 200 30904
+"POST /admin/home/order/ HTTP/1.1" 302 0
+"POST /admin/home/order/ HTTP/1.1" 302 0
+"GET /admin/home/order/ HTTP/1.1" 200 30932
+"GET /admin/home/order/ HTTP/1.1" 200 30932
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
