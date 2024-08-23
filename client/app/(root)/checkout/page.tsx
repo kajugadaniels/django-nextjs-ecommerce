@@ -145,7 +145,7 @@ const CheckOut = () => {
             // Format phone number to E.164
             let formattedPhone;
             try {
-                const phoneNumber = parsePhoneNumber(shippingInfo.phone, 'RW'); // Assuming 'RW' for Rwanda
+                const phoneNumber = parsePhoneNumber(shippingInfo.phone, 'RW');
                 if (isValidPhoneNumber(shippingInfo.phone, 'RW')) {
                     formattedPhone = phoneNumber.format('E.164');
                 } else {
@@ -158,7 +158,8 @@ const CheckOut = () => {
             }
 
             const orderData = {
-                user_email: user?.primaryEmailAddress?.emailAddress,
+                user_id: userData?.clerk_id, // Use clerk_id from userData
+                user_email: userData?.email,
                 total_amount: calculateTotal(),
                 items: cartItems.map(item => ({
                     product_id: item.id,
@@ -169,7 +170,7 @@ const CheckOut = () => {
                 shipping_address: shippingInfo.address,
                 shipping_city: shippingInfo.city,
                 shipping_zip_code: shippingInfo.zipCode,
-                shipping_phone: formattedPhone // Use the formatted phone number
+                shipping_phone: formattedPhone
             };
 
             // Send payment request along with order data
@@ -180,7 +181,7 @@ const CheckOut = () => {
                     'Authorization': `Bearer ${token}`
                 },
                 body: JSON.stringify({
-                    phone: formattedPhone, // Use the formatted phone number
+                    phone: formattedPhone,
                     amount: calculateTotal(),
                     order_data: orderData
                 }),
