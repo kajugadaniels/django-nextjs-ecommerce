@@ -117,11 +117,12 @@ class MomoApi():
         res = response.json()
         return res
 
+logger = logging.getLogger(__name__)
+
 class PaymentView(APIView):
     def post(self, request):
         telephone = request.data.get('phone')
         phone = telephone.replace("+", "")
-        # print(f"Phone number: {phone}")
         amount = request.data.get('amount')
         order_data = request.data.get('order_data')
         
@@ -133,41 +134,39 @@ class PaymentView(APIView):
             payment_response = MomoApi.CollectMoney(phone, amount)
             logger.info(f"Payment response: {payment_response}")
             
-            if payment_response.get('status') == 'SUCCESS':
-                # Create order only if payment is successful
-                order = Order.objects.create(
-                    user=request.user,
-                    total_amount=amount,
-                    payment_status='Paid',
-                    transaction_id=payment_response.get('transactionid'),
-                    shipping_address=order_data.get('shipping_address'),
-                    shipping_city=order_data.get('shipping_city'),
-                    shipping_zip_code=order_data.get('shipping_zip_code'),
-                    shipping_phone=phone
+            # Create order with pending status
+            order = Order.objects.create(
+                user=request.user,
+                total_amount=amount,
+                payment_status=payment_response.get('status', 'Pending'),
+                transaction_id=payment_response.get('transactionid'),
+                shipping_address=order_data.get('shipping_address'),
+                shipping_city=order_data.get('shipping_city'),
+                shipping_zip_code=order_data.get('shipping_zip_code'),
+                shipping_phone=phone
+            )
+            
+            # Add additional fields to the order
+            order.request_transaction_id = payment_response.get('requesttransactionid')
+            order.response_code = payment_response.get('responsecode')
+            order.save()
+            
+            # Create order items
+            for item in order_data.get('items', []):
+                OrderItem.objects.create(
+                    order=order,
+                    product_id=item['product_id'],
+                    quantity=item['quantity']
                 )
-                
-                # Create order items
-                for item in order_data.get('items', []):
-                    OrderItem.objects.create(
-                        order=order,
-                        product_id=item['product_id'],
-                        product_name=item['product_name'],
-                        quantity=item['quantity'],
-                        unit_price=item['unit_price']
-                    )
-                
-                return Response({
-                    'status': 'SUCCESS',
-                    'message': 'Payment successful and order created',
-                    'transaction_id': payment_response.get('transactionid'),
-                    'order_id': order.id
-                }, status=status.HTTP_200_OK)
-            else:
-                return Response({
-                    'status': 'FAILED',
-                    'message': payment_response.get('msg', 'Payment failed'),
-                    'error_code': payment_response.get('statuscode')
-                }, status=status.HTTP_400_BAD_REQUEST)
+            
+            return Response({
+                'status': payment_response.get('status'),
+                'message': payment_response.get('message'),
+                'transaction_id': payment_response.get('transactionid'),
+                'request_transaction_id': payment_response.get('requesttransactionid'),
+                'order_id': order.id
+            }, status=status.HTTP_200_OK)
+        
         except Exception as e:
             logger.error(f"Unexpected error in payment process: {str(e)}")
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
