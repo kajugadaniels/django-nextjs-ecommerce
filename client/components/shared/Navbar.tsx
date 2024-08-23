@@ -132,12 +132,19 @@ const Navbar: React.FC = () => {
                                                         transition={{ duration: 0.2 }}
                                                         className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 ring-1 ring-black ring-opacity-5"
                                                     >
-                                                        <Link
+                                                        {/* <Link
                                                             href="/dashboard"
                                                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                                             onClick={closeProfileDropdown}
                                                         >
                                                             Dashboard
+                                                        </Link> */}
+                                                        <Link
+                                                            href="/orders"
+                                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                                            onClick={closeProfileDropdown}
+                                                        >
+                                                            Orders
                                                         </Link>
                                                         <button
                                                             onClick={() => signOut(() => router.push('/'))}
@@ -214,8 +221,11 @@ const Navbar: React.FC = () => {
                                     </Link>
                                 </SignedOut>
                                 <SignedIn>
-                                    <Link href="/dashboard" className="block text-lg font-medium text-gray-900 hover:text-green-800" onClick={closeMobileMenu}>
+                                    {/* <Link href="/dashboard" className="block text-lg font-medium text-gray-900 hover:text-green-800" onClick={closeMobileMenu}>
                                         Dashboard
+                                    </Link> */}
+                                    <Link href="/orders" className="block text-lg font-medium text-gray-900 hover:text-green-800" onClick={closeMobileMenu}>
+                                        Orders
                                     </Link>
                                     <button
                                         onClick={() => signOut(() => router.push('/'))}
