@@ -315,6 +315,7 @@ const CheckOut = () => {
                                         value={shippingInfo.address}
                                         onChange={handleInputChange}
                                         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                                        required
                                     />
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
@@ -329,6 +330,7 @@ const CheckOut = () => {
                                             value={shippingInfo.city}
                                             onChange={handleInputChange}
                                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                                            required
                                         />
                                     </div>
                                     <div>
@@ -342,6 +344,7 @@ const CheckOut = () => {
                                             value={shippingInfo.zipCode}
                                             onChange={handleInputChange}
                                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                                            required
                                         />
                                     </div>
                                 </div>
@@ -359,6 +362,7 @@ const CheckOut = () => {
                                             isPhoneValid() ? 'border-gray-300' : 'border-red-500'
                                         } rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent`}
                                         placeholder="+250 7x xxx xxxx"
+                                        required
                                     />
                                     {!isPhoneValid() && shippingInfo.phone && (
                                         <p className="mt-1 text-sm text-red-600">Please enter a valid phone number.</p>
@@ -379,7 +383,7 @@ const CheckOut = () => {
                                 <div key={item.id} className="flex items-center justify-between mb-4 pb-4 border-b border-gray-200">
                                     <div className="flex items-center">
                                         <Image
-                                            src={getProductImageUrl(item.id)}
+                                            src={item.image}
                                             alt={item.name}
                                             width={60}
                                             height={60}
@@ -414,6 +418,13 @@ const CheckOut = () => {
                             <h3 className="text-lg font-medium text-gray-900 mb-2">Products:</h3>
                             {cartItems.map((item) => (
                                 <div key={item.id} className="flex justify-between mb-2">
+                                    <Image
+                                        src={item.image}
+                                        alt={item.name}
+                                        width={50}
+                                        height={50}
+                                        className="rounded-md mr-4"
+                                    />
                                     <span>
                                         {item.name} (x{item.quantity})
                                     </span>
@@ -425,19 +436,13 @@ const CheckOut = () => {
                         <div className="mt-6">
                             <h3 className="text-lg font-medium text-gray-900 mb-2">User Information:</h3>
                             <p>
-                                <strong>First Name:</strong> {userData?.first_name ?? 'N/A'}
-                            </p>
-                            <p>
-                                <strong>Last Name:</strong> {userData?.last_name ?? 'N/A'}
+                                <strong>Names:</strong> {userData?.first_name ?? 'N/A'} {userData?.last_name ?? 'N/A'}
                             </p>
                             <p>
                                 <strong>Email:</strong> {userData?.email ?? 'N/A'}
                             </p>
                             <p>
-                                <strong>Slug:</strong> {userData?.slug ?? 'N/A'}
-                            </p>
-                            <p>
-                                <strong>Django User ID:</strong> {userData?.id ?? 'N/A'}
+                                <strong>Phone Number:</strong> {shippingInfo.phone}
                             </p>
                         </div>
                         <div className="mt-6 flex justify-end">
@@ -447,6 +452,13 @@ const CheckOut = () => {
                                 disabled={isProcessing}
                             >
                                 {isProcessing ? "Processing..." : "Confirm Order and Pay"}
+                            </button>
+                            <button
+                                onClick={() => setShowModal(false)}
+                                className="absolute top-4 right-4 text-gray-500 hover:text-gray-800"
+                                aria-label="Close"
+                            >
+                                Close
                             </button>
                         </div>
                     </div>
