@@ -11803,3 +11803,68 @@ Payment response: {'status': 'Pending', 'requesttransactionid': '74674152708', '
 "GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
 "GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
 "GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Payment response: {'status': 'Pending', 'requesttransactionid': '19021070843', 'success': True, 'responsecode': '1000', 'transactionid': '183642920240823115027907100', 'message': 'Your Payment transaction of 144RWF is Pending. Dial *182*7*1# to approve it.'}
+"POST /api/payment/ HTTP/1.1" 200 126
+"POST /api/payment/ HTTP/1.1" 200 126
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 312
+"GET /api/orders/list/ HTTP/1.1" 200 312
+"GET /api/orders/list/ HTTP/1.1" 200 312
+"GET /api/orders/list/ HTTP/1.1" 200 312
+"GET /admin/home/order/ HTTP/1.1" 200 34186
+"GET /admin/home/order/ HTTP/1.1" 200 34186
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/orderitem/ HTTP/1.1" 200 33768
+"GET /admin/home/orderitem/ HTTP/1.1" 200 33768
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ HTTP/1.1" 200 42218
+"GET /admin/ HTTP/1.1" 200 42218
+"GET /api/orders/list/ HTTP/1.1" 200 6025
+"GET /api/orders/list/ HTTP/1.1" 200 6025
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+"GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader

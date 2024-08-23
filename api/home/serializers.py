@@ -57,6 +57,8 @@ class ProfileSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class OrderItemSerializer(serializers.ModelSerializer):
+    product = ProductSerializer()
+
     class Meta:
         model = OrderItem
         fields = ['product', 'quantity']
