@@ -12155,3 +12155,76 @@ Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
 "GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
 "GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
 "GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"OPTIONS /api/payment/ HTTP/1.1" 200 0
+"OPTIONS /api/payment/ HTTP/1.1" 200 0
+Payment response: {'status': 'Pending', 'requesttransactionid': '22537920717', 'success': True, 'responsecode': '1000', 'transactionid': '183667220240823132724504406', 'message': 'Your Payment transaction of 312RWF is Pending. Dial *182*7*1# to approve it.'}
+"POST /api/payment/ HTTP/1.1" 200 126
+"POST /api/payment/ HTTP/1.1" 200 126
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 2907
+"GET /api/orders/list/ HTTP/1.1" 200 2907
+"GET /api/orders/list/ HTTP/1.1" 200 2907
+"GET /api/orders/list/ HTTP/1.1" 200 2907
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /admin/home/orderitem/ HTTP/1.1" 200 35252
+"GET /admin/home/orderitem/ HTTP/1.1" 200 35252
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /api/orders/6 HTTP/1.1" 301 0
+"GET /api/orders/6 HTTP/1.1" 301 0
+Not Found: /api/orders/6/
+Not Found: /api/orders/6/
+"GET /api/orders/6/ HTTP/1.1" 404 5387
+"GET /api/orders/6/ HTTP/1.1" 404 5387
+"GET /admin/home/orderitem/ HTTP/1.1" 200 35252
+"GET /admin/home/orderitem/ HTTP/1.1" 200 35252
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/orderitem/ HTTP/1.1" 200 35252
+"GET /admin/home/orderitem/ HTTP/1.1" 200 35252
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /api/orders/list/ HTTP/1.1" 200 14248
+"GET /api/orders/list/ HTTP/1.1" 200 14248
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/orders/list/ HTTP/1.1" 200 14479
+"GET /api/orders/list/ HTTP/1.1" 200 14479
+"GET /admin/home/orderitem/29/change/ HTTP/1.1" 200 36145
+"GET /admin/home/orderitem/29/change/ HTTP/1.1" 200 36145
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/ HTTP/1.1" 200 35309
+"GET /admin/home/order/ HTTP/1.1" 200 35309
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/order/5/change/ HTTP/1.1" 200 42215
+"GET /admin/home/order/5/change/ HTTP/1.1" 200 42215
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/orders/list/ HTTP/1.1" 200 14479
+"GET /api/orders/list/ HTTP/1.1" 200 14479
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
