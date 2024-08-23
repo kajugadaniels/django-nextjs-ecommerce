@@ -106,6 +106,19 @@ const Orders = () => {
         return '/placeholder.png'; // Placeholder image URL
     };
 
+    const getStatusClass = (status: string) => {
+        switch (status) {
+            case 'Pending':
+                return 'bg-yellow-100 text-yellow-800';
+            case 'Failed':
+                return 'bg-red-100 text-red-800';
+            case 'Success':
+                return 'bg-green-100 text-green-800';
+            default:
+                return 'bg-gray-100 text-gray-800';
+        }
+    };
+
     return (
         <div className='bg-gray-50 py-20'>
             <h2 className="text-3xl font-extrabold text-green-800 text-center pt-20 md:pt-44">Order History</h2>
@@ -146,11 +159,7 @@ const Orders = () => {
                                         <span className="text-gray-400">Order ID:</span>
                                         <span className="text-black font-semibold">#{order.id}</span>
                                     </div>
-                                    <span className={`text-sm px-3 py-1 rounded ${
-                                        order.payment_status === 'Not Paid'
-                                            ? 'bg-red-100 text-red-800'
-                                            : 'bg-green-100 text-green-800'
-                                    }`}>
+                                    <span className={`text-sm px-3 py-1 rounded ${getStatusClass(order.payment_status)}`}>
                                         {order.payment_status}
                                     </span>
                                 </div>

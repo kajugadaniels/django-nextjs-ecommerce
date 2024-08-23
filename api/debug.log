@@ -11868,3 +11868,184 @@ C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py 
 C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\serializers.py changed, reloading.
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
+"GET /api/orders/list/ HTTP/1.1" 200 7843
+"GET /api/orders/list/ HTTP/1.1" 200 7843
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 846
+"GET /api/orders/list/ HTTP/1.1" 200 846
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+Received POST request: {'clerk_id': 'user_2l3TXHFxGxnDjvxIgChsjgLU5vO', 'email': 'kajugadaniels@gmail.com', 'first_name': 'KAJUGA', 'last_name': 'Daniel'}
+User created/updated: kajugadaniels@gmail.com
+"POST /api/auth/users/ HTTP/1.1" 201 154
+"POST /api/auth/users/ HTTP/1.1" 201 154
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/auth/users/user_2l3TXHFxGxnDjvxIgChsjgLU5vO/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2l3TXHFxGxnDjvxIgChsjgLU5vO/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 846
+"GET /api/orders/list/ HTTP/1.1" 200 846
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2l3TXHFxGxnDjvxIgChsjgLU5vO/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2l3TXHFxGxnDjvxIgChsjgLU5vO/ HTTP/1.1" 200 154
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2l3TXHFxGxnDjvxIgChsjgLU5vO/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2l3TXHFxGxnDjvxIgChsjgLU5vO/ HTTP/1.1" 200 154
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2l3TXHFxGxnDjvxIgChsjgLU5vO/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2l3TXHFxGxnDjvxIgChsjgLU5vO/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2l3TXHFxGxnDjvxIgChsjgLU5vO/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2l3TXHFxGxnDjvxIgChsjgLU5vO/ HTTP/1.1" 200 154
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+"GET /api/products/?ids=1,2 HTTP/1.1" 200 979
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+Payment response: {'status': 'Pending', 'requesttransactionid': '28929252714', 'success': True, 'responsecode': '1000', 'transactionid': '183644820240823115908546861', 'message': 'Your Payment transaction of 120RWF is Pending. Dial *182*7*1# to approve it.'}
+"POST /api/payment/ HTTP/1.1" 200 126
+"POST /api/payment/ HTTP/1.1" 200 126
+"GET /api/auth/users/user_2l3TXHFxGxnDjvxIgChsjgLU5vO/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2l3TXHFxGxnDjvxIgChsjgLU5vO/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2l3TXHFxGxnDjvxIgChsjgLU5vO/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2l3TXHFxGxnDjvxIgChsjgLU5vO/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 2156
+"GET /api/orders/list/ HTTP/1.1" 200 2156
+"GET /api/orders/list/ HTTP/1.1" 200 2156
+"GET /api/orders/list/ HTTP/1.1" 200 2156
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"OPTIONS /api/auth/users/user_2l3TXHFxGxnDjvxIgChsjgLU5vO/ HTTP/1.1" 200 0
+"OPTIONS /api/auth/users/user_2l3TXHFxGxnDjvxIgChsjgLU5vO/ HTTP/1.1" 200 0
+"GET /api/auth/users/user_2l3TXHFxGxnDjvxIgChsjgLU5vO/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2l3TXHFxGxnDjvxIgChsjgLU5vO/ HTTP/1.1" 200 154
+"OPTIONS /api/orders/list/ HTTP/1.1" 200 0
+"OPTIONS /api/orders/list/ HTTP/1.1" 200 0
+"GET /api/orders/list/ HTTP/1.1" 200 2156
+"GET /api/orders/list/ HTTP/1.1" 200 2156
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"OPTIONS /api/auth/users/ HTTP/1.1" 200 0
+"OPTIONS /api/auth/users/ HTTP/1.1" 200 0
+Received POST request: {'clerk_id': 'user_2l3TXHFxGxnDjvxIgChsjgLU5vO', 'email': 'kajugadaniels@gmail.com', 'first_name': 'KAJUGA', 'last_name': 'Daniel'}
+User created/updated: kajugadaniels@gmail.com
+"POST /api/auth/users/ HTTP/1.1" 201 154
+"POST /api/auth/users/ HTTP/1.1" 201 154
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/auth/users/user_2l3TXHFxGxnDjvxIgChsjgLU5vO/ HTTP/1.1" 200 154
+"GET /api/auth/users/user_2l3TXHFxGxnDjvxIgChsjgLU5vO/ HTTP/1.1" 200 154
+"GET /api/orders/list/ HTTP/1.1" 200 2156
+"GET /api/orders/list/ HTTP/1.1" 200 2156
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+Received POST request: {'clerk_id': 'user_2l3ZoGTmwdttcrqN4PofsniCUBn', 'email': 'beniobed02@gmail.com', 'first_name': 'MUNYESHYA', 'last_name': 'Beni Obed'}
+User created/updated: beniobed02@gmail.com
+"POST /api/auth/users/ HTTP/1.1" 201 164
+"POST /api/auth/users/ HTTP/1.1" 201 164
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"OPTIONS /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 0
+"OPTIONS /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 0
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 2156
+"GET /api/orders/list/ HTTP/1.1" 200 2156
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 2156
+"GET /api/orders/list/ HTTP/1.1" 200 2156
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 2156
+"GET /api/orders/list/ HTTP/1.1" 200 2156
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 2156
+"GET /api/orders/list/ HTTP/1.1" 200 2156
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 2156
+"GET /api/orders/list/ HTTP/1.1" 200 2156
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 2156
+"GET /api/orders/list/ HTTP/1.1" 200 2156
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 2156
+"GET /api/orders/list/ HTTP/1.1" 200 2156
