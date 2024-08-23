@@ -12228,3 +12228,275 @@ C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py change
 C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+"GET /media/http://127.0.0.1:8000/media/products/product_ibijumba_12.jpg HTTP/1.1" 404 2886
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+Not Found: /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /media/http://127.0.0.1:8000/media/products/product_amashu_8.jpg HTTP/1.1" 404 2874
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_amashu_8.jpg HTTP/1.1" 200 442601
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/auth/users/user_2l3ZoGTmwdttcrqN4PofsniCUBn/ HTTP/1.1" 200 164
+"GET /api/orders/list/ HTTP/1.1" 200 3048
+"GET /api/orders/list/ HTTP/1.1" 200 3048
