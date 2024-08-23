@@ -1,57 +1,47 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
-import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
+import { SignedIn, SignedOut, useUser, useClerk } from '@clerk/nextjs';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import CartModel, { useCartItems } from './CartModel';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar: React.FC = () => {
     const [isCartOpen, setIsCartOpen] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
     const cartItems = useCartItems();
     const cartRef = useRef<HTMLDivElement>(null);
     const mobileMenuRef = useRef<HTMLDivElement>(null);
-    const pathname = usePathname();
+    const profileDropdownRef = useRef<HTMLDivElement>(null);
+    const router = useRouter();
+    const { user } = useUser();
+    const { signOut } = useClerk();
 
-    const toggleCart = () => {
-        setIsCartOpen(!isCartOpen);
-    };
-
-    const closeCart = () => {
-        setIsCartOpen(false);
-    };
-
-    const toggleMobileMenu = () => {
-        setIsMobileMenuOpen(!isMobileMenuOpen);
-    };
-
-    const closeMobileMenu = () => {
-        setIsMobileMenuOpen(false);
-    };
+    const toggleCart = () => setIsCartOpen(!isCartOpen);
+    const closeCart = () => setIsCartOpen(false);
+    const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+    const closeMobileMenu = () => setIsMobileMenuOpen(false);
+    const toggleProfileDropdown = () => setIsProfileDropdownOpen(!isProfileDropdownOpen);
+    const closeProfileDropdown = () => setIsProfileDropdownOpen(false);
 
     useEffect(() => {
         const handleOutsideClick = (event: MouseEvent) => {
-            if (cartRef.current && !cartRef.current.contains(event.target as Node)) {
-                closeCart();
-            }
-            if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
-                closeMobileMenu();
-            }
+            if (cartRef.current && !cartRef.current.contains(event.target as Node)) closeCart();
+            if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) closeMobileMenu();
+            if (profileDropdownRef.current && !profileDropdownRef.current.contains(event.target as Node)) closeProfileDropdown();
         };
 
         document.addEventListener('mousedown', handleOutsideClick);
-
-        return () => {
-            document.removeEventListener('mousedown', handleOutsideClick);
-        };
+        return () => document.removeEventListener('mousedown', handleOutsideClick);
     }, []);
 
     useEffect(() => {
         closeCart();
         closeMobileMenu();
-    }, [pathname]);
+        closeProfileDropdown();
+    }, [router]);
 
     const uniqueProductCount = new Set(cartItems.map(item => item.id)).size;
 
@@ -119,7 +109,46 @@ const Navbar: React.FC = () => {
 
                                 <div className="hidden lg:flex lg:items-center lg:space-x-8">
                                     <SignedIn>
-                                        <UserButton afterSignOutUrl='/' />
+                                        <div className="relative" ref={profileDropdownRef}>
+                                            <button
+                                                onClick={toggleProfileDropdown}
+                                                className="flex items-center space-x-2 focus:outline-none"
+                                            >
+                                                <img
+                                                    src={user?.imageUrl || 'https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg'}
+                                                    alt="Profile"
+                                                    className="w-8 h-8 rounded-full border-2 border-white"
+                                                />
+                                                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                                                </svg>
+                                            </button>
+                                            <AnimatePresence>
+                                                {isProfileDropdownOpen && (
+                                                    <motion.div
+                                                        initial={{ opacity: 0, y: -10 }}
+                                                        animate={{ opacity: 1, y: 0 }}
+                                                        exit={{ opacity: 0, y: -10 }}
+                                                        transition={{ duration: 0.2 }}
+                                                        className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 ring-1 ring-black ring-opacity-5"
+                                                    >
+                                                        <Link
+                                                            href="/dashboard"
+                                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                                            onClick={closeProfileDropdown}
+                                                        >
+                                                            Dashboard
+                                                        </Link>
+                                                        <button
+                                                            onClick={() => signOut(() => router.push('/'))}
+                                                            className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                                        >
+                                                            Logout
+                                                        </button>
+                                                    </motion.div>
+                                                )}
+                                            </AnimatePresence>
+                                        </div>
                                     </SignedIn>
                                 </div>
                             </div>
@@ -185,7 +214,15 @@ const Navbar: React.FC = () => {
                                     </Link>
                                 </SignedOut>
                                 <SignedIn>
-                                    <UserButton afterSignOutUrl='/' />
+                                    <Link href="/dashboard" className="block text-lg font-medium text-gray-900 hover:text-green-800" onClick={closeMobileMenu}>
+                                        Dashboard
+                                    </Link>
+                                    <button
+                                        onClick={() => signOut(() => router.push('/'))}
+                                        className="block text-lg font-medium text-gray-900 hover:text-green-800"
+                                    >
+                                        Logout
+                                    </button>
                                 </SignedIn>
                             </nav>
                         </div>
