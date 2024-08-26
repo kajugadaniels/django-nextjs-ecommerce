@@ -109,7 +109,7 @@ const Dashboard: React.FC = () => {
                         <div className="w-full lg:w-1/3 mt-8 lg:mt-0">
                             <div className="p-6 bg-white rounded-md shadow-md">
                                 <h2 className="text-lg font-semibold text-gray-700 mb-4">Profile Summary</h2>
-                                <UserProfileCard user={user} />
+                                {/* <UserProfileCard user={user} /> */}
                             </div>
                         </div>
                     </div>
