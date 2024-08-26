@@ -174,7 +174,7 @@ const CheckOut = () => {
             };
 
             // Send payment request along with order data
-            const paymentResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/payment/`, {
+            const paymentResponse = await fetch(`${getApiUrl()}/payment/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
