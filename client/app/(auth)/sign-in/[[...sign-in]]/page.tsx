@@ -20,7 +20,7 @@ export default function CustomSignIn() {
             }}
             afterSignInUrl="/profile"
             redirectUrl="/profile"
-            onComplete={handleComplete}
+            // onComplete={handleComplete}
         />
     );
 }

@@ -21,7 +21,7 @@ export default function CustomSignUp() {
             }}
             afterSignUpUrl="/profile"
             redirectUrl="/profile"
-            onComplete={handleComplete}
+            // onComplete={handleComplete}
         />
     );
 }
