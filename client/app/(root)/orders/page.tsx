@@ -136,79 +136,81 @@ const Orders = () => {
         }
     };
 
-    return (
-        <div className='bg-gray-50 py-20'>
-            <h2 className="text-3xl font-extrabold text-green-800 text-center pt-20 md:pt-44">Order History</h2>
-            <div className="max-w-6xl mx-auto bg-white p-6 rounded-lg shadow-lg mt-12 mb-10">
-                <div className="flex flex-col md:flex-row justify-between items-center mb-4 space-y-4 md:space-y-0">
-                    <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-0 w-full">
-                        <input
-                            type="text"
-                            placeholder="Search by Order ID or product name"
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            className="bg-white text-gray-600 px-12 md:px-4 py-3 border rounded-l focus:outline-none w-full md:w-80"
-                        />
-                        <button className="bg-green-800 text-white px-4 py-2 rounded-r w-full md:w-auto">
-                            Search
-                        </button>
-                    </div>
-                </div>
+    const formatDate = (dateString: string) => {
+        const date = new Date(dateString);
+        return `${date.getDate()} ${date.toLocaleString('default', { month: 'short' })}`;
+    };
 
-                {filteredOrders.length === 0 ? (
-                    <p className="text-center py-10">No orders found.</p>
-                ) : (
-                    filteredOrders.map((order) => (
-                        <div key={order.id} className="bg-white p-4 rounded-lg mb-6 border border-gray-200">
-                            <div className="flex flex-col md:flex-row justify-between items-center mb-4 space-y-4 md:space-y-0">
-                                <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
-                                    <div className="flex space-x-2">
-                                        <span className="text-gray-400">Order ID:</span>
-                                        <span className="text-black font-semibold">#{order.id}</span>
+    if (!isLoaded || isLoading) {
+        return <div className="text-center py-20">Loading...</div>;
+    }
+
+    if (!isSignedIn) {
+        return <div className="text-center py-20">Please sign in to view your orders.</div>;
+    }
+
+    return (
+        <div className='bg-gray-100 py-20 px-4 sm:px-6 lg:px-8'>
+            <h2 className="text-3xl font-extrabold text-gray-900 text-center pt-20 md:pt-44 mb-10">Order History</h2>
+            <div className="max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {filteredOrders.map((order) => (
+                        <div key={order.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+                            <div className="p-6">
+                                <div className="flex justify-between items-center mb-4">
+                                    <div className='flex'>
+                                        <div className="w-12 h-12 relative">
+                                            <Image
+                                                src={order.items[0].product.image}
+                                                alt={order.items[0].product.name}
+                                                layout="fill"
+                                                objectFit="cover"
+                                                className="rounded-full"
+                                            />
+                                        </div>
+                                        <div className='mx-4'>
+                                            <h3 className="text-lg font-semibold text-gray-900">{order.items[0].product.name}</h3>
+                                            <p className="text-sm text-gray-500">${parseFloat(order.total_amount).toFixed(2)}</p>
+                                        </div>
                                     </div>
-                                    <div className="flex space-x-2">
-                                        <span className="text-gray-400">Transaction ID:</span>
-                                        <span className="text-black font-semibold">#{order.transaction_id}</span>
+                                    <div className="text-right">
+                                        <p className="text-sm text-gray-500">Order Id:</p>
+                                        <p className="text-sm font-semibold text-gray-900">#{order.id}</p>
                                     </div>
-                                    <span className={`text-sm px-3 py-1 rounded ${getStatusClass(order.payment_status)}`}>
-                                        {order.payment_status}
-                                    </span>
                                 </div>
-                                <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 w-full md:w-auto">
-                                    <button className="bg-gray-400 text-white px-4 py-2 rounded w-full md:w-auto">Order details</button>
+                                <div className="mb-4">
+                                    <p className="text-sm text-gray-500">Delivery Address</p>
+                                    <p className="text-sm text-gray-700">{order.shipping_address}</p>
+                                    <p className="text-sm text-gray-700">{order.shipping_city}, {order.shipping_zip_code}</p>
+                                </div>
+                                <div className="flex justify-between items-center">
+                                    <div>
+                                        <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getStatusClass(order.payment_status)}`}>
+                                            {order.payment_status}
+                                        </span>
+                                    </div>
+                                    <div className="text-2xl font-bold text-gray-900">
+                                        {formatDate(order.created_at)}
+                                    </div>
                                 </div>
                             </div>
-                            {order.items.map((item) => (
-                                <div key={item.id} className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 p-4 border-t border-gray-200">
-                                    <div className="w-28 h-28 relative">
-                                        <Image
-                                            src={item.product.image}
-                                            alt={item.product.name}
-                                            layout="fill"
-                                            objectFit="cover"
-                                            className="rounded-md"
-                                        />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-semibold text-gray-800 text-center md:text-left">{item.product.name}</h3>
-                                        <p className="text-sm text-gray-600 text-center md:text-left">Qty: {item.quantity}</p>
-                                        <p className="font-semibold text-emerald-900 text-center md:text-left">Price: ${item.product.unit_price}</p>
-                                    </div>
-                                </div>
-                            ))}
-                            <div className="mt-4 flex justify-between items-center">
-                                <div>
-                                    <span className="text-gray-400">Order date:</span>
-                                    <span className="text-gray-600 ml-2">{new Date(order.created_at).toLocaleDateString()}</span>
-                                </div>
-                                <div>
-                                    <span className="text-gray-400">Total:</span>
-                                    <span className="text-gray-600 ml-2 font-semibold">${parseFloat(order.total_amount).toFixed(2)}</span>
+                            <div className="bg-gray-50 px-6 py-4">
+                                <div className="flex justify-between items-center">
+                                    <button className="text-sm text-emerald-950 hover:text-emerald-800">Rate Product</button>
+                                    {order.payment_status.toLowerCase() !== 'delivered' && order.payment_status.toLowerCase() !== 'cancelled' && (
+                                        <button className="text-sm text-red-600 hover:text-red-900">Cancel Order</button>
+                                    )}
+                                    {order.payment_status.toLowerCase() === 'delivered' && (
+                                        <span className="text-sm text-green-600">Delivered on: {new Date(order.created_at).toLocaleDateString()}</span>
+                                    )}
+                                    {order.payment_status.toLowerCase() === 'cancelled' && (
+                                        <button className="text-sm bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">Buy Now</button>
+                                    )}
                                 </div>
                             </div>
                         </div>
-                    ))
-                )}
+                    ))}
+                </div>
             </div>
         </div>
     );
