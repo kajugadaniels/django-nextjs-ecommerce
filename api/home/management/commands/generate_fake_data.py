@@ -37,8 +37,8 @@ class Command(BaseCommand):
         for _ in range(50):
             name = fake.sentence(nb_words=3, ext_word_list=food_words)
             category = Category.objects.order_by('?').first()
-            unit_price = round(random.uniform(1, 100), 2)
-            quantity = random.randint(1, 1000)
+            unit_price = round(random.uniform(100, 999), 2)
+            quantity = random.randint(100, 1000)
             measure = random.choice(['KG'])
             description = f"Delicious {name.lower()} perfect for your next meal!, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             slug = slugify(name)

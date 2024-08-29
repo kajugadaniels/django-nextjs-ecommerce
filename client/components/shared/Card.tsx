@@ -115,7 +115,7 @@ const Card = () => {
                             <div className="flex items-center justify-between mb-2">
                                 <h6 className="font-semibold text-base leading-7 text-black">{product.name}</h6>
                                 <h6 className="font-semibold text-base leading-7 text-emerald-600 text-right">
-                                    {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(Number(product.unit_price))}
+                                    {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'RWF' }).format(Number(product.unit_price))}
                                 </h6>
                             </div>
                         </Link>
