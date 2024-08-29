@@ -394,7 +394,9 @@ const CheckOut = () => {
                                             <p className="text-sm text-gray-600">Quantity: {item.quantity}</p>
                                         </div>
                                     </div>
-                                    <div className="text-lg font-medium text-gray-900">${item.unit_price * item.quantity}</div>
+                                    <div className="text-lg font-medium text-gray-900">
+                                        {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'RWF' }).format(Number(item.unit_price * item.quantity))}
+                                    </div>
                                 </div>
                             ))}
                             <div className="text-xl font-bold text-emerald-900 mt-6">Total: ${calculateTotal()}</div>
@@ -428,11 +430,15 @@ const CheckOut = () => {
                                     <span>
                                         {item.name} (x{item.quantity})
                                     </span>
-                                    <span>${item.unit_price * item.quantity}</span>
+                                    <span>
+                                        {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'RWF' }).format(Number(item.unit_price * item.quantity))}
+                                    </span>
                                 </div>
                             ))}
                         </div>
-                        <div className="text-lg font-bold text-emerald-900 mt-4">Total: ${calculateTotal()}</div>
+                        <div className="text-lg font-bold text-emerald-900 mt-4">
+                            {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'RWF' }).format(Number(calculateTotal()))}
+                        </div>
                         <div className="mt-6">
                             <h3 className="text-lg font-medium text-gray-900 mb-2">User Information:</h3>
                             <p>

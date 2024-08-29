@@ -117,7 +117,7 @@ function Cart() {
                 <motion.div
                     animate={{ rotate: 360 }}
                     transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                    className="w-16 h-16 border-t-4 border-blue-500 border-solid rounded-full"
+                    className="w-16 h-16 border-t-4 border-emerald-900 border-solid rounded-full"
                 />
             </div>
         );
@@ -183,7 +183,9 @@ function Cart() {
                                             </motion.button>
                                         </div>
                                     </div>
-                                    <div className="text-center text-lg text-gray-700 w-full md:w-auto">${item.unit_price}</div>
+                                    <div className="text-center text-lg text-gray-700 w-full md:w-auto">
+                                        {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'RWF' }).format(Number(item.unit_price))}
+                                    </div>
                                     <div className="flex justify-center items-center w-full md:w-auto">
                                         <motion.button
                                             whileHover={{ scale: 1.1 }}
@@ -209,7 +211,7 @@ function Cart() {
                                         </motion.button>
                                     </div>
                                     <div className="text-center md:text-right text-lg font-semibold text-gray-800 w-full md:w-auto">
-                                        ${(parseFloat(item.unit_price) * item.quantity).toFixed(2)}
+                                        {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'RWF' }).format(Number((parseFloat(item.unit_price) * item.quantity).toFixed(2)))}
                                     </div>
                                 </motion.div>
                             ))}
@@ -225,7 +227,11 @@ function Cart() {
                                 Clear Cart
                             </motion.button>
                             <div className="text-center md:text-right w-full md:w-auto">
-                                <p className="text-xl font-medium text-gray-800">Subtotal: <span className="font-bold">${calculateTotal()}</span></p>
+                                <p className="text-xl font-medium text-gray-800">Subtotal: 
+                                    <span className="font-bold">
+                                        {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'RWF' }).format(Number(calculateTotal()))}
+                                    </span>
+                                </p>
                                 <Link href='/checkout'>
                                     <motion.button
                                         whileHover={{ scale: 1.05 }}

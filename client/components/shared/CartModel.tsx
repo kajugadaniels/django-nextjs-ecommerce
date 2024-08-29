@@ -127,7 +127,9 @@ const CartModel: React.FC<CartModelProps> = ({ onClose }) => {
                                     />
                                     <div className="flex-grow">
                                         <h3 className="text-sm font-medium text-gray-900">{item.name}</h3>
-                                        <p className="text-sm text-gray-500">${formatPrice(item.unit_price)}</p>
+                                        <p className="text-sm text-gray-500">
+                                            {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'RWF' }).format(Number(item.unit_price))}
+                                        </p>
                                         <p className="text-sm font-bold text-gray-700">Total: ${formatPrice(calculateItemTotal(item))}</p>
                                     </div>
                                     <div className="flex items-center space-x-2">

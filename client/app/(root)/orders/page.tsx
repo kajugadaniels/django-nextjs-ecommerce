@@ -170,7 +170,9 @@ const Orders = () => {
                                         </div>
                                         <div className='mx-4'>
                                             <h3 className="text-lg font-semibold text-gray-900">{order.items[0].product.name}</h3>
-                                            <p className="text-sm text-gray-500">${parseFloat(order.total_amount).toFixed(2)}</p>
+                                            <p className="text-sm text-gray-500">
+                                                {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'RWF' }).format(Number(parseFloat(order.total_amount).toFixed(2)))}
+                                            </p>
                                         </div>
                                     </div>
                                     <div className="text-right">
