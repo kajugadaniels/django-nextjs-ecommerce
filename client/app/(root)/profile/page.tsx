@@ -55,6 +55,7 @@ const Profile = () => {
             } else {
                 const errorData = await response.json();
                 setError(errorData.message || 'Failed to submit user data. Please try again.');
+                router.push('/');
             }
         } catch (error) {
             console.error('Error submitting user data:', error);
