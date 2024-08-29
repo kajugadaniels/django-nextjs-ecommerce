@@ -13218,3 +13218,584 @@ User created/updated: kajugadaniels@gmail.com
 "GET /api/orders/list/ HTTP/1.1" 200 2
 "GET /api/orders/list/ HTTP/1.1" 200 2
 "GET /api/orders/list/ HTTP/1.1" 200 2
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /api/auth/users/user_2lKuRPeEsaxNiPDaMBGh4ay6Vnf/ HTTP/1.1" 200 155
+"GET /api/auth/users/user_2lKuRPeEsaxNiPDaMBGh4ay6Vnf/ HTTP/1.1" 200 155
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2lKuRPeEsaxNiPDaMBGh4ay6Vnf/ HTTP/1.1" 200 155
+"GET /api/auth/users/user_2lKuRPeEsaxNiPDaMBGh4ay6Vnf/ HTTP/1.1" 200 155
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2lKuRPeEsaxNiPDaMBGh4ay6Vnf/ HTTP/1.1" 200 155
+"GET /api/auth/users/user_2lKuRPeEsaxNiPDaMBGh4ay6Vnf/ HTTP/1.1" 200 155
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+Received POST request: {'clerk_id': 'user_2lKuRPeEsaxNiPDaMBGh4ay6Vnf', 'email': 'kajugadaniels@gmail.com', 'first_name': 'KAJUGA', 'last_name': 'Daniel'}
+User created/updated: kajugadaniels@gmail.com
+"POST /api/auth/users/ HTTP/1.1" 201 155
+"POST /api/auth/users/ HTTP/1.1" 201 155
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/auth/users/user_2lKuRPeEsaxNiPDaMBGh4ay6Vnf/ HTTP/1.1" 200 155
+"GET /api/auth/users/user_2lKuRPeEsaxNiPDaMBGh4ay6Vnf/ HTTP/1.1" 200 155
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/auth/users/user_2lKuRPeEsaxNiPDaMBGh4ay6Vnf/ HTTP/1.1" 200 155
+"GET /api/auth/users/user_2lKuRPeEsaxNiPDaMBGh4ay6Vnf/ HTTP/1.1" 200 155
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"GET /api/products/?ids=1 HTTP/1.1" 200 979
+"OPTIONS /api/payment/ HTTP/1.1" 200 0
+"OPTIONS /api/payment/ HTTP/1.1" 200 0
+Payment response: {'status': 'Pending', 'requesttransactionid': '17145367039', 'success': True, 'responsecode': '1000', 'transactionid': '185478420240829142201477197', 'message': 'Your Payment transaction of 120RWF is Pending. Dial *182*7*1# to approve it.'}
+"POST /api/payment/ HTTP/1.1" 200 126
+"POST /api/payment/ HTTP/1.1" 200 126
+"GET /api/auth/users/user_2lKuRPeEsaxNiPDaMBGh4ay6Vnf/ HTTP/1.1" 200 155
+"GET /api/auth/users/user_2lKuRPeEsaxNiPDaMBGh4ay6Vnf/ HTTP/1.1" 200 155
+"GET /api/auth/users/user_2lKuRPeEsaxNiPDaMBGh4ay6Vnf/ HTTP/1.1" 200 155
+"GET /api/auth/users/user_2lKuRPeEsaxNiPDaMBGh4ay6Vnf/ HTTP/1.1" 200 155
+"GET /api/orders/list/ HTTP/1.1" 200 893
+"GET /api/orders/list/ HTTP/1.1" 200 893
+"GET /api/orders/list/ HTTP/1.1" 200 893
+"GET /api/orders/list/ HTTP/1.1" 200 893
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /media/products/product_ibijumba_12.jpg HTTP/1.1" 200 661151
+"GET /admin/account/user/ HTTP/1.1" 200 35521
+"GET /admin/account/user/ HTTP/1.1" 200 35521
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/custom.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/custom.css HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+"GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+"GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+"GET /admin/account/user/ HTTP/1.1" 200 35521
+"GET /admin/account/user/ HTTP/1.1" 200 35521
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/ HTTP/1.1" 200 979
+"GET /api/products/amashu/ HTTP/1.1" 200 441
+"GET /api/products/amashu/ HTTP/1.1" 200 441
+"GET /api/products/amashu/ HTTP/1.1" 200 441
+"GET /api/products/amashu/ HTTP/1.1" 200 441
+"GET /media/products/add_on/1317_2024-08-19.jpg HTTP/1.1" 200 324874
+"GET /media/products/add_on/1317_2024-08-19.jpg HTTP/1.1" 200 324874
+"GET /media/products/add_on/1975_2024-08-19.jpg HTTP/1.1" 200 364386
+"GET /media/products/add_on/1975_2024-08-19.jpg HTTP/1.1" 200 364386
+"GET /admin/home/product/ HTTP/1.1" 200 39553
+"GET /admin/home/product/ HTTP/1.1" 200 39553
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/product/2/change/ HTTP/1.1" 200 54175
+"GET /admin/home/product/2/change/ HTTP/1.1" 200 54175
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+"GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+"GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+"GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /static/jazzmin/js/change_form.js HTTP/1.1" 200 6052
+"GET /static/jazzmin/js/change_form.js HTTP/1.1" 200 6052
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+"POST /admin/home/product/2/change/ HTTP/1.1" 302 0
+"POST /admin/home/product/2/change/ HTTP/1.1" 302 0
+"GET /admin/home/product/ HTTP/1.1" 200 40115
+"GET /admin/home/product/ HTTP/1.1" 200 40115
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /api/products/amashu/ HTTP/1.1" 200 901
+"GET /api/products/amashu/ HTTP/1.1" 200 901
+"GET /api/products/amashu/ HTTP/1.1" 200 901
+"GET /api/products/amashu/ HTTP/1.1" 200 901
+"GET /admin/home/product/2/change/ HTTP/1.1" 200 57180
+"GET /admin/home/product/2/change/ HTTP/1.1" 200 57180
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/custom.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/custom.css HTTP/1.1" 304 0
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+"POST /admin/home/product/2/change/ HTTP/1.1" 302 0
+"POST /admin/home/product/2/change/ HTTP/1.1" 302 0
+"GET /admin/home/product/ HTTP/1.1" 200 40115
+"GET /admin/home/product/ HTTP/1.1" 200 40115
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/product/2/change/ HTTP/1.1" 200 57180
+"GET /admin/home/product/2/change/ HTTP/1.1" 200 57180
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /api/products/amashu/ HTTP/1.1" 200 901
+"GET /api/products/amashu/ HTTP/1.1" 200 901
+"GET /api/products/amashu/ HTTP/1.1" 200 901
+"GET /api/products/amashu/ HTTP/1.1" 200 901
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/products/ HTTP/1.1" 200 1439
+"GET /api/products/ HTTP/1.1" 200 1439
+"GET /api/products/ HTTP/1.1" 200 1439
+"GET /api/products/ HTTP/1.1" 200 1439
+"GET /api/products/ibijumba/ HTTP/1.1" 200 535
+"GET /api/products/ibijumba/ HTTP/1.1" 200 535
+"GET /api/products/ibijumba/ HTTP/1.1" 200 535
+"GET /api/products/ibijumba/ HTTP/1.1" 200 535
+"GET /media/products/add_on/8565_2024-08-19.jpg HTTP/1.1" 200 276669
+"GET /media/products/add_on/8565_2024-08-19.jpg HTTP/1.1" 200 276669
+"GET /media/products/add_on/2618_2024-08-19.jpg HTTP/1.1" 200 257864
+"GET /media/products/add_on/2618_2024-08-19.jpg HTTP/1.1" 200 257864
+"GET /media/products/add_on/4295_2024-08-19.jpg HTTP/1.1" 200 417624
+"GET /media/products/add_on/4295_2024-08-19.jpg HTTP/1.1" 200 417624
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\urls.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/products/ibijumba/ HTTP/1.1" 200 535
+"GET /api/products/ibijumba/ HTTP/1.1" 200 535
+"GET /api/products/ibijumba/ HTTP/1.1" 200 535
+"GET /api/products/ibijumba/ HTTP/1.1" 200 535
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/products/ HTTP/1.1" 200 1439
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/products/ HTTP/1.1" 200 1439
+"GET /api/categories/ HTTP/1.1" 200 91
+"GET /api/products/ HTTP/1.1" 200 1439
+"GET /api/products/ HTTP/1.1" 200 1439
+"GET /api/products/amashu/related/ HTTP/1.1" 200 2
+"GET /api/products/amashu/ HTTP/1.1" 200 901
+"GET /api/products/amashu/related/ HTTP/1.1" 200 2
+"GET /api/products/amashu/ HTTP/1.1" 200 901
+"GET /api/products/amashu/related/ HTTP/1.1" 200 2
+"GET /api/products/amashu/related/ HTTP/1.1" 200 2
+"GET /api/products/amashu/ HTTP/1.1" 200 901
+"GET /api/products/amashu/ HTTP/1.1" 200 901
+"GET /api/products/amashu/ HTTP/1.1" 200 901
+"GET /api/products/amashu/ HTTP/1.1" 200 901
+"GET /api/products/amashu/ HTTP/1.1" 200 901
+"GET /api/products/amashu/ HTTP/1.1" 200 901
+"GET /admin/ HTTP/1.1" 200 43717
+"GET /admin/ HTTP/1.1" 200 43717
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/custom.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/custom.css HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+"GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+"GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+"GET /api/products/ HTTP/1.1" 200 14641
+"GET /api/products/ HTTP/1.1" 200 14641
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+"GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+"GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+"GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+"GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+"GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+"GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+"GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+"GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+"GET /api/products/ibijumba HTTP/1.1" 301 0
+"GET /api/products/ibijumba HTTP/1.1" 301 0
+"GET /api/products/ibijumba/ HTTP/1.1" 200 14879
+"GET /api/products/ibijumba/ HTTP/1.1" 200 14879
+"GET /api/products/ibijumba/related HTTP/1.1" 301 0
+"GET /api/products/ibijumba/related HTTP/1.1" 301 0
+"GET /api/products/ibijumba/related/ HTTP/1.1" 200 5562
+"GET /api/products/ibijumba/related/ HTTP/1.1" 200 5562
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /api/products/ibijumba/related/
+Traceback (most recent call last):
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\generics.py", line 203, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py", line 72, in get_queryset
+    return Product.objects.filter(category=product.category).exclude(id=product.id)[:4]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseManager.all() got an unexpected keyword argument 'category'
+Internal Server Error: /api/products/ibijumba/related/
+Traceback (most recent call last):
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\generics.py", line 203, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\venv\Lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py", line 72, in get_queryset
+    return Product.objects.filter(category=product.category).exclude(id=product.id)[:4]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseManager.all() got an unexpected keyword argument 'category'
+"GET /api/products/ibijumba/related/ HTTP/1.1" 500 116482
+"GET /api/products/ibijumba/related/ HTTP/1.1" 500 116482
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+C:\Users\Code Craft\Desktop\projects\realtime\ecommerce\api\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/products/ibijumba/related/ HTTP/1.1" 200 5562
+"GET /api/products/ibijumba/related/ HTTP/1.1" 200 5562
+"GET /api/products/ibijumba/related/ HTTP/1.1" 200 5562
+"GET /api/products/ibijumba/related/ HTTP/1.1" 200 5562
+"GET /admin/ HTTP/1.1" 200 43717
+"GET /admin/ HTTP/1.1" 200 43717
+"GET /admin/home/product/ HTTP/1.1" 200 39553
+"GET /admin/home/product/ HTTP/1.1" 200 39553
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/category/ HTTP/1.1" 200 35049
+"GET /admin/home/category/ HTTP/1.1" 200 35049
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/custom.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 304 0
+"GET /static/jazzmin/css/custom.css HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+"GET /admin/home/orderitem/ HTTP/1.1" 200 33771
+"GET /admin/home/orderitem/ HTTP/1.1" 200 33771
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/category/ HTTP/1.1" 200 35049
+"GET /admin/home/category/ HTTP/1.1" 200 35049
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/home/category/add/ HTTP/1.1" 200 33464
+"GET /admin/home/category/add/ HTTP/1.1" 200 33464
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/home/category/add/ HTTP/1.1" 302 0
+"POST /admin/home/category/add/ HTTP/1.1" 302 0
+"GET /admin/home/category/ HTTP/1.1" 200 36116
+"GET /admin/home/category/ HTTP/1.1" 200 36116
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /api/categories/ HTTP/1.1" 200 125
+"GET /api/categories/ HTTP/1.1" 200 125
+"GET /api/products/ HTTP/1.1" 200 1439
+"GET /api/products/ HTTP/1.1" 200 1439
+"GET /api/categories/ HTTP/1.1" 200 125
+"GET /api/categories/ HTTP/1.1" 200 125
+"GET /api/products/ HTTP/1.1" 200 1439
+"GET /api/products/ HTTP/1.1" 200 1439
+"GET /api/products/category/root-vegetable/ HTTP/1.1" 200 537
+"GET /api/products/category/root-vegetable/ HTTP/1.1" 200 537
+"GET /api/products/category/vegetable/ HTTP/1.1" 200 903
+"GET /api/products/category/vegetable/ HTTP/1.1" 200 903
+"GET /api/products/category/fruits/ HTTP/1.1" 200 2
+"GET /api/products/category/fruits/ HTTP/1.1" 200 2
+"GET /api/products/category/vegetable/ HTTP/1.1" 200 903
+"GET /api/products/category/vegetable/ HTTP/1.1" 200 903
+"GET /admin/home/product/ HTTP/1.1" 200 39709
+"GET /admin/home/product/ HTTP/1.1" 200 39709
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/custom.css HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/custom.css HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 304 0
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+"GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+"GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+"GET /admin/home/product/add/ HTTP/1.1" 200 47465
+"GET /admin/home/product/add/ HTTP/1.1" 200 47465
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /api/products/ HTTP/1.1" 200 14641
+"GET /api/products/ HTTP/1.1" 200 14641
+"POST /admin/home/product/add/ HTTP/1.1" 302 0
+"POST /admin/home/product/add/ HTTP/1.1" 302 0
+"GET /admin/home/product/ HTTP/1.1" 200 40930
+"GET /admin/home/product/ HTTP/1.1" 200 40930
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/custom.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/custom.css HTTP/1.1" 304 0
+"GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 304 0
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 304 0
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+"GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+"GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+"GET /api/products/amashu/related HTTP/1.1" 301 0
+"GET /api/products/amashu/related HTTP/1.1" 301 0
+"GET /api/products/amashu/related/ HTTP/1.1" 200 7269
+"GET /api/products/amashu/related/ HTTP/1.1" 200 7269
+"GET /api/products/category/root-vegetable/ HTTP/1.1" 200 537
+"GET /api/products/category/root-vegetable/ HTTP/1.1" 200 537
+"GET /api/products/category/vegetable/ HTTP/1.1" 200 1799
+"GET /api/products/category/vegetable/ HTTP/1.1" 200 1799
+"GET /media/products/product_carrot_400.jpeg HTTP/1.1" 200 397803
+"GET /media/products/product_carrot_400.jpeg HTTP/1.1" 200 397803
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /media/products/add_on/8419_2024-08-29.jpg HTTP/1.1" 200 298754
+"GET /media/products/add_on/8419_2024-08-29.jpg HTTP/1.1" 200 298754
+"GET /media/products/add_on/7851_2024-08-29.jpg HTTP/1.1" 200 287961
+"GET /media/products/add_on/7851_2024-08-29.jpg HTTP/1.1" 200 287961
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /media/products/product_carrot_400.jpeg HTTP/1.1" 304 0
+"GET /media/products/add_on/8419_2024-08-29.jpg HTTP/1.1" 304 0
+"GET /media/products/add_on/8419_2024-08-29.jpg HTTP/1.1" 304 0
+"GET /media/products/product_carrot_400.jpeg HTTP/1.1" 304 0
+"GET /media/products/add_on/7851_2024-08-29.jpg HTTP/1.1" 304 0
+"GET /media/products/add_on/7851_2024-08-29.jpg HTTP/1.1" 304 0
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /media/products/add_on/7851_2024-08-29.jpg HTTP/1.1" 304 0
+"GET /media/products/add_on/7851_2024-08-29.jpg HTTP/1.1" 304 0
+"GET /media/products/product_carrot_400.jpeg HTTP/1.1" 304 0
+"GET /media/products/product_carrot_400.jpeg HTTP/1.1" 304 0
+"GET /media/products/add_on/8419_2024-08-29.jpg HTTP/1.1" 304 0
+"GET /media/products/add_on/8419_2024-08-29.jpg HTTP/1.1" 304 0
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+Not Found: /api/products/related/carrot/
+Not Found: /api/products/related/carrot/
+"GET /api/products/related/carrot/ HTTP/1.1" 404 5304
+"GET /api/products/related/carrot/ HTTP/1.1" 404 5304
+Not Found: /api/products/related/carrot/
+Not Found: /api/products/related/carrot/
+"GET /api/products/related/carrot/ HTTP/1.1" 404 5304
+"GET /api/products/related/carrot/ HTTP/1.1" 404 5304
+"GET /media/products/product_carrot_400.jpeg HTTP/1.1" 304 0
+"GET /media/products/product_carrot_400.jpeg HTTP/1.1" 304 0
+"GET /media/products/add_on/7851_2024-08-29.jpg HTTP/1.1" 304 0
+"GET /media/products/add_on/7851_2024-08-29.jpg HTTP/1.1" 304 0
+"GET /media/products/add_on/8419_2024-08-29.jpg HTTP/1.1" 304 0
+"GET /media/products/add_on/8419_2024-08-29.jpg HTTP/1.1" 304 0
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+Not Found: /api/products/related/carrot/
+Not Found: /api/products/related/carrot/
+"GET /api/products/related/carrot/ HTTP/1.1" 404 5304
+"GET /api/products/related/carrot/ HTTP/1.1" 404 5304
+Not Found: /api/products/related/carrot/
+Not Found: /api/products/related/carrot/
+"GET /api/products/related/carrot/ HTTP/1.1" 404 5304
+"GET /api/products/related/carrot/ HTTP/1.1" 404 5304
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+Not Found: /api/products/related/carrot/
+Not Found: /api/products/related/carrot/
+"GET /api/products/related/carrot/ HTTP/1.1" 404 5304
+"GET /api/products/related/carrot/ HTTP/1.1" 404 5304
+Not Found: /api/products/related/carrot/
+Not Found: /api/products/related/carrot/
+"GET /api/products/related/carrot/ HTTP/1.1" 404 5304
+"GET /api/products/related/carrot/ HTTP/1.1" 404 5304
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+"GET /api/products/carrot/ HTTP/1.1" 200 895
+Not Found: /api/products/related/carrot/
+Not Found: /api/products/related/carrot/
+"GET /api/products/related/carrot/ HTTP/1.1" 404 5304
+"GET /api/products/related/carrot/ HTTP/1.1" 404 5304
+Not Found: /api/products/related/carrot/
+Not Found: /api/products/related/carrot/
+"GET /api/products/related/carrot/ HTTP/1.1" 404 5304
+"GET /api/products/related/carrot/ HTTP/1.1" 404 5304
+"GET /media/products/product_carrot_400.jpeg HTTP/1.1" 304 0
+"GET /media/products/add_on/8419_2024-08-29.jpg HTTP/1.1" 304 0
+"GET /media/products/product_carrot_400.jpeg HTTP/1.1" 304 0
+"GET /media/products/add_on/8419_2024-08-29.jpg HTTP/1.1" 304 0
+"GET /media/products/add_on/7851_2024-08-29.jpg HTTP/1.1" 304 0
+"GET /media/products/add_on/7851_2024-08-29.jpg HTTP/1.1" 304 0

@@ -1,8 +1,10 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { motion } from 'framer-motion';
 import Swal from 'sweetalert2';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -38,14 +40,37 @@ interface CartItem extends ProductData {
 const CART_STORAGE_KEY = 'userCart';
 const CART_EXPIRY_TIME = 60 * 60 * 1000;
 
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1
+        }
+    }
+};
+
+const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            type: "spring",
+            stiffness: 100
+        }
+    }
+};
+
 const Product = ({ params }: ProductProps) => {
     const [quantity, setQuantity] = useState(1);
     const [product, setProduct] = useState<ProductData | null>(null);
+    const [relatedProducts, setRelatedProducts] = useState<ProductData[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const { slug } = params;
 
     useEffect(() => {
-        const fetchProduct = async () => {
+        const fetchProductAndRelated = async () => {
             if (slug) {
                 try {
                     const response = await fetch(`${getApiUrl()}/products/${slug}/`);
@@ -54,15 +79,23 @@ const Product = ({ params }: ProductProps) => {
                     }
                     const data = await response.json();
                     setProduct(data);
+
+                    // Fetch related products
+                    const relatedResponse = await fetch(`${getApiUrl()}/products/${slug}/related/`);
+                    if (!relatedResponse.ok) {
+                        throw new Error('Failed to fetch related products');
+                    }
+                    const relatedData = await relatedResponse.json();
+                    setRelatedProducts(relatedData);
                 } catch (error) {
-                    console.error('Error fetching product:', error);
+                    console.error('Error fetching product or related products:', error);
                 } finally {
                     setIsLoading(false);
                 }
             }
         };
 
-        fetchProduct();
+        fetchProductAndRelated();
     }, [slug]);
 
     useEffect(() => {
@@ -78,6 +111,10 @@ const Product = ({ params }: ProductProps) => {
 
         return () => clearInterval(intervalId);
     }, []);
+
+    const handleButtonClick = (product: ProductData) => {
+        addToCart();
+    };
 
     const handleQuantityChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setQuantity(parseInt(event.target.value));
@@ -232,6 +269,53 @@ const Product = ({ params }: ProductProps) => {
                             </div>
                         </div>
                     </div>
+                </div>
+
+                {/* Related Products here */}
+                <div className="mt-16">
+                    <h2 className="text-2xl font-bold mb-8">Related Products</h2>
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+                    >
+                        {relatedProducts.map((relatedProduct) => (
+                            <motion.div
+                                key={relatedProduct.id}
+                                variants={itemVariants}
+                                className="relative bg-cover group rounded-3xl bg-center overflow-hidden mx-auto sm:mr-0 xl:mx-auto cursor-pointer"
+                            >
+                                <Link href={`/shop/${relatedProduct.slug}`}>
+                                    <img className="rounded-2xl w-full h-64 object-cover" src={relatedProduct.image} alt={relatedProduct.name} />
+                                </Link>
+                                <div className="absolute z-10 bottom-3 left-0 mx-3 p-3 bg-white w-[calc(100%-24px)] rounded-xl shadow-sm shadow-transparent transition-all duration-500 group-hover:shadow-indigo-200 group-hover:bg-indigo-50">
+                                    <Link href={`/shop/${relatedProduct.slug}`}>
+                                        <div className="flex items-center justify-between mb-2">
+                                            <h6 className="font-semibold text-base leading-7 text-black">{relatedProduct.name}</h6>
+                                            <h6 className="font-semibold text-base leading-7 text-emerald-600 text-right">
+                                                {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(Number(relatedProduct.unit_price))}
+                                            </h6>
+                                        </div>
+                                    </Link>
+                                    <div className="flex items-center justify-between mb-2">
+                                        <p className="text-xs leading-5 text-gray-500">{relatedProduct.category.name}</p>
+                                        <button 
+                                            className="p-2 bg-white hover:bg-emerald-900 text-white rounded-full shadow-lg transform transition-transform duration-700 ease-in-out hover:scale-110"
+                                            onClick={() => handleButtonClick(relatedProduct)}
+                                        >
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-emerald-900 hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path d="m19.5 9.5l-.71-2.605c-.274-1.005-.411-1.507-.692-1.886A2.5 2.5 0 0 0 17 4.172C16.56 4 16.04 4 15 4M4.5 9.5l.71-2.605c.274-1.005.411-1.507.692-1.886A2.5 2.5 0 0 1 7 4.172C7.44 4 7.96 4 9 4" />
+                                                <path d="M9 4a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1Z" />
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M8 13v4m8-4v4m-4-4v4" />
+                                                <path strokeLinecap="round" d="M3.864 16.455c.546 2.183.819 3.274 1.632 3.91C6.31 21 7.435 21 9.685 21h4.63c2.25 0 3.375 0 4.19-.635c.813-.636 1.086-1.727 1.631-3.91c.858-3.432 1.287-5.147.387-6.301C19.622 9 17.853 9 14.316 9H9.685c-3.538 0-5.306 0-6.207 1.154c-.529.677-.6 1.548-.394 2.846" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
                 </div>
             </div>
         </section>

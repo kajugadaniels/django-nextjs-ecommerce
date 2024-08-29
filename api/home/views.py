@@ -63,6 +63,14 @@ class ProductCategoryDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = ProductCategory.objects.all()
     serializer_class = ProductCategorySerializer
 
+class RelatedProductsView(generics.ListAPIView):
+    serializer_class = ProductSerializer
+
+    def get_queryset(self):
+        slug = self.kwargs['slug']
+        product = Product.objects.get(slug=slug)
+        return Product.objects.filter(category=product.category).exclude(id=product.id)[:4]
+
 class ProfileList(generics.ListCreateAPIView):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
